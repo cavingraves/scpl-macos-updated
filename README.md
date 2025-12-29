@@ -66,7 +66,7 @@ End Menu
 OpenURLs
 ```
 
-**→** Try the [ScPL Editor](https://editor.scpl.dev/) to convert your shortcuts to ScPL!
+**→** Use the command-line tool or see the original [ScPL Editor](https://editor.scpl.dev/) (by pfgithub)
 
 ---
 
@@ -135,18 +135,21 @@ npm install -g scpl
 ### Usage
 
 ```bash
-# Convert ScPL to .shortcut file
-scpl input.scpl output.shortcut
+# Install
+npm install -g scpl-macos-updated
 
-# Use the online editor
-# Visit: https://editor.scpl.dev
+# Convert ScPL to .shortcut file
+scpl-macos-updated input.scpl output.shortcut
+
+# Or if you alias it:
+scpl input.scpl output.shortcut
 ```
 
 ### Documentation
 
-- 📚 [ScPL Documentation](https://docs.scpl.dev/)
-- 🎓 [Getting Started Guide](https://docs.scpl.dev/gettingstarted)
-- 📖 [Action Reference](https://docs.scpl.dev/actions)
+- 📚 [Original ScPL Documentation](https://docs.scpl.dev/) (by pfgithub)
+- 📖 [macOS Tahoe Actions Reference](./MACOS_TAHOE_UPDATES.md)
+- 🤝 [Contributing Guide](./CONTRIBUTING.md)
 
 ---
 
