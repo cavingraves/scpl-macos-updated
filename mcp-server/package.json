@@ -1,11 +1,11 @@
 {
-  "name": "scpl-mcp-server",
+  "name": "scpl-updated-mcp-server",
   "version": "1.0.0",
-  "description": "MCP server for creating macOS Shortcuts using ScPL",
+  "description": "MCP server for creating macOS Shortcuts using ScPL (macOS Tahoe updated fork)",
   "type": "module",
   "main": "index.js",
   "bin": {
-    "scpl-mcp-server": "./index.js"
+    "scpl-updated-mcp-server": "./index.js"
   },
   "scripts": {
     "start": "node index.js"

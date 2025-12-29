@@ -153,10 +153,10 @@ Create shortcuts using natural language with Claude Code!
 
 ```bash
 # Install the MCP server
-npm install -g scpl-mcp-server
+npm install -g scpl-updated-mcp-server
 
 # Register with Claude Code
-claude mcp add scpl-shortcuts npx scpl-mcp-server
+claude mcp add scpl-shortcuts npx scpl-updated-mcp-server
 
 # Use the skill in Claude Code
 /create-shortcut

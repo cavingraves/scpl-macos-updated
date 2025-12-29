@@ -15,7 +15,7 @@ import { homedir } from "os";
 
 const server = new Server(
   {
-    name: "scpl-mcp-server",
+    name: "scpl-updated-mcp-server",
     version: "1.0.0",
   },
   {
@@ -331,7 +331,7 @@ ShowAlert title="Text Improved" message="The improved text has been copied to yo
 async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
-  console.error("ScPL MCP server running on stdio");
+  console.error("ScPL Updated MCP server running on stdio");
 }
 
 main().catch((error) => {

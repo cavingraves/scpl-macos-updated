@@ -24,13 +24,13 @@ Generated .shortcut files may need to be signed before macOS will allow you to r
 ### Option 1: Global Installation (Recommended)
 
 ```bash
-npm install -g scpl-mcp-server
+npm install -g scpl-updated-mcp-server
 ```
 
 Then register with Claude Code:
 
 ```bash
-claude mcp add scpl-shortcuts npx scpl-mcp-server
+claude mcp add scpl-shortcuts npx scpl-updated-mcp-server
 ```
 
 ### Option 2: Local Development
@@ -225,11 +225,11 @@ ShowResult "Files on Desktop"
 
 ## Troubleshooting
 
-### "Command not found: scpl-mcp-server"
+### "Command not found: scpl-updated-mcp-server"
 
 Make sure you installed globally:
 ```bash
-npm install -g scpl-mcp-server
+npm install -g scpl-updated-mcp-server
 ```
 
 ### "Error: Cannot find module 'scpl-macos-updated'"
