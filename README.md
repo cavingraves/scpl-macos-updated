@@ -10,7 +10,7 @@ See [MACOS_TAHOE_UPDATES.md](./MACOS_TAHOE_UPDATES.md) for the complete list.
 
 ---
 
-**Note**: The original ScPL repository has not been updated since July 2021. This fork extends it with macOS-specific actions from Tahoe (macOS 16.x).
+**Note**: The original ScPL repository has not been updated since July 2021. This fork extends it with macOS-specific actions from Tahoe (macOS 26.x).
 
 <p align="center">
   <a href="" rel="noopener">
