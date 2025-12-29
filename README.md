@@ -11,12 +11,14 @@
 <div align="center">
 
 [![Actions](https://img.shields.io/badge/actions-294-blue.svg)](./MACOS_TAHOE_UPDATES.md)
-[![macOS Tahoe](https://img.shields.io/badge/macOS-Tahoe%2026.x-purple.svg)](https://www.apple.com/macos/)
-[![Apple Silicon](https://img.shields.io/badge/Apple%20Silicon-M1%2B-orange.svg)](https://support.apple.com/en-us/116943)
+[![macOS](https://img.shields.io/badge/macOS-Tahoe%2026.x%20%7C%20Intel%20%26%20Apple%20Silicon-purple.svg)](https://www.apple.com/macos/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
 
 </div>
+
+> **💻 Intel Mac Compatible!** ScPL and most actions work on both Intel and Apple Silicon Macs.
+> Only Apple Intelligence actions (Use Model, Image Playground) require Apple Silicon.
 
 ---
 
@@ -24,12 +26,14 @@
 
 This fork adds **22 new actions** for macOS Tahoe, including:
 
-### 🤖 Apple Intelligence
+### 🤖 Apple Intelligence *(Apple Silicon only)*
 - **Use Model** (`askllm`) - AI integration with Apple Intelligence, on-device models, and ChatGPT
 - **Image Playground** - Generate images with AI (`GenerateImageIntent`)
-- **ChatGPT & Claude** - Direct integration with AI assistants
 
-### ⚙️ System & Scripting
+### 🤖 AI Assistants *(Intel & Apple Silicon)*
+- **ChatGPT & Claude** - Direct integration with AI assistants (requires apps installed)
+
+### ⚙️ System & Scripting *(Intel & Apple Silicon)*
 - Shell script execution (`runshellscript`, `runapplescript`, `runjavascriptforautomation`)
 - File operations (`file.rename`, `file.move`, `file.reveal`, and more)
 - System utilities (`getonscreencontent`, `connecttoservers`)
@@ -186,22 +190,22 @@ Thousands of apps have App Intents that could be added to scpl. See [CONTRIBUTIN
 
 ## 📦 What's New in This Fork?
 
-### Apple Intelligence Actions (macOS 26.0+)
+### 🍎 Apple Intelligence Actions (Apple Silicon M1+ required)
 - `is.workflow.actions.askllm` - Use Model (AI prompts)
 - `com.apple.GenerativePlaygroundApp.GenerateImageIntent` - Image Playground
 
-### AI Assistant Integrations
+### 🤖 AI Assistant Integrations (Intel & Apple Silicon)
 - `com.openai.chat.OpenVoiceModeIntent` - ChatGPT Voice Mode
 - `com.anthropic.claude.ClaudeAppIntentsExtension` - Ask Claude
 
-### Shell & Scripting (3 actions)
+### 🔧 Shell & Scripting (3 actions - Intel & Apple Silicon)
 - `runshellscript`, `runapplescript`, `runjavascriptforautomation`
 
-### File Operations (10 actions)
+### 📁 File Operations (10 actions - Intel & Apple Silicon)
 - `file`, `file.rename`, `file.move`, `file.reveal`, `file.select`
 - `file.label`, `file.getfoldercontents`, `finder.getselectedfiles`, `savefile`
 
-### System & Network (5 actions)
+### 🌐 System & Network (5 actions - Intel & Apple Silicon)
 - `connecttoservers`, `getonscreencontent`, `makespokenaudiofromtext`
 - `converttimezone`, `text.trimwhitespace`, `output`, `setname`
 
