@@ -47,9 +47,28 @@ Choose your platform below:
 
 #### Claude Code
 
+**Option 1: CLI command** (may not always work):
+
 ```bash
 claude mcp add scpl-shortcuts npx scpl-updated-mcp-server
 ```
+
+**Option 2: Manual config** (recommended):
+
+Add to `~/.claude.json` for global configuration:
+
+```json
+{
+  "mcpServers": {
+    "scpl-shortcuts": {
+      "command": "npx",
+      "args": ["scpl-updated-mcp-server"]
+    }
+  }
+}
+```
+
+Or for project-specific config, add to `.claude/mcp.json` in your project directory.
 
 #### Claude Desktop
 
