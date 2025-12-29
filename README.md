@@ -132,3 +132,18 @@ prepublishOnly will automatically format your code using prettier and make sure 
 ## Acknowledgements <a name="acknowledgement"></a>
 - [xAlien95](https://github.com/xalien95/) for finding the actions plist file within the shortcuts ipa and manually making lists of all the variable types and aggrandizements.
 - [Shortcuts JS](https://github.com/joshfarrant/shortcuts-js) for the complete shortcut glyph and color list.
+
+## 🤝 Contributing
+
+**Want to add your favorite app's actions?** We need your help!
+
+Thousands of apps have App Intents that could be added to scpl. See [CONTRIBUTING.md](./CONTRIBUTING.md) for:
+- How to extract action identifiers from shortcuts
+- How to create action definitions  
+- How to submit a PR
+
+**Popular apps we'd love to see:**
+- Notion, Things 3, Bear, OmniFocus
+- PDF Expert, Pixelmator Pro, Final Cut Pro
+- GitHub Desktop, Slack, Discord, 1Password
+- DEVONthink, Keyboard Maestro, Hazel
