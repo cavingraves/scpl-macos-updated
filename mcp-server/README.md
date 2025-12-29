@@ -11,9 +11,9 @@ Model Context Protocol server for creating macOS Shortcuts using ScPL (Shortcuts
 
 ## ⚠️ Shortcut Signing & Installation
 
-Generated .shortcut files need to be signed before macOS will allow you to run them.
+Generated .shortcut files need to be signed before macOS will allow you to run them. You have two options:
 
-### Recommended: Use Shortcut Source Helper (Free)
+### Option 1: Shortcut Source Helper (Free - Recommended)
 
 **Setup (one-time):**
 1. Install required shortcuts from RoutineHub:
@@ -27,9 +27,9 @@ Generated .shortcut files need to be signed before macOS will allow you to run t
 2. Follow the prompts to sign and import
 3. The shortcut will be added to your Shortcuts app and ready to use!
 
-### Alternative: Apple Developer Account
+### Option 2: Apple Developer Account
 
-If you have an Apple Developer account, you can sign shortcuts with your developer certificate.
+If you have an Apple Developer account ($99/year), you can sign shortcuts with your developer certificate for distribution.
 
 **Disclaimer**: We are not associated with Shortcut Source Tool/Helper or their creators. Use third-party tools at your own risk. Always review shortcuts before running them.
 

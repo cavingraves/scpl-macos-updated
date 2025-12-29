@@ -64,9 +64,9 @@ I'll:
 
 ## Step 5: Installation & Signing
 
-Generated shortcuts need to be signed before macOS will allow you to run them.
+Generated shortcuts need to be signed before macOS will allow you to run them. You have two options:
 
-### Recommended Method: Shortcut Source Helper
+### Option 1: Shortcut Source Helper (Free - Recommended)
 
 **One-time setup:**
 1. Install these free shortcuts from RoutineHub:
@@ -80,6 +80,10 @@ Generated shortcuts need to be signed before macOS will allow you to run them.
 2. **Drag and drop** it onto Shortcut Source Helper in your Dock
 3. Follow the prompts to sign and import
 4. The shortcut is now installed and ready to use!
+
+### Option 2: Apple Developer Account
+
+If you have an Apple Developer account ($99/year), you can sign shortcuts with your developer certificate for distribution.
 
 **After installation, you can:**
 - ✅ Run it from Shortcuts app
