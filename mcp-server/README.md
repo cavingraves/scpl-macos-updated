@@ -55,24 +55,20 @@ claude mcp add scpl-shortcuts npx scpl-updated-mcp-server
 
 **Option 2: Manual config** (recommended):
 
-Add to `~/.claude.json` for global configuration:
+Add this to the `mcpServers` section in `~/.claude.json`:
 
 ```json
-{
-  "mcpServers": {
-    "scpl-shortcuts": {
-      "type": "stdio",
-      "command": "npx",
-      "args": [
-        "-y",
-        "scpl-updated-mcp-server"
-      ]
-    }
-  }
+"scpl-shortcuts": {
+  "type": "stdio",
+  "command": "npx",
+  "args": [
+    "-y",
+    "scpl-updated-mcp-server"
+  ]
 }
 ```
 
-Or for project-specific config, add to `.claude/mcp.json` in your project directory with the same format.
+Or for project-specific config, add to `.claude/mcp.json` in your project directory.
 
 #### Claude Desktop
 
