@@ -1,6 +1,12 @@
 # macOS Tahoe Updates for scpl
 
-This fork adds **18 new actions** that are present in macOS Tahoe Shortcuts but were missing from the original scpl repository (last updated July 2021).
+This fork adds **19 new actions** that are present in macOS Tahoe Shortcuts but were missing from the original scpl repository (last updated July 2021).
+
+## 🤖 Apple Intelligence Actions
+
+**New in macOS Tahoe 26.0+** - Requires Apple Silicon Mac:
+
+- **`is.workflow.actions.askllm`** - Use Model action for Apple Intelligence and ChatGPT integration
 
 ## What's New
 
@@ -33,10 +39,51 @@ This fork adds **18 new actions** that are present in macOS Tahoe Shortcuts but 
 - **`is.workflow.actions.text.trimwhitespace`** - Trim whitespace from text
 - **`is.workflow.actions.setname`** - Set name of an item
 
+## Apple Intelligence Integration
+
+### Use Model Action (`is.workflow.actions.askllm`)
+
+Send prompts to Apple Intelligence or ChatGPT:
+
+**Parameters:**
+- **Model**: `"Apple Intelligence"`, `"Apple Intelligence on Device"`, or `"ChatGPT"`
+- **Prompt**: Text prompt to send
+- **Follow-Up**: Boolean - treat as follow-up to previous response
+- **Result Type**: `"Text"`, `"Boolean"`, or `"Number"`
+
+**Requirements:**
+- macOS Tahoe 26.0+
+- Apple Silicon Mac (M1 or later)
+- Apple Intelligence enabled in System Settings
+
+**Example Usage:**
+```
+askllm model="Apple Intelligence" prompt="Summarize this article"
+```
+
+**JSON Structure:**
+```json
+{
+  "WFWorkflowActionIdentifier": "is.workflow.actions.askllm",
+  "WFWorkflowActionParameters": {
+    "WFLLMModel": "Apple Intelligence",
+    "WFLLMPrompt": {
+      "Value": {
+        "string": "What is the weather like today?",
+        "attachmentsByRange": {}
+      },
+      "WFSerializationType": "WFTextTokenString"
+    }
+  }
+}
+```
+
+---
+
 ## Total Actions
 
 - **Original scpl**: 272 actions
-- **After update**: **290 actions** (+18)
+- **After update**: **291 actions** (+19)
 
 ## How These Were Discovered
 

@@ -1316,6 +1316,80 @@
 			"WatchKit"
 		]
 	},
+	"is.workflow.actions.askllm": {
+		"ActionClass": "WFAskLLMAction",
+		"ActionKeywords": [
+			"ai",
+			"apple intelligence",
+			"chatgpt",
+			"llm",
+			"model",
+			"prompt"
+		],
+		"Category": "Scripting",
+		"Description": {
+			"DescriptionSummary": "Sends a prompt to Apple Intelligence or ChatGPT and returns the response."
+		},
+		"IconName": "Scripting.png",
+		"Input": {
+			"Multiple": false,
+			"Required": false,
+			"Types": [
+				"WFStringContentItem"
+			]
+		},
+		"Name": "Use Model",
+		"Output": {
+			"Multiple": false,
+			"OutputName": "Response",
+			"Types": [
+				"NSString"
+			]
+		},
+		"Parameters": [
+			{
+				"Class": "WFEnumerationParameter",
+				"Items": [
+					"Apple Intelligence",
+					"Apple Intelligence on Device",
+					"ChatGPT"
+				],
+				"Key": "WFLLMModel",
+				"Label": "Model",
+				"DefaultValue": "Apple Intelligence"
+			},
+			{
+				"Class": "WFTextInputParameter",
+				"Key": "WFLLMPrompt",
+				"Label": "Prompt",
+				"Multiline": true,
+				"Placeholder": "Ask a question or provide a task"
+			},
+			{
+				"Class": "WFSwitchParameter",
+				"DefaultValue": false,
+				"Key": "FollowUp",
+				"Label": "Follow-Up Question"
+			},
+			{
+				"Class": "WFEnumerationParameter",
+				"Items": [
+					"Text",
+					"Boolean",
+					"Number"
+				],
+				"Key": "WFGenerativeResultType",
+				"Label": "Result Type",
+				"DefaultValue": "Text"
+			}
+		],
+		"Subcategory": "Apple Intelligence",
+		"RequiredResources": [
+			{
+				"WFResourceClass": "WFAppleIntelligenceAccessResource"
+			}
+		]
+	},
 	"is.workflow.actions.avairyeditphoto": {
 		"ActionClass": "WFMarkupAction",
 		"ActionKeywords": [

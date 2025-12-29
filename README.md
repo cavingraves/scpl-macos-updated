@@ -1,6 +1,7 @@
 ## macOS Tahoe Updates 🎉
 
-This fork adds **18 new actions** for macOS Tahoe, including:
+This fork adds **19 new actions** for macOS Tahoe, including:
+- **Apple Intelligence** (`askllm` - Use Model action for AI integration)
 - Shell script execution (`runshellscript`, `runapplescript`, `runjavascriptforautomation`)
 - File operations (`file.rename`, `file.move`, `file.reveal`, and more)
 - System utilities (`getonscreencontent`, `connecttoservers`)
