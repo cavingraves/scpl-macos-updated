@@ -59,24 +59,34 @@ End Menu
 I'll:
 1. Validate the ScPL code using `validate_scpl`
 2. Create the .shortcut file using `create_shortcut`
-3. Save it to your Downloads folder (or specified location)
-4. Provide instructions on how to install it
+3. Save it to your Documents folder (or specified location)
+4. Provide instructions on how to sign and install it
 
-## Step 5: Installation
+## Step 5: Installation & Signing
 
-Once created, you can:
-1. **Double-click** the .shortcut file to install it
-2. **Drag it** into the Shortcuts app
-3. **AirDrop** it to your iPhone/iPad
-4. **Share** it with others
+Generated shortcuts need to be signed before macOS will allow you to run them.
 
-### ⚠️ Signing Note
+### Recommended Method: Shortcut Source Helper
 
-Generated shortcuts may need to be signed before macOS allows you to run them.
+**One-time setup:**
+1. Install these free shortcuts from RoutineHub:
+   - [Shortcut Source Helper](https://routinehub.co/shortcut/10060/)
+   - [Shortcut Source Tool](https://routinehub.co/shortcut/5256/)
+   - [Tinycut Builder](https://routinehub.co/shortcut/5217/)
+2. Add **Shortcut Source Helper** to your Dock
 
-**If you don't have an Apple Developer account**, you can use [Shortcut Source Tool](https://routinehub.co/shortcut/5256/) to import and sign shortcuts.
+**For each generated shortcut:**
+1. Find the `.shortcut` file in your Documents folder
+2. **Drag and drop** it onto Shortcut Source Helper in your Dock
+3. Follow the prompts to sign and import
+4. The shortcut is now installed and ready to use!
 
-**Disclaimer**: We are not associated with Shortcut Source Tool. Use third-party tools at your own risk. Always review shortcuts before running them.
+**After installation, you can:**
+- ✅ Run it from Shortcuts app
+- ✅ AirDrop it to your iPhone/iPad
+- ✅ Share the signed version with others
+
+**Disclaimer**: We are not associated with Shortcut Source Tool/Helper or their creators. Use third-party tools at your own risk. Always review shortcuts before running them.
 
 ## Examples of What I Can Create
 

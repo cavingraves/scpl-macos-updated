@@ -95,23 +95,24 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
       const { scpl_code, output_name, output_dir } = args;
 
       // Convert ScPL to shortcut
-      const result = await convert(scpl_code, {
+      // Note: parse() returns a Buffer directly when makeShortcut: true
+      const shortcutBuffer = convert(scpl_code, {
         makePlist: true,
         makeShortcut: true,
       });
 
-      // Determine output path
-      const dir = output_dir || join(homedir(), "Downloads");
+      // Determine output path (default to ~/Documents)
+      const dir = output_dir || join(homedir(), "Documents");
       const outputPath = join(dir, `${output_name}.shortcut`);
 
       // Write the file
-      writeFileSync(outputPath, result.shortcutData);
+      writeFileSync(outputPath, shortcutBuffer);
 
       return {
         content: [
           {
             type: "text",
-            text: `✅ Shortcut created successfully!\n\nPath: ${outputPath}\n\nYou can now:\n1. Double-click to install it in Shortcuts app\n2. Share it with others\n3. Import it to iOS via AirDrop`,
+            text: `✅ Shortcut created successfully!\n\nPath: ${outputPath}\n\n📝 To install and sign it:\n\n1. Install Shortcut Source Helper from RoutineHub (if you haven't already)\n   - Also install: Shortcut Source Tool, Tinycut Builder\n2. Add Shortcut Source Helper to your Dock\n3. Drag and drop ${output_name}.shortcut onto it\n4. Follow the prompts to sign and import\n\nThe shortcut will be added to your Shortcuts app and ready to use!`,
           },
         ],
       };
@@ -121,7 +122,8 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
       const { scpl_code } = args;
 
       try {
-        await convert(scpl_code, {
+        // Just parse to validate, don't generate output
+        convert(scpl_code, {
           makePlist: false,
           makeShortcut: false,
         });

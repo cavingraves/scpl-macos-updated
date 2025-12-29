@@ -9,15 +9,29 @@ Model Context Protocol server for creating macOS Shortcuts using ScPL (Shortcuts
 - **Discover Actions**: Browse 294 available actions with descriptions
 - **Documentation**: Access action reference and examples
 
-## ⚠️ Shortcut Signing
+## ⚠️ Shortcut Signing & Installation
 
-Generated .shortcut files may need to be signed before macOS will allow you to run them.
+Generated .shortcut files need to be signed before macOS will allow you to run them.
 
-**Options:**
-1. **Apple Developer Account**: Sign shortcuts with your developer certificate
-2. **Shortcut Source Tool** (free alternative): If you don't have a developer account, you can use [Shortcut Source Tool](https://routinehub.co/shortcut/5256/) to import and sign shortcuts
+### Recommended: Use Shortcut Source Helper (Free)
 
-**Disclaimer**: We are not associated with Shortcut Source Tool or its creator. Use third-party tools at your own risk. Always review shortcuts before running them.
+**Setup (one-time):**
+1. Install required shortcuts from RoutineHub:
+   - [Shortcut Source Helper](https://routinehub.co/shortcut/10060/)
+   - [Shortcut Source Tool](https://routinehub.co/shortcut/5256/)
+   - [Tinycut Builder](https://routinehub.co/shortcut/5217/)
+2. Add **Shortcut Source Helper** to your Dock for easy access
+
+**To install a generated shortcut:**
+1. Drag and drop the `.shortcut` file onto Shortcut Source Helper in your Dock
+2. Follow the prompts to sign and import
+3. The shortcut will be added to your Shortcuts app and ready to use!
+
+### Alternative: Apple Developer Account
+
+If you have an Apple Developer account, you can sign shortcuts with your developer certificate.
+
+**Disclaimer**: We are not associated with Shortcut Source Tool/Helper or their creators. Use third-party tools at your own risk. Always review shortcuts before running them.
 
 ## Installation
 
@@ -56,7 +70,7 @@ Create a macOS Shortcut from ScPL code.
 **Parameters:**
 - `scpl_code` (required): The ScPL code to convert
 - `output_name` (required): Name for the .shortcut file
-- `output_dir` (optional): Output directory (defaults to ~/Downloads)
+- `output_dir` (optional): Output directory (defaults to ~/Documents)
 
 **Example:**
 ```json
