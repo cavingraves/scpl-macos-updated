@@ -35,30 +35,58 @@ If you have an Apple Developer account ($99/year), you can sign shortcuts with y
 
 ## Installation
 
-### Option 1: Global Installation (Recommended)
+### Step 1: Install the Package
 
 ```bash
 npm install -g scpl-updated-mcp-server
 ```
 
-Then register with Claude Code:
+### Step 2: Register with Your AI Assistant
+
+Choose your platform below:
+
+#### Claude Code
 
 ```bash
 claude mcp add scpl-shortcuts npx scpl-updated-mcp-server
 ```
 
-### Option 2: Local Development
+#### Claude Desktop
 
-```bash
-cd mcp-server
-npm install
-chmod +x index.js
+Add to `~/Library/Application Support/Claude/claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "scpl-shortcuts": {
+      "command": "npx",
+      "args": ["scpl-updated-mcp-server"]
+    }
+  }
+}
 ```
 
-Register with Claude Code:
+#### Codex / Code (and forks)
 
-```bash
-claude mcp add scpl-shortcuts /Users/cav/dev/shortcuts/scpl-updated/mcp-server/index.js
+Add to `~/.code/config.toml` (or `~/.codex/config.toml`):
+
+```toml
+[mcp_servers.scpl-shortcuts]
+command = "npx"
+args = ["scpl-updated-mcp-server"]
+startup_timeout_sec = 60.0
+tool_timeout_sec = 120
+```
+
+**For local development:**
+
+```toml
+[mcp_servers.scpl-shortcuts]
+command = "node"
+args = ["/path/to/scpl-updated/mcp-server/index.js"]
+cwd = "/path/to/scpl-updated/mcp-server"
+startup_timeout_sec = 60.0
+tool_timeout_sec = 120
 ```
 
 ## Tools
