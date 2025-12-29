@@ -1,0 +1,26 @@
+{
+  "name": "scpl-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for creating macOS Shortcuts using ScPL",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "scpl-mcp-server": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "mcp",
+    "shortcuts",
+    "scpl",
+    "macos",
+    "automation"
+  ],
+  "author": "Cavin Graves",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.5.0",
+    "scpl-macos-updated": "^2.0.0"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "scpl-shortcut-creator",
+  "version": "1.0.0",
+  "description": "Create macOS Shortcuts using natural language and ScPL",
+  "skills": [
+    {
+      "name": "create-shortcut",
+      "description": "Create a macOS Shortcut using natural language. Guides you through the process and generates a .shortcut file.",
+      "path": "skills/create-shortcut.md"
+    }
+  ],
+  "mcp": {
+    "server": "scpl-shortcuts",
+    "command": "npx",
+    "args": ["scpl-mcp-server"],
+    "description": "ScPL MCP server for creating shortcuts programmatically"
+  }
+}

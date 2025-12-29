@@ -24,7 +24,9 @@
 
 ## 🎉 macOS Tahoe Updates
 
-This fork adds **22 new actions** for macOS Tahoe, including:
+This fork adds **22 new actions** for macOS Tahoe, plus **AI-powered shortcut creation** with the MCP server!
+
+### New Features:
 
 ### 🤖 Apple Intelligence *(Apple Silicon only)*
 - **Use Model** (`askllm`) - AI integration with Apple Intelligence, on-device models, and ChatGPT
@@ -145,9 +147,32 @@ scpl-macos-updated input.scpl output.shortcut
 scpl input.scpl output.shortcut
 ```
 
+### AI-Powered Shortcut Creation 🤖
+
+Create shortcuts using natural language with Claude Code!
+
+```bash
+# Install the MCP server
+npm install -g scpl-mcp-server
+
+# Register with Claude Code
+claude mcp add scpl-shortcuts npx scpl-mcp-server
+
+# Use the skill in Claude Code
+/create-shortcut
+```
+
+Then just describe what you want:
+> "Create a shortcut that gets clipboard text, asks ChatGPT to summarize it, and shows the result"
+
+Claude will write the ScPL code, validate it, and generate the .shortcut file for you!
+
+**→** See [mcp-server/README.md](./mcp-server/README.md) for full documentation
+
 ### Documentation
 
 - 📖 [macOS Tahoe Actions Reference](./MACOS_TAHOE_UPDATES.md) - All 22 new actions
+- 🤖 [MCP Server Guide](./mcp-server/README.md) - AI-powered shortcut creation
 - 🤝 [Contributing Guide](./CONTRIBUTING.md) - Add your favorite app's actions
 - 📚 [Original ScPL Documentation](https://docs.scpl.dev/) - Core language reference (by pfgithub)
 
