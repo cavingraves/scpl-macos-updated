@@ -1,12 +1,20 @@
 # macOS Tahoe Updates for scpl
 
-This fork adds **19 new actions** that are present in macOS Tahoe Shortcuts but were missing from the original scpl repository (last updated July 2021).
+This fork adds **22 new actions** that are present in macOS Tahoe Shortcuts but were missing from the original scpl repository (last updated July 2021).
 
 ## 🤖 Apple Intelligence Actions
 
 **New in macOS Tahoe 26.0+** - Requires Apple Silicon Mac:
 
 - **`is.workflow.actions.askllm`** - Use Model action for Apple Intelligence and ChatGPT integration
+- **`com.apple.GenerativePlaygroundApp.GenerateImageIntent`** - Image Playground (generate images with AI)
+
+## 🎯 AI Assistant App Intents
+
+**Requires respective apps installed:**
+
+- **`com.openai.chat.OpenVoiceModeIntent`** - ChatGPT Voice Mode
+- **`com.anthropic.claude.ClaudeAppIntentsExtension`** - Ask Claude
 
 ## What's New
 
@@ -80,10 +88,68 @@ askllm model="Apple Intelligence" prompt="Summarize this article"
 
 ---
 
+## Image Playground Action
+
+### Generate Image (`com.apple.GenerativePlaygroundApp.GenerateImageIntent`)
+
+Create images with Apple Intelligence Image Playground:
+
+**Parameters:**
+- **Prompt**: Description of image to generate
+- **Style**: `"Animation"`, `"Illustration"`, or `"Sketch"`
+- **Reference Image**: Optional image to use as reference
+
+**Requirements:**
+- macOS Tahoe 26.0+
+- Apple Silicon Mac (M1 or later)
+- Apple Intelligence enabled
+
+**Example:**
+```json
+{
+  "WFWorkflowActionIdentifier": "com.apple.GenerativePlaygroundApp.GenerateImageIntent",
+  "WFWorkflowActionParameters": {
+    "prompt": "A cat wearing sunglasses on the beach",
+    "style": {
+      "identifier": "illustration"
+    }
+  }
+}
+```
+
+## ChatGPT & Claude Integration
+
+### ChatGPT Voice Mode
+```json
+{
+  "WFWorkflowActionIdentifier": "com.openai.chat.OpenVoiceModeIntent",
+  "WFWorkflowActionParameters": {
+    "AppIntentDescriptor": {
+      "BundleIdentifier": "com.openai.chat",
+      "Name": "ChatGPT",
+      "AppIntentIdentifier": "OpenVoiceModeIntent"
+    }
+  }
+}
+```
+
+### Ask Claude
+```json
+{
+  "WFWorkflowActionIdentifier": "com.anthropic.claude.ClaudeAppIntentsExtension",
+  "WFWorkflowActionParameters": {
+    "message": "Hello Claude!",
+    "ShowWhenRun": false
+  }
+}
+```
+
+---
+
 ## Total Actions
 
 - **Original scpl**: 272 actions
-- **After update**: **291 actions** (+19)
+- **After update**: **294 actions** (+22)
 
 ## How These Were Discovered
 

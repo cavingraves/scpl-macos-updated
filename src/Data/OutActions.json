@@ -1,4 +1,94 @@
 {
+	"com.anthropic.claude.ClaudeAppIntentsExtension": {
+		"ActionClass": "WFAppIntentAction",
+		"ActionKeywords": [
+			"claude",
+			"anthropic",
+			"ai",
+			"chat"
+		],
+		"AppIdentifier": "com.anthropic.claude",
+		"Category": "Productivity",
+		"Description": {
+			"DescriptionSummary": "Sends a message to Claude and optionally shows the response."
+		},
+		"Name": "Ask Claude",
+		"Parameters": [
+			{
+				"Class": "WFTextInputParameter",
+				"Key": "message",
+				"Label": "Message",
+				"Placeholder": "Ask Claude a question"
+			},
+			{
+				"Class": "WFSwitchParameter",
+				"DefaultValue": true,
+				"Key": "ShowWhenRun",
+				"Label": "Show When Run"
+			}
+		],
+		"RequiredResources": [
+			{
+				"WFResourceClass": "WFAppInstalledResource",
+				"WFAppIdentifier": "com.anthropic.claude"
+			}
+		],
+		"Subcategory": "AI Assistants"
+	},
+	"com.apple.GenerativePlaygroundApp.GenerateImageIntent": {
+		"ActionClass": "WFAppIntentAction",
+		"ActionKeywords": [
+			"image",
+			"playground",
+			"generate",
+			"ai",
+			"apple intelligence"
+		],
+		"AppIdentifier": "com.apple.GenerativePlaygroundApp",
+		"Category": "Media",
+		"Description": {
+			"DescriptionSummary": "Generates an image using Apple's Image Playground."
+		},
+		"Name": "Generate Image",
+		"Parameters": [
+			{
+				"Class": "WFTextInputParameter",
+				"Key": "prompt",
+				"Label": "Prompt",
+				"Placeholder": "Describe the image to generate"
+			},
+			{
+				"Class": "WFEnumerationParameter",
+				"Items": [
+					"Animation",
+					"Illustration",
+					"Sketch"
+				],
+				"Key": "style",
+				"Label": "Style",
+				"DefaultValue": "Illustration"
+			},
+			{
+				"Class": "WFImageParameter",
+				"Key": "image",
+				"Label": "Reference Image",
+				"Description": "Optional image to use as reference"
+			}
+		],
+		"RequiredResources": [
+			{
+				"WFResourceClass": "WFAppleIntelligenceAccessResource"
+			}
+		],
+		"Subcategory": "Image Generation",
+		"Output": {
+			"Multiple": false,
+			"OutputName": "Generated Image",
+			"Types": [
+				"WFImageContentItem"
+			]
+		}
+	},
 	"com.apple.facetime.facetime": {
 		"ActionClass": "WFStartCallAction",
 		"ActionKeywords": [
@@ -148,6 +238,29 @@
 		],
 		"Subcategory": "Phone",
 		"WFStartCallActionType": "Phone"
+	},
+	"com.openai.chat.OpenVoiceModeIntent": {
+		"ActionClass": "WFAppIntentAction",
+		"ActionKeywords": [
+			"chatgpt",
+			"openai",
+			"voice",
+			"conversation"
+		],
+		"AppIdentifier": "com.openai.chat",
+		"Category": "Productivity",
+		"Description": {
+			"DescriptionSummary": "Opens ChatGPT in voice conversation mode."
+		},
+		"Name": "Open ChatGPT Voice Mode",
+		"Parameters": [],
+		"RequiredResources": [
+			{
+				"WFResourceClass": "WFAppInstalledResource",
+				"WFAppIdentifier": "com.openai.chat"
+			}
+		],
+		"Subcategory": "AI Assistants"
 	},
 	"com.ubercab.UberClient.requestuber": {
 		"ActionClass": "WFRequestUberAction",
