@@ -56,17 +56,17 @@ ScPL is a **programming language for iOS/macOS Shortcuts** that lets you write s
 ### Example
 
 ```scpl
-ShowResult "Hello ScPL"
-ChooseFromMenu prompt="ScPL" items=["Getting Started", "View Documentation"]
-Case "Getting Started"
-    URL "https://docs.scpl.dev/gettingstarted"
-Case "View Documentation"
-    URL "https://docs.scpl.dev/"
-End Menu
-OpenURLs
-```
+# Simple notification shortcut
+ShowResult "Hello from ScPL on macOS Tahoe!"
 
-**→** Use the command-line tool or see the original [ScPL Editor](https://editor.scpl.dev/) (by pfgithub)
+# Use Apple Intelligence
+AskLLM model="Apple Intelligence" prompt="Explain what ScPL is in one sentence"
+ShowResult
+
+# Run a shell script
+RunShellScript shell="/bin/zsh" script="echo 'ScPL makes Shortcuts programming easy!'"
+ShowResult
+```
 
 ---
 
@@ -147,9 +147,9 @@ scpl input.scpl output.shortcut
 
 ### Documentation
 
-- 📚 [Original ScPL Documentation](https://docs.scpl.dev/) (by pfgithub)
-- 📖 [macOS Tahoe Actions Reference](./MACOS_TAHOE_UPDATES.md)
-- 🤝 [Contributing Guide](./CONTRIBUTING.md)
+- 📖 [macOS Tahoe Actions Reference](./MACOS_TAHOE_UPDATES.md) - All 22 new actions
+- 🤝 [Contributing Guide](./CONTRIBUTING.md) - Add your favorite app's actions
+- 📚 [Original ScPL Documentation](https://docs.scpl.dev/) - Core language reference (by pfgithub)
 
 ---
 
@@ -220,11 +220,11 @@ Thousands of apps have App Intents that could be added to scpl. See [CONTRIBUTIN
 
 | Resource | Description |
 |----------|-------------|
-| [ScPL Editor](https://editor.scpl.dev/) | Convert shortcuts to ScPL online |
-| [ScPL CLI](https://github.com/pfgithub/scpl-cli) | Command-line converter |
+| [npm Package](https://www.npmjs.com/package/scpl-macos-updated) | Install scpl-macos-updated |
 | [RoutineHub](https://routinehub.co/) | Shortcut sharing community |
 | [Shortcut Source Tool](https://routinehub.co/shortcut/5256/) | Developer tools for shortcuts |
 | [r/shortcuts](https://reddit.com/r/shortcuts) | Reddit community |
+| [Original ScPL](https://github.com/pfgithub/scpl) | Original scpl project by pfgithub |
 
 ---
 

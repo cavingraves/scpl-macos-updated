@@ -1,94 +1,4 @@
 {
-	"com.anthropic.claude.ClaudeAppIntentsExtension": {
-		"ActionClass": "WFAppIntentAction",
-		"ActionKeywords": [
-			"claude",
-			"anthropic",
-			"ai",
-			"chat"
-		],
-		"AppIdentifier": "com.anthropic.claude",
-		"Category": "Productivity",
-		"Description": {
-			"DescriptionSummary": "Sends a message to Claude and optionally shows the response."
-		},
-		"Name": "Ask Claude",
-		"Parameters": [
-			{
-				"Class": "WFTextInputParameter",
-				"Key": "message",
-				"Label": "Message",
-				"Placeholder": "Ask Claude a question"
-			},
-			{
-				"Class": "WFSwitchParameter",
-				"DefaultValue": true,
-				"Key": "ShowWhenRun",
-				"Label": "Show When Run"
-			}
-		],
-		"RequiredResources": [
-			{
-				"WFResourceClass": "WFAppInstalledResource",
-				"WFAppIdentifier": "com.anthropic.claude"
-			}
-		],
-		"Subcategory": "AI Assistants"
-	},
-	"com.apple.GenerativePlaygroundApp.GenerateImageIntent": {
-		"ActionClass": "WFAppIntentAction",
-		"ActionKeywords": [
-			"image",
-			"playground",
-			"generate",
-			"ai",
-			"apple intelligence"
-		],
-		"AppIdentifier": "com.apple.GenerativePlaygroundApp",
-		"Category": "Media",
-		"Description": {
-			"DescriptionSummary": "Generates an image using Apple's Image Playground."
-		},
-		"Name": "Generate Image",
-		"Parameters": [
-			{
-				"Class": "WFTextInputParameter",
-				"Key": "prompt",
-				"Label": "Prompt",
-				"Placeholder": "Describe the image to generate"
-			},
-			{
-				"Class": "WFEnumerationParameter",
-				"Items": [
-					"Animation",
-					"Illustration",
-					"Sketch"
-				],
-				"Key": "style",
-				"Label": "Style",
-				"DefaultValue": "Illustration"
-			},
-			{
-				"Class": "WFImageParameter",
-				"Key": "image",
-				"Label": "Reference Image",
-				"Description": "Optional image to use as reference"
-			}
-		],
-		"RequiredResources": [
-			{
-				"WFResourceClass": "WFAppleIntelligenceAccessResource"
-			}
-		],
-		"Subcategory": "Image Generation",
-		"Output": {
-			"Multiple": false,
-			"OutputName": "Generated Image",
-			"Types": [
-				"WFImageContentItem"
-			]
-		}
-	},
 	"com.apple.facetime.facetime": {
 		"ActionClass": "WFStartCallAction",
 		"ActionKeywords": [
@@ -238,29 +148,6 @@
 		],
 		"Subcategory": "Phone",
 		"WFStartCallActionType": "Phone"
-	},
-	"com.openai.chat.OpenVoiceModeIntent": {
-		"ActionClass": "WFAppIntentAction",
-		"ActionKeywords": [
-			"chatgpt",
-			"openai",
-			"voice",
-			"conversation"
-		],
-		"AppIdentifier": "com.openai.chat",
-		"Category": "Productivity",
-		"Description": {
-			"DescriptionSummary": "Opens ChatGPT in voice conversation mode."
-		},
-		"Name": "Open ChatGPT Voice Mode",
-		"Parameters": [],
-		"RequiredResources": [
-			{
-				"WFResourceClass": "WFAppInstalledResource",
-				"WFAppIdentifier": "com.openai.chat"
-			}
-		],
-		"Subcategory": "AI Assistants"
 	},
 	"com.ubercab.UberClient.requestuber": {
 		"ActionClass": "WFRequestUberAction",
@@ -553,7 +440,7 @@
 			},
 			{
 				"Class": "WFDateFieldParameter",
-				"Description": "Text representing the date this event begins. Examples: \u201ctomorrow at 2\u201d, \u201cJanuary 3\u201d, \u201c8:00pm\u201d",
+				"Description": "Text representing the date this event begins. Examples: “tomorrow at 2”, “January 3”, “8:00pm”",
 				"HintDisplayMode": "WhileProcessing",
 				"Key": "WFCalendarItemStartDate",
 				"Label": "Start Date",
@@ -620,7 +507,7 @@
 			},
 			{
 				"Class": "WFTextInputParameter",
-				"Description": "Text representing the date when the alert should occur. Examples: \u201ctonight at 7\u201d, \u201cMarch 7\u201d",
+				"Description": "Text representing the date when the alert should occur. Examples: “tonight at 7”, “March 7”",
 				"Key": "WFAlertCustomTime",
 				"Label": "Alert Time",
 				"Placeholder": "Tomorrow at 4pm",
@@ -736,7 +623,7 @@
 				"AllowsDecimalNumbers": true,
 				"Class": "WFNumberFieldParameter",
 				"DefaultValue": 300,
-				"Description": "The distance (in meters) from the provided location to consider \u201centering\u201d or \u201cleaving\u201d the location.",
+				"Description": "The distance (in meters) from the provided location to consider “entering” or “leaving” the location.",
 				"Key": "WFAlertLocationRadius",
 				"Label": "Radius",
 				"Placeholder": "in meters",
@@ -777,7 +664,7 @@
 			},
 			{
 				"Class": "WFDateFieldParameter",
-				"Description": "Text representing the date when the alert should occur. Examples: \u201ctonight at 7\u201d, \u201cMarch 7\u201d",
+				"Description": "Text representing the date when the alert should occur. Examples: “tonight at 7”, “March 7”",
 				"HintDisplayMode": "WhileProcessing",
 				"Key": "WFAlertCustomTime",
 				"Label": "Alert Time",
@@ -1046,7 +933,7 @@
 		],
 		"Category": "Scripting",
 		"Description": {
-			"DescriptionSummary": "Sets the device\u2019s Airplane Mode to on or off."
+			"DescriptionSummary": "Sets the device’s Airplane Mode to on or off."
 		},
 		"IconName": "AirplaneMode.png",
 		"InputPassthrough": true,
@@ -1429,80 +1316,6 @@
 			"WatchKit"
 		]
 	},
-	"is.workflow.actions.askllm": {
-		"ActionClass": "WFAskLLMAction",
-		"ActionKeywords": [
-			"ai",
-			"apple intelligence",
-			"chatgpt",
-			"llm",
-			"model",
-			"prompt"
-		],
-		"Category": "Scripting",
-		"Description": {
-			"DescriptionSummary": "Sends a prompt to Apple Intelligence or ChatGPT and returns the response."
-		},
-		"IconName": "Scripting.png",
-		"Input": {
-			"Multiple": false,
-			"Required": false,
-			"Types": [
-				"WFStringContentItem"
-			]
-		},
-		"Name": "Use Model",
-		"Output": {
-			"Multiple": false,
-			"OutputName": "Response",
-			"Types": [
-				"NSString"
-			]
-		},
-		"Parameters": [
-			{
-				"Class": "WFEnumerationParameter",
-				"Items": [
-					"Apple Intelligence",
-					"Apple Intelligence on Device",
-					"ChatGPT"
-				],
-				"Key": "WFLLMModel",
-				"Label": "Model",
-				"DefaultValue": "Apple Intelligence"
-			},
-			{
-				"Class": "WFTextInputParameter",
-				"Key": "WFLLMPrompt",
-				"Label": "Prompt",
-				"Multiline": true,
-				"Placeholder": "Ask a question or provide a task"
-			},
-			{
-				"Class": "WFSwitchParameter",
-				"DefaultValue": false,
-				"Key": "FollowUp",
-				"Label": "Follow-Up Question"
-			},
-			{
-				"Class": "WFEnumerationParameter",
-				"Items": [
-					"Text",
-					"Boolean",
-					"Number"
-				],
-				"Key": "WFGenerativeResultType",
-				"Label": "Result Type",
-				"DefaultValue": "Text"
-			}
-		],
-		"Subcategory": "Apple Intelligence",
-		"RequiredResources": [
-			{
-				"WFResourceClass": "WFAppleIntelligenceAccessResource"
-			}
-		]
-	},
 	"is.workflow.actions.avairyeditphoto": {
 		"ActionClass": "WFMarkupAction",
 		"ActionKeywords": [
@@ -1626,7 +1439,7 @@
 		],
 		"Category": "Scripting",
 		"Description": {
-			"DescriptionSummary": "Sets the device\u2019s Bluetooth to on or off."
+			"DescriptionSummary": "Sets the device’s Bluetooth to on or off."
 		},
 		"IconName": "Bluetooth.png",
 		"InputPassthrough": true,
@@ -1658,7 +1471,7 @@
 		],
 		"Category": "Scripting",
 		"Description": {
-			"DescriptionSummary": "Sets the device\u2019s Cellular Data to on or off."
+			"DescriptionSummary": "Sets the device’s Cellular Data to on or off."
 		},
 		"IconName": "CellularData.png",
 		"InputPassthrough": true,
@@ -1925,7 +1738,7 @@
 		],
 		"Category": "Scripting",
 		"Description": {
-			"DescriptionSummary": "Tests if any item passed as input matches the specified condition, and if so, runs the actions inside. Otherwise, the actions under \u201cOtherwise\u201d are run."
+			"DescriptionSummary": "Tests if any item passed as input matches the specified condition, and if so, runs the actions inside. Otherwise, the actions under “Otherwise” are run."
 		},
 		"IconName": "Scripting.png",
 		"Input": {
@@ -2002,32 +1815,6 @@
 			"Completion": "\n\t$0\notherwise\nend"
 		}
 	},
-	"is.workflow.actions.connecttoservers": {
-		"ActionClass": "WFConnectToServersAction",
-		"ActionKeywords": [
-			"server",
-			"network",
-			"smb",
-			"afp",
-			"connect"
-		],
-		"Category": "Documents",
-		"Description": {
-			"DescriptionSummary": "Connects to network servers."
-		},
-		"IconName": "Documents.png",
-		"Input": {
-			"Multiple": true,
-			"Required": true,
-			"Types": [
-				"WFURLContentItem"
-			]
-		},
-		"InputPassthrough": true,
-		"Name": "Connect to Servers",
-		"Parameters": [],
-		"Subcategory": "File Storage"
-	},
 	"is.workflow.actions.contacts": {
 		"ActionClass": "WFContactsAction",
 		"ActionKeywords": [
@@ -2060,49 +1847,6 @@
 			"WFContactAccessResource"
 		],
 		"Subcategory": "Contacts"
-	},
-	"is.workflow.actions.converttimezone": {
-		"ActionClass": "WFConvertTimezoneAction",
-		"ActionKeywords": [
-			"timezone",
-			"time",
-			"zone",
-			"convert",
-			"date"
-		],
-		"Category": "Calendar",
-		"Description": {
-			"DescriptionSummary": "Converts a date between time zones."
-		},
-		"IconName": "Date.png",
-		"Input": {
-			"Multiple": false,
-			"Required": true,
-			"Types": [
-				"WFDateContentItem"
-			]
-		},
-		"Name": "Convert Time Zone",
-		"Output": {
-			"Multiple": false,
-			"OutputName": "Adjusted Date",
-			"Types": [
-				"WFDateContentItem"
-			]
-		},
-		"Parameters": [
-			{
-				"Class": "WFTimeZonePickerParameter",
-				"Key": "WFSourceTimezone",
-				"Label": "Source Time Zone"
-			},
-			{
-				"Class": "WFTimeZonePickerParameter",
-				"Key": "WFDestinationTimezone",
-				"Label": "Target Time Zone"
-			}
-		],
-		"Subcategory": "Dates"
 	},
 	"is.workflow.actions.correctspelling": {
 		"ActionClass": "WFSpellCorrectAction",
@@ -2885,7 +2629,7 @@
 		],
 		"Category": "Scripting",
 		"Description": {
-			"DescriptionSummary": "Sets the device\u2019s Do Not Disturb to on or off"
+			"DescriptionSummary": "Sets the device’s Do Not Disturb to on or off"
 		},
 		"IconName": "DoNotDisturb.png",
 		"InputPassthrough": true,
@@ -3002,8 +2746,8 @@
 		],
 		"Category": "Documents",
 		"Description": {
-			"DescriptionNote": "In the iCloud picker, tap \u201cLocations\u201d to see document pickers from other apps.",
-			"DescriptionSummary": "Get files from iCloud Drive or Dropbox. Turn off \u201cShow Document Picker\u201d to specify a path to retrieve."
+			"DescriptionNote": "In the iCloud picker, tap “Locations” to see document pickers from other apps.",
+			"DescriptionSummary": "Get files from iCloud Drive or Dropbox. Turn off “Show Document Picker” to specify a path to retrieve."
 		},
 		"IconName": "Documents.png",
 		"LastModifiedDate": "2017-03-13T05:00:00.000Z",
@@ -3113,9 +2857,9 @@
 		],
 		"Category": "Documents",
 		"Description": {
-			"DescriptionNote": "In the iCloud picker, tap \u201cLocations\u201d to see document pickers from other apps.",
+			"DescriptionNote": "In the iCloud picker, tap “Locations” to see document pickers from other apps.",
 			"DescriptionResult": "The saved files",
-			"DescriptionSummary": "Save files to iCloud Drive or Dropbox. Turn off \u201cAsk Where to Save\u201d in order to specify a destination path."
+			"DescriptionSummary": "Save files to iCloud Drive or Dropbox. Turn off “Ask Where to Save” in order to specify a destination path."
 		},
 		"IconName": "Documents.png",
 		"Input": {
@@ -3876,7 +3620,7 @@
 			},
 			{
 				"Class": "WFEvernoteTagsTagFieldParameter",
-				"Description": "A list of tags to apply to the new note\u00a0(optional)",
+				"Description": "A list of tags to apply to the new note (optional)",
 				"Key": "WFEvernoteTags",
 				"Label": "Tags",
 				"Placeholder": "optional"
@@ -3994,36 +3738,6 @@
 			"UIKit"
 		]
 	},
-	"is.workflow.actions.file": {
-		"ActionClass": "WFFileAction",
-		"ActionKeywords": [
-			"file",
-			"path",
-			"reference"
-		],
-		"Category": "Documents",
-		"Description": {
-			"DescriptionSummary": "Gets a file from the specified path."
-		},
-		"IconName": "Documents.png",
-		"Name": "File",
-		"Output": {
-			"Multiple": false,
-			"OutputName": "File",
-			"Types": [
-				"WFGenericFileContentItem"
-			]
-		},
-		"Parameters": [
-			{
-				"Class": "WFTextInputParameter",
-				"Key": "WFFilePath",
-				"Label": "File Path",
-				"Placeholder": "/Users/username/Documents/file.txt"
-			}
-		],
-		"Subcategory": "File Management"
-	},
 	"is.workflow.actions.file.append": {
 		"ActionClass": "WFAppendFileAction",
 		"ActionKeywords": [
@@ -4065,7 +3779,7 @@
 			{
 				"AutocapitalizationType": "None",
 				"Class": "WFTextInputParameter",
-				"Description": "The name or path of the file to retrieve. For example, if you are appending a file called \u201cnotes.txt\u201d in a folder called \u201cPublic\u201d, use \u201c/Public/notes.txt\u201d.",
+				"Description": "The name or path of the file to retrieve. For example, if you are appending a file called “notes.txt” in a folder called “Public”, use “/Public/notes.txt”.",
 				"DisableAutocorrection": true,
 				"Key": "WFFilePath",
 				"KeyboardType": "WebSearch",
@@ -4116,7 +3830,7 @@
 			{
 				"AutocapitalizationType": "None",
 				"Class": "WFTextInputParameter",
-				"Description": "The path of the new folder. For example, if you want create \u201cAdventure\u201d in an existing folder titled \u201cPhotos\u201d, put \u201c/Photos/Adventure/\u201d",
+				"Description": "The path of the new folder. For example, if you want create “Adventure” in an existing folder titled “Photos”, put “/Photos/Adventure/”",
 				"DisableAutocorrection": true,
 				"Key": "WFFilePath",
 				"KeyboardType": "WebSearch",
@@ -4160,44 +3874,6 @@
 		],
 		"Subcategory": "File Storage"
 	},
-	"is.workflow.actions.file.getfoldercontents": {
-		"ActionClass": "WFGetFolderContentsAction",
-		"ActionKeywords": [
-			"folder",
-			"directory",
-			"contents",
-			"list"
-		],
-		"Category": "Documents",
-		"Description": {
-			"DescriptionSummary": "Gets the contents of the specified folder."
-		},
-		"IconName": "Documents.png",
-		"Input": {
-			"Multiple": false,
-			"Required": true,
-			"Types": [
-				"WFGenericFileContentItem"
-			]
-		},
-		"Name": "Get Folder Contents",
-		"Output": {
-			"Multiple": true,
-			"OutputName": "Files",
-			"Types": [
-				"WFGenericFileContentItem"
-			]
-		},
-		"Parameters": [
-			{
-				"Class": "WFSwitchParameter",
-				"DefaultValue": false,
-				"Key": "WFRecursive",
-				"Label": "Recursive"
-			}
-		],
-		"Subcategory": "File Management"
-	},
 	"is.workflow.actions.file.getlink": {
 		"ActionClass": "WFGetFileLinkAction",
 		"ActionKeywords": [
@@ -4225,177 +3901,6 @@
 		"OutputName": "Link to File",
 		"ShortName": "Get Link",
 		"Subcategory": "File Storage"
-	},
-	"is.workflow.actions.file.label": {
-		"ActionClass": "WFSetFileLabelAction",
-		"ActionKeywords": [
-			"label",
-			"tag",
-			"color",
-			"file"
-		],
-		"Category": "Documents",
-		"Description": {
-			"DescriptionSummary": "Sets the Finder label or tag on a file."
-		},
-		"IconName": "Documents.png",
-		"Input": {
-			"Multiple": true,
-			"Required": true,
-			"Types": [
-				"WFGenericFileContentItem"
-			]
-		},
-		"InputPassthrough": true,
-		"Name": "Set File Label",
-		"Parameters": [
-			{
-				"Class": "WFEnumerationParameter",
-				"Items": [
-					"None",
-					"Red",
-					"Orange",
-					"Yellow",
-					"Green",
-					"Blue",
-					"Purple",
-					"Gray"
-				],
-				"Key": "WFLabel",
-				"Label": "Label Color"
-			}
-		],
-		"Subcategory": "File Management"
-	},
-	"is.workflow.actions.file.move": {
-		"ActionClass": "WFMoveFileAction",
-		"ActionKeywords": [
-			"move",
-			"file",
-			"relocate"
-		],
-		"Category": "Documents",
-		"Description": {
-			"DescriptionSummary": "Moves the file to a new location."
-		},
-		"IconName": "Documents.png",
-		"Input": {
-			"Multiple": true,
-			"Required": true,
-			"Types": [
-				"WFGenericFileContentItem"
-			]
-		},
-		"Name": "Move File",
-		"Output": {
-			"Multiple": true,
-			"OutputName": "Moved File",
-			"Types": [
-				"WFGenericFileContentItem"
-			]
-		},
-		"Parameters": [
-			{
-				"Class": "WFTextInputParameter",
-				"Key": "WFDestinationPath",
-				"Label": "Destination",
-				"Placeholder": "/Users/username/Documents/"
-			}
-		],
-		"Subcategory": "File Management"
-	},
-	"is.workflow.actions.file.rename": {
-		"ActionClass": "WFRenameFileAction",
-		"ActionKeywords": [
-			"rename",
-			"file",
-			"name"
-		],
-		"Category": "Documents",
-		"Description": {
-			"DescriptionSummary": "Renames the file passed as input."
-		},
-		"IconName": "Documents.png",
-		"Input": {
-			"Multiple": false,
-			"Required": true,
-			"Types": [
-				"WFGenericFileContentItem"
-			]
-		},
-		"Name": "Rename File",
-		"Output": {
-			"Multiple": false,
-			"OutputName": "Renamed File",
-			"Types": [
-				"WFGenericFileContentItem"
-			]
-		},
-		"Parameters": [
-			{
-				"Class": "WFTextInputParameter",
-				"Key": "WFNewName",
-				"Label": "New Name",
-				"Placeholder": "NewFileName.txt"
-			}
-		],
-		"Subcategory": "File Management"
-	},
-	"is.workflow.actions.file.reveal": {
-		"ActionClass": "WFRevealFileAction",
-		"ActionKeywords": [
-			"reveal",
-			"show",
-			"finder",
-			"file"
-		],
-		"Category": "Documents",
-		"Description": {
-			"DescriptionSummary": "Shows the file in Finder."
-		},
-		"IconName": "Documents.png",
-		"Input": {
-			"Multiple": true,
-			"Required": true,
-			"Types": [
-				"WFGenericFileContentItem"
-			]
-		},
-		"InputPassthrough": true,
-		"Name": "Reveal in Finder",
-		"Parameters": [],
-		"Subcategory": "File Management"
-	},
-	"is.workflow.actions.file.select": {
-		"ActionClass": "WFSelectFileAction",
-		"ActionKeywords": [
-			"select",
-			"choose",
-			"pick",
-			"file"
-		],
-		"Category": "Documents",
-		"Description": {
-			"DescriptionSummary": "Prompts to select one or more files."
-		},
-		"IconName": "Documents.png",
-		"Name": "Select File",
-		"Output": {
-			"Multiple": true,
-			"OutputName": "Selected File",
-			"Types": [
-				"WFGenericFileContentItem"
-			]
-		},
-		"Parameters": [
-			{
-				"Class": "WFSwitchParameter",
-				"DefaultValue": false,
-				"Key": "WFMultipleFilesAllowed",
-				"Label": "Select Multiple"
-			}
-		],
-		"Subcategory": "File Management"
 	},
 	"is.workflow.actions.filter.articles": {
 		"ActionClass": "WFContentItemFilterAction",
@@ -4774,7 +4279,7 @@
 		"Category": "Health",
 		"CreationDate": "2015-07-03T07:00:00.000Z",
 		"Description": {
-			"DescriptionNote": "If you only see some but not all of your data in the results, make sure that \u201cAllow Shortcuts to read data\u201d is set to on in the Health app."
+			"DescriptionNote": "If you only see some but not all of your data in the results, make sure that “Allow Shortcuts to read data” is set to on in the Health app."
 		},
 		"Name": "Find Health Samples",
 		"RequiredResources": [
@@ -5232,29 +4737,6 @@
 		"WFContentItemClass": "WFReminderContentItem",
 		"WFContentItemDefaultProperty": "List",
 		"Parameters": []
-	},
-	"is.workflow.actions.finder.getselectedfiles": {
-		"ActionClass": "WFGetSelectedFilesAction",
-		"ActionKeywords": [
-			"finder",
-			"selected",
-			"files"
-		],
-		"Category": "Documents",
-		"Description": {
-			"DescriptionSummary": "Gets the files currently selected in Finder."
-		},
-		"IconName": "Documents.png",
-		"Name": "Get Selected Files",
-		"Output": {
-			"Multiple": true,
-			"OutputName": "Selected Files",
-			"Types": [
-				"WFGenericFileContentItem"
-			]
-		},
-		"Parameters": [],
-		"Subcategory": "File Management"
 	},
 	"is.workflow.actions.flashlight": {
 		"ACECommandClass": "SASettingSetFlashlight",
@@ -6318,7 +5800,7 @@
 		],
 		"Category": "Scripting",
 		"Description": {
-			"DescriptionSummary": "Returns the type of every item passed as input. For example, if a URL is passed, this action will return \u201cURL\u201d."
+			"DescriptionSummary": "Returns the type of every item passed as input. For example, if a URL is passed, this action will return “URL”."
 		},
 		"IconName": "Scripting.png",
 		"Input": {
@@ -6684,30 +6166,6 @@
 		},
 		"ShortName": "Get Emoji Name",
 		"SuggestedNever": true
-	},
-	"is.workflow.actions.getonscreencontent": {
-		"ActionClass": "WFGetOnScreenContentAction",
-		"ActionKeywords": [
-			"screen",
-			"content",
-			"ocr",
-			"text"
-		],
-		"Category": "Scripting",
-		"Description": {
-			"DescriptionSummary": "Gets text and content visible on screen."
-		},
-		"IconName": "Scripting.png",
-		"Name": "Get On-Screen Content",
-		"Output": {
-			"Multiple": false,
-			"OutputName": "On-Screen Content",
-			"Types": [
-				"WFStringContentItem"
-			]
-		},
-		"Parameters": [],
-		"Subcategory": "Screen"
 	},
 	"is.workflow.actions.getrichtextfromhtml": {
 		"ActionClass": "WFRichTextFromHTMLAction",
@@ -8781,7 +8239,7 @@
 		],
 		"Category": "Scripting",
 		"Description": {
-			"DescriptionSummary": "Sets the device\u2019s Low Power Mode to on or off."
+			"DescriptionSummary": "Sets the device’s Low Power Mode to on or off."
 		},
 		"IconName": "Battery.png",
 		"InputPassthrough": true,
@@ -9006,52 +8464,6 @@
 			"MemoryConstrained"
 		]
 	},
-	"is.workflow.actions.makespokenaudiofromtext": {
-		"ActionClass": "WFMakeSpokenAudioFromTextAction",
-		"ActionKeywords": [
-			"text",
-			"speech",
-			"tts",
-			"audio",
-			"voice"
-		],
-		"Category": "Media",
-		"Description": {
-			"DescriptionSummary": "Generates spoken audio from text using text-to-speech."
-		},
-		"IconName": "Media.png",
-		"Input": {
-			"Multiple": false,
-			"Required": true,
-			"Types": [
-				"WFStringContentItem"
-			]
-		},
-		"Name": "Make Spoken Audio from Text",
-		"Output": {
-			"Multiple": false,
-			"OutputName": "Spoken Audio",
-			"Types": [
-				"WFAVAssetContentItem"
-			]
-		},
-		"Parameters": [
-			{
-				"Class": "WFTextInputParameter",
-				"Key": "WFVoice",
-				"Label": "Voice",
-				"Placeholder": "Default"
-			},
-			{
-				"Class": "WFNumberParameter",
-				"DefaultValue": 1.0,
-				"Key": "WFRate",
-				"Label": "Rate",
-				"TextAlignment": "Right"
-			}
-		],
-		"Subcategory": "Audio"
-	},
 	"is.workflow.actions.makevideofromgif": {
 		"ActionClass": "WFMakeVideoFromGIFAction",
 		"ActionKeywords": [
@@ -9211,9 +8623,9 @@
 				"Items": [
 					"+",
 					"-",
-					"\u00d7",
-					"\u00f7",
-					"\u2026"
+					"×",
+					"÷",
+					"…"
 				],
 				"Key": "WFMathOperation",
 				"Label": "Operation"
@@ -9229,8 +8641,8 @@
 					"10^x",
 					"ln(x)",
 					"log(x)",
-					"\u221ax",
-					"\u221bx",
+					"√x",
+					"∛x",
 					"x!",
 					"sin(x)",
 					"cos(x)",
@@ -9242,7 +8654,7 @@
 				"RequiredResources": [
 					{
 						"WFParameterKey": "WFMathOperation",
-						"WFParameterValue": "\u2026",
+						"WFParameterValue": "…",
 						"WFResourceClass": "WFParameterRelationResource"
 					}
 				]
@@ -9257,7 +8669,7 @@
 					{
 						"WFParameterKey": "WFMathOperation",
 						"WFParameterRelation": "!=",
-						"WFParameterValue": "\u2026",
+						"WFParameterValue": "…",
 						"WFResourceClass": "WFParameterRelationResource"
 					}
 				],
@@ -9272,7 +8684,7 @@
 				"RequiredResources": [
 					{
 						"WFParameterKey": "WFMathOperation",
-						"WFParameterValue": "\u2026",
+						"WFParameterValue": "…",
 						"WFResourceClass": "WFParameterRelationResource"
 					},
 					{
@@ -9717,7 +9129,7 @@
 		"Parameters": [
 			{
 				"Class": "WFSwitchParameter",
-				"Description": "Turn this on if you want to open a callback URL that is not x-callback-url compliant and uses keys other than \u201cx-success\u201d, \u201cx-error\u201d, and \u201cx-cancel\u201d.",
+				"Description": "Turn this on if you want to open a callback URL that is not x-callback-url compliant and uses keys other than “x-success”, “x-error”, and “x-cancel”.",
 				"Key": "WFXCallbackCustomCallbackEnabled",
 				"Label": "Custom Callback"
 			},
@@ -9793,29 +9205,6 @@
 		"UnsupportedEnvironments": [
 			"Extension"
 		]
-	},
-	"is.workflow.actions.output": {
-		"ActionClass": "WFOutputAction",
-		"ActionKeywords": [
-			"output",
-			"return",
-			"result"
-		],
-		"Category": "Scripting",
-		"Description": {
-			"DescriptionSummary": "Sets the output of the shortcut."
-		},
-		"IconName": "Scripting.png",
-		"Input": {
-			"Multiple": true,
-			"Required": true,
-			"Types": [
-				"WFContentItem"
-			]
-		},
-		"Name": "Output",
-		"Parameters": [],
-		"Subcategory": "Outputs"
 	},
 	"is.workflow.actions.overlayimageonimage": {
 		"ActionClass": "WFOverlayImageAction",
@@ -11152,7 +10541,7 @@
 		"Category": "Scripting",
 		"Description": {
 			"DescriptionInput": "A list of items",
-			"DescriptionResult": "Every item passed to the \u201cEnd Repeat\u201d action",
+			"DescriptionResult": "Every item passed to the “End Repeat” action",
 			"DescriptionSummary": "Takes a list of items as input, and runs the contained actions once for each item in the list."
 		},
 		"IconName": "Scripting.png",
@@ -11324,44 +10713,6 @@
 		"ShortName": "Get RSS Feeds",
 		"Subcategory": "URLs"
 	},
-	"is.workflow.actions.runapplescript": {
-		"ActionClass": "WFRunAppleScriptAction",
-		"ActionKeywords": [
-			"applescript",
-			"script",
-			"automation"
-		],
-		"Category": "Scripting",
-		"Description": {
-			"DescriptionSummary": "Runs AppleScript code."
-		},
-		"IconName": "Scripting.png",
-		"Input": {
-			"Multiple": true,
-			"Required": false,
-			"Types": [
-				"WFContentItem"
-			]
-		},
-		"Name": "Run AppleScript",
-		"Output": {
-			"Multiple": false,
-			"OutputName": "AppleScript Result",
-			"Types": [
-				"NSString"
-			]
-		},
-		"Parameters": [
-			{
-				"Class": "WFTextInputParameter",
-				"Key": "Script",
-				"Label": "Script",
-				"Multiline": true,
-				"Placeholder": "display dialog \"Hello, World\""
-			}
-		],
-		"Subcategory": "AppleScript"
-	},
 	"is.workflow.actions.runextension": {
 		"ActionClass": "WFRunExtensionAction",
 		"ActionKeywords": [
@@ -11394,45 +10745,6 @@
 		"UserInterfaces": [
 			"UIKit"
 		]
-	},
-	"is.workflow.actions.runjavascriptforautomation": {
-		"ActionClass": "WFRunJavaScriptForAutomationAction",
-		"ActionKeywords": [
-			"jxa",
-			"javascript",
-			"script",
-			"automation"
-		],
-		"Category": "Scripting",
-		"Description": {
-			"DescriptionSummary": "Runs JavaScript for Automation (JXA) code."
-		},
-		"IconName": "Scripting.png",
-		"Input": {
-			"Multiple": true,
-			"Required": false,
-			"Types": [
-				"WFContentItem"
-			]
-		},
-		"Name": "Run JavaScript for Automation",
-		"Output": {
-			"Multiple": false,
-			"OutputName": "JXA Result",
-			"Types": [
-				"NSString"
-			]
-		},
-		"Parameters": [
-			{
-				"Class": "WFTextInputParameter",
-				"Key": "Script",
-				"Label": "Script",
-				"Multiline": true,
-				"Placeholder": "var app = Application.currentApplication();\nreturn \"Hello, World\";"
-			}
-		],
-		"Subcategory": "JavaScript"
 	},
 	"is.workflow.actions.runjavascriptonwebpage": {
 		"ActionClass": "WFRunJavaScriptOnWebPageAction",
@@ -11540,71 +10852,6 @@
 			"WFHomeKitAccessResource"
 		]
 	},
-	"is.workflow.actions.runshellscript": {
-		"ActionClass": "WFRunShellScriptAction",
-		"ActionKeywords": [
-			"bash",
-			"shell",
-			"script",
-			"terminal",
-			"command",
-			"zsh",
-			"python"
-		],
-		"Category": "Scripting",
-		"Description": {
-			"DescriptionSummary": "Runs a shell script using the specified interpreter."
-		},
-		"IconName": "Scripting.png",
-		"Input": {
-			"Multiple": true,
-			"Required": false,
-			"Types": [
-				"WFContentItem",
-				"WFStringContentItem"
-			]
-		},
-		"Name": "Run Shell Script",
-		"Output": {
-			"Multiple": false,
-			"OutputName": "Shell Script Result",
-			"Types": [
-				"NSString"
-			]
-		},
-		"Parameters": [
-			{
-				"Class": "WFEnumerationParameter",
-				"DefaultValue": "/bin/bash",
-				"Items": [
-					"/bin/bash",
-					"/bin/zsh",
-					"/usr/bin/python3",
-					"/bin/sh"
-				],
-				"Key": "Shell",
-				"Label": "Shell"
-			},
-			{
-				"Class": "WFTextInputParameter",
-				"Key": "Script",
-				"Label": "Script",
-				"Multiline": true,
-				"Placeholder": "#!/bin/bash\necho \"Hello, World\""
-			},
-			{
-				"Class": "WFEnumerationParameter",
-				"DefaultValue": "to stdin",
-				"Items": [
-					"to stdin",
-					"as arguments"
-				],
-				"Key": "InputMode",
-				"Label": "Pass Input"
-			}
-		],
-		"Subcategory": "Shell"
-	},
 	"is.workflow.actions.runsshscript": {
 		"ActionClass": "WFRunSSHScriptAction",
 		"ActionKeywords": [
@@ -11672,7 +10919,7 @@
 				"Class": "WFTextInputParameter",
 				"Key": "WFSSHPassword",
 				"Label": "Password",
-				"Placeholder": "\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022",
+				"Placeholder": "••••••••",
 				"SecureTextInput": true,
 				"TextContentType": "Password"
 			},
@@ -11753,56 +11000,6 @@
 			"UIKitWidget",
 			"WatchKit"
 		]
-	},
-	"is.workflow.actions.savefile": {
-		"ActionClass": "WFSaveFileAction",
-		"ActionKeywords": [
-			"save",
-			"write",
-			"file",
-			"export"
-		],
-		"Category": "Documents",
-		"Description": {
-			"DescriptionSummary": "Saves the input to a file at the specified location."
-		},
-		"IconName": "Documents.png",
-		"Input": {
-			"Multiple": false,
-			"Required": true,
-			"Types": [
-				"WFContentItem"
-			]
-		},
-		"Name": "Save File",
-		"Output": {
-			"Multiple": false,
-			"OutputName": "Saved File",
-			"Types": [
-				"WFGenericFileContentItem"
-			]
-		},
-		"Parameters": [
-			{
-				"Class": "WFTextInputParameter",
-				"Key": "WFFileDestinationPath",
-				"Label": "Destination Path",
-				"Placeholder": "/Users/username/Documents/output.txt"
-			},
-			{
-				"Class": "WFSwitchParameter",
-				"DefaultValue": true,
-				"Key": "WFAskWhereToSave",
-				"Label": "Ask Where to Save"
-			},
-			{
-				"Class": "WFSwitchParameter",
-				"DefaultValue": false,
-				"Key": "WFSaveFileOverwrite",
-				"Label": "Overwrite If File Exists"
-			}
-		],
-		"Subcategory": "File Storage"
 	},
 	"is.workflow.actions.savetocameraroll": {
 		"ActionClass": "WFSaveToCameraRollAction",
@@ -12716,49 +11913,6 @@
 		],
 		"Subcategory": "Content"
 	},
-	"is.workflow.actions.setname": {
-		"ActionClass": "WFSetNameAction",
-		"ActionKeywords": [
-			"name",
-			"rename",
-			"set"
-		],
-		"Category": "Scripting",
-		"Description": {
-			"DescriptionSummary": "Sets the name of the input item."
-		},
-		"IconName": "Scripting.png",
-		"Input": {
-			"Multiple": false,
-			"Required": true,
-			"Types": [
-				"WFContentItem"
-			]
-		},
-		"Name": "Set Name",
-		"Output": {
-			"Multiple": false,
-			"OutputName": "Named Item",
-			"Types": [
-				"WFContentItem"
-			]
-		},
-		"Parameters": [
-			{
-				"Class": "WFTextInputParameter",
-				"Key": "WFName",
-				"Label": "Name",
-				"Placeholder": "Item Name"
-			},
-			{
-				"Class": "WFSwitchParameter",
-				"DefaultValue": false,
-				"Key": "WFDontIncludeFileExtension",
-				"Label": "Don't Include File Extension"
-			}
-		],
-		"Subcategory": "X-Callback"
-	},
 	"is.workflow.actions.setvalueforkey": {
 		"ActionClass": "WFSetDictionaryValueAction",
 		"ActionKeywords": [
@@ -13126,7 +12280,7 @@
 			{
 				"Class": "WFSwitchParameter",
 				"DefaultValue": false,
-				"Description": "Enter Safari Reader mode if it\u2019s available for the given webpage.",
+				"Description": "Enter Safari Reader mode if it’s available for the given webpage.",
 				"Key": "WFEnterSafariReader",
 				"Label": "Enter Safari Reader"
 			}
@@ -13950,37 +13104,6 @@
 				"Label": "To"
 			}
 		]
-	},
-	"is.workflow.actions.text.trimwhitespace": {
-		"ActionClass": "WFTrimWhitespaceAction",
-		"ActionKeywords": [
-			"trim",
-			"whitespace",
-			"text",
-			"clean"
-		],
-		"Category": "Text",
-		"Description": {
-			"DescriptionSummary": "Removes leading and trailing whitespace from text."
-		},
-		"IconName": "Text.png",
-		"Input": {
-			"Multiple": true,
-			"Required": true,
-			"Types": [
-				"NSString"
-			]
-		},
-		"Name": "Trim Whitespace",
-		"Output": {
-			"Multiple": true,
-			"OutputName": "Trimmed Text",
-			"Types": [
-				"NSString"
-			]
-		},
-		"Parameters": [],
-		"Subcategory": "Text Editing"
 	},
 	"is.workflow.actions.timer.start": {
 		"ActionClass": "WFStartTimerAction",
@@ -15176,7 +14299,7 @@
 		],
 		"Category": "Scripting",
 		"Description": {
-			"DescriptionSummary": "Sets the device\u2019s Wi-Fi to on or off."
+			"DescriptionSummary": "Sets the device’s Wi-Fi to on or off."
 		},
 		"IconName": "Wi-Fi.png",
 		"InputPassthrough": true,
