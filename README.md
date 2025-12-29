@@ -1,4 +1,15 @@
- Note that ScPL has not been updated to support the new iOS 13/14+ actions. If you are looking for a text shortcuts language, consider Jellycuts. 
+## macOS Tahoe Updates 🎉
+
+This fork adds **18 new actions** for macOS Tahoe, including:
+- Shell script execution (`runshellscript`, `runapplescript`, `runjavascriptforautomation`)
+- File operations (`file.rename`, `file.move`, `file.reveal`, and more)
+- System utilities (`getonscreencontent`, `connecttoservers`)
+
+See [MACOS_TAHOE_UPDATES.md](./MACOS_TAHOE_UPDATES.md) for the complete list.
+
+---
+
+**Note**: The original ScPL repository has not been updated since July 2021. This fork extends it with macOS-specific actions from Tahoe (macOS 16.x).
 
 <p align="center">
   <a href="" rel="noopener">
