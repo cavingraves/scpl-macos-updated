@@ -61,14 +61,18 @@ Add to `~/.claude.json` for global configuration:
 {
   "mcpServers": {
     "scpl-shortcuts": {
+      "type": "stdio",
       "command": "npx",
-      "args": ["scpl-updated-mcp-server"]
+      "args": [
+        "-y",
+        "scpl-updated-mcp-server"
+      ]
     }
   }
 }
 ```
 
-Or for project-specific config, add to `.claude/mcp.json` in your project directory.
+Or for project-specific config, add to `.claude/mcp.json` in your project directory with the same format.
 
 #### Claude Desktop
 
