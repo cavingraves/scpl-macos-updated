@@ -1,13 +1,26 @@
 {
-	"name": "scpl",
-	"version": "1.14.0",
+	"name": "scpl-macos-updated",
+	"version": "2.0.0",
+	"description": "Shortcuts Programming Language - Updated for macOS Tahoe with 22 new actions including Apple Intelligence, shell scripting, and file operations",
 	"main": "built/index.js",
 	"types": "built/index.d.ts",
 	"license": "MIT",
-	"homepage": "https://pfgithub.github.io/shortcutslang",
+	"homepage": "https://github.com/cavingraves/scpl-macos-updated",
 	"bugs": {
-		"url": "https://github.com/pfgithub/shortcutslang"
+		"url": "https://github.com/cavingraves/scpl-macos-updated/issues"
 	},
+	"keywords": [
+		"shortcuts",
+		"ios",
+		"macos",
+		"tahoe",
+		"apple-intelligence",
+		"automation",
+		"scpl",
+		"shortcut-language",
+		"apple-silicon",
+		"intel"
+	],
 	"scripts": {
 		"docs": "tsc && node ./built/src/GenDocs",
 		"test": "jest --no-cache --coverage",
@@ -20,7 +33,14 @@
 		"email": "omegariisthebest@gmail.com",
 		"url": "https://pfgithub.github.io/"
 	},
-	"repository": "github:pfgithub/shortcutslang",
+	"contributors": [
+		{
+			"name": "Cavin Graves",
+			"email": "193660148+cavingraves@users.noreply.github.com",
+			"url": "https://github.com/cavingraves"
+		}
+	],
+	"repository": "github:cavingraves/scpl-macos-updated",
 	"files": [
 		"/man",
 		"/built/index.js",

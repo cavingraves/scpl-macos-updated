@@ -1,0 +1,24 @@
+# Development files
+/test
+/examples_mac
+*.test.ts
+*.spec.ts
+.git
+.gitignore
+*.md
+!README.md
+
+# Build artifacts
+*.log
+*.tsbuildinfo
+coverage/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
