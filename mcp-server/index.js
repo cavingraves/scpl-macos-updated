@@ -9,7 +9,7 @@ import {
   ReadResourceRequestSchema,
 } from "@modelcontextprotocol/sdk/types.js";
 import pkg from "scpl-macos-updated";
-const { convert } = pkg;
+const { parse } = pkg;
 import { writeFileSync, readFileSync, existsSync, mkdirSync, appendFileSync } from "fs";
 import { join, dirname } from "path";
 import { homedir } from "os";
@@ -492,9 +492,8 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
     if (name === "create_shortcut") {
       const { scpl_code, output_name, output_dir } = args;
 
-      const shortcutBuffer = convert(scpl_code, {
+      const shortcutBuffer = parse(scpl_code, {
         makePlist: true,
-        makeShortcut: true,
       });
 
       const dir = output_dir || join(homedir(), "Documents");
@@ -516,7 +515,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
       const { scpl_code } = args;
 
       try {
-        convert(scpl_code, { makePlist: false, makeShortcut: false });
+        parse(scpl_code, {});
         return { content: [{ type: "text", text: "✅ ScPL code is valid!" }] };
       } catch (error) {
         return { content: [{ type: "text", text: `❌ Invalid: ${error.message}` }], isError: true };
