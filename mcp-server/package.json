@@ -1,7 +1,7 @@
 {
   "name": "scpl-updated-mcp-server",
   "version": "1.0.0",
-  "description": "MCP server for creating macOS Shortcuts using ScPL (macOS Tahoe updated fork)",
+  "description": "AI-powered Apple Shortcuts creation with Claude Code! Generate macOS shortcuts using natural language. 493 actions available. MCP server for text-based shortcut programming. Vibe code your automation workflows.",
   "type": "module",
   "main": "index.js",
   "bin": {

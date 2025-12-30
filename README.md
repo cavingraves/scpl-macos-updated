@@ -5,7 +5,11 @@
 <h1 align="center">scpl-macos-updated</h1>
 
 <p align="center">
-  <b>Shortcuts Programming Language • Updated for macOS Tahoe 26.x</b>
+  <b>Code Your Apple Shortcuts • Vibe-Based Automation • AI-Powered Creation</b>
+</p>
+
+<p align="center">
+  Write macOS Shortcuts in text instead of clicking • Natural language programming for Apple automation
 </p>
 
 <div align="center">
@@ -19,6 +23,8 @@
 
 > **💻 Intel Mac Compatible!** ScPL and most actions work on both Intel and Apple Silicon Macs.
 > Only Apple Intelligence actions (Use Model, Image Playground) require Apple Silicon.
+
+**🔍 Find what you need:** Apple Shortcuts automation • Shortcuts scripting language • Program shortcuts with code • Text-based shortcut builder • AI shortcut generator • Automate macOS with Claude • Vibe code your workflows • Natural language automation • Voice memo automation • Dark mode scheduling • Window manager shortcuts • Pomodoro timer automation • Accessibility automation • HomeKit scripting
 
 ---
 
@@ -53,14 +59,20 @@ Complete integration with Apple Notes app:
 
 ---
 
-## 📊 What is ScPL?
+## 📊 What is ScPL? (Code Your Shortcuts!)
 
-ScPL is a **programming language for iOS/macOS Shortcuts** that lets you write shortcuts in text instead of dragging and dropping blocks. Perfect for:
+**Tired of clicking through the Shortcuts app?** ScPL is a **text-based programming language for Apple Shortcuts** that lets you **vibe code your automation** instead of dragging blocks around.
 
-- ✨ **Large shortcuts** - Copy/paste actions, work without scrolling
-- 🔧 **Version control** - Track changes with Git
-- ⚡ **Speed** - Type actions faster than dragging
-- 🔍 **Debugging** - See your entire shortcut at once
+Think of it as: **Markdown for Shortcuts** • **Code instead of clicks** • **AI-powered shortcut generation**
+
+Perfect for:
+
+- ✨ **Large shortcuts** - Copy/paste actions, work without scrolling like a pro
+- 🔧 **Version control** - Track your automation in Git like real code
+- ⚡ **Speed** - Type workflows 10x faster than GUI clicking
+- 🔍 **Debugging** - See your entire shortcut logic at once
+- 🤖 **AI creation** - Describe shortcuts in plain English, get working code
+- 🎯 **Power users** - Build complex automations without RSI from clicking
 
 ### Example
 
@@ -76,6 +88,33 @@ ShowResult
 RunShellScript shell="/bin/zsh" script="echo 'ScPL makes Shortcuts programming easy!'"
 ShowResult
 ```
+
+### Why Choose Text-Based Shortcuts?
+
+**Real automation workflow scenarios:**
+
+🎯 **"I want to automate my morning routine"**
+→ Dark mode off, VPN on, start timer, open calendar, create voice memo for daily notes
+
+⏱️ **"I need a Pomodoro timer with logging"**
+→ 25-min timer, log work sessions, auto dark mode during breaks
+
+📸 **"Batch process screenshots with AI"**
+→ Take screenshot, AI extract text, save to organized folders, share via clipboard
+
+🎤 **"Voice memo workflow"**
+→ Record, auto-transcribe, tag with location/time, save to dated folders
+
+🪟 **"Window management layouts"**
+→ Arrange apps in specific positions, resize windows, switch between workspace configs
+
+🤖 **"AI-powered content creation"**
+→ Get clipboard, Claude/ChatGPT improve text, format output, copy back
+
+💻 **"DevOps automation on Mac"**
+→ Git status check, run tests, open terminal, notify on completion
+
+All of this **in text you can copy/paste/share/version-control** instead of clicking through menus!
 
 ---
 
