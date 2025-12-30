@@ -19,7 +19,117 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 // ============================================================================
-// AUTO-SETUP: Run with --setup to install everything automatically
+// HELP
+// ============================================================================
+if (process.argv.includes("--help") || process.argv.includes("-h")) {
+  console.log(`
+ScPL Updated MCP Server - Create macOS Shortcuts with AI
+
+USAGE:
+  npx scpl-updated-mcp-server [OPTIONS]
+
+OPTIONS:
+  --setup         Auto-install for Claude Code (recommended)
+  --setup-codex   Auto-install for OpenAI Codex CLI
+  --help, -h      Show this help message
+
+EXAMPLES:
+  npx scpl-updated-mcp-server --setup        # Install for Claude Code
+  npx scpl-updated-mcp-server --setup-codex  # Install for Codex
+
+After setup, restart your AI coding tool and ask:
+  "Create a shortcut that starts a timer and plays a sound"
+`);
+  process.exit(0);
+}
+
+// ============================================================================
+// CODEX SETUP: Run with --setup-codex for OpenAI Codex CLI
+// ============================================================================
+if (process.argv.includes("--setup-codex")) {
+  console.log("🚀 Setting up ScPL Shortcuts for Codex...\n");
+
+  const codexConfigPath = join(homedir(), ".codex", "config.toml");
+  const agentsPath = join(homedir(), ".codex", "AGENTS.md");
+
+  // Step 1: Add MCP server to ~/.codex/config.toml
+  console.log("📝 Step 1: Adding MCP server to ~/.codex/config.toml...");
+  try {
+    let config = "";
+    if (existsSync(codexConfigPath)) {
+      config = readFileSync(codexConfigPath, "utf-8");
+    }
+
+    // Check if already configured
+    if (config.includes('[mcp_servers."scpl-shortcuts"]') || config.includes('[mcp_servers.scpl-shortcuts]')) {
+      console.log("   ⏭️  Already configured, skipping...\n");
+    } else {
+      const tomlBlock = `
+[mcp_servers.scpl-shortcuts]
+command = "npx"
+args = ["-y", "scpl-updated-mcp-server"]
+startup_timeout_sec = 60.0
+`;
+      writeFileSync(codexConfigPath, config + tomlBlock);
+      console.log("   ✅ MCP server added!\n");
+    }
+  } catch (error) {
+    console.error("   ❌ Failed to update config:", error.message);
+    console.log("   Add this to ~/.codex/config.toml manually:");
+    console.log(`
+[mcp_servers.scpl-shortcuts]
+command = "npx"
+args = ["-y", "scpl-updated-mcp-server"]
+startup_timeout_sec = 60.0
+`);
+  }
+
+  // Step 2: Add instructions to AGENTS.md
+  console.log("📁 Step 2: Adding skill instructions to AGENTS.md...");
+  try {
+    let agents = "";
+    if (existsSync(agentsPath)) {
+      agents = readFileSync(agentsPath, "utf-8");
+    }
+
+    if (agents.includes("## ScPL Shortcuts")) {
+      console.log("   ⏭️  Already in AGENTS.md, skipping...\n");
+    } else {
+      const agentBlock = `
+
+## ScPL Shortcuts
+
+You have access to the ScPL MCP server with 493 actions for creating macOS Shortcuts.
+
+**Tools available:**
+- \`create_shortcut\` - Generate a .shortcut file from ScPL code
+- \`validate_scpl\` - Check if ScPL code is valid
+- \`list_actions\` - Search available actions
+
+**ScPL syntax example:**
+\`\`\`scpl
+Text "Hello"
+AskLLM model="Apple Intelligence" prompt="Make it fun"
+ShowResult
+\`\`\`
+
+When user asks to create a shortcut, write ScPL code, validate it, then create the file.
+`;
+      writeFileSync(agentsPath, agents + agentBlock);
+      console.log("   ✅ Instructions added!\n");
+    }
+  } catch (error) {
+    console.error("   ❌ Failed to update AGENTS.md:", error.message, "\n");
+  }
+
+  console.log("🎉 Setup complete! Restart Codex to use the shortcuts tools.\n");
+  console.log("Usage: Just ask Codex to create a shortcut!");
+  console.log('  Example: "Create a shortcut that starts a timer and plays a sound"\n');
+  process.exit(0);
+}
+
+// ============================================================================
+// CLAUDE CODE SETUP: Run with --setup to install everything automatically
 // ============================================================================
 if (process.argv.includes("--setup")) {
   console.log("🚀 Setting up ScPL Shortcuts for Claude Code...\n");

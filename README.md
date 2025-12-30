@@ -195,18 +195,19 @@ scpl input.scpl output.shortcut
 
 ### AI-Powered Shortcut Creation 🤖
 
-Create shortcuts using natural language with Claude Code! One command installs everything:
+Create shortcuts using natural language! One command installs everything:
 
+**For Claude Code:**
 ```bash
 npx scpl-updated-mcp-server --setup
 ```
 
-That's it! This automatically:
-- ✅ Adds the MCP server to your Claude Code config
-- ✅ Installs the plugin with the skill file
-- ✅ Registers everything so it just works
+**For OpenAI Codex:**
+```bash
+npx scpl-updated-mcp-server --setup-codex
+```
 
-**Restart Claude Code**, then just ask:
+That's it! This automatically configures everything. **Restart your AI tool**, then just ask:
 
 > "Create a shortcut that gets clipboard text, asks ChatGPT to summarize it, and shows the result"
 
