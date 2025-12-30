@@ -21,7 +21,7 @@
 
 </div>
 
-> **💻 Intel Mac Compatible!** ScPL and most actions work on both Intel and Apple Silicon Macs.
+> **💻 Intel Mac Compatible!** ScPL-macOS-updated and most actions work on both Intel and Apple Silicon Macs.
 > Only Apple Intelligence actions (Use Model, Image Playground) require Apple Silicon.
 
 **🔍 Find what you need:** Apple Shortcuts automation • Shortcuts scripting language • Program shortcuts with code • Text-based shortcut builder • AI shortcut generator • Automate macOS with Claude • Vibe code your workflows • Natural language automation • Voice memo automation • Dark mode scheduling • Window manager shortcuts • Pomodoro timer automation • Accessibility automation • HomeKit scripting
@@ -59,9 +59,9 @@ Complete integration with Apple Notes app:
 
 ---
 
-## 📊 What is ScPL? (Code Your Shortcuts!)
+## 📊 What is ScPL-macOS-updated? (Code Your Shortcuts!)
 
-**Tired of clicking through the Shortcuts app?** ScPL is a **text-based programming language for Apple Shortcuts** that lets you **vibe code your automation** instead of dragging blocks around.
+**Tired of clicking through the Shortcuts app?** ScPL-macOS-updated is a **text-based programming language for Apple Shortcuts** that lets you **vibe code your automation** instead of dragging blocks around.
 
 Think of it as: **Markdown for Shortcuts** • **Code instead of clicks** • **AI-powered shortcut generation**
 
@@ -155,7 +155,7 @@ The ultimate shortcut developer tool for viewing, editing, and analyzing shortcu
    - Copy the identifier (e.g., `"is.workflow.actions.askllm"`)
    - Note the parameters under `"WFWorkflowActionParameters"`
 
-4. **Submit to scpl:**
+4. **Submit to ScPL-macOS-updated:**
    - See [CONTRIBUTING.md](./CONTRIBUTING.md) for how to add actions
    - Submit a PR with your action definition
 
@@ -260,7 +260,7 @@ Claude will write the ScPL code, validate it, and generate the .shortcut file fo
 
 **Want to add your favorite app's actions?** We need your help!
 
-Thousands of apps have App Intents that could be added to scpl. See [CONTRIBUTING.md](./CONTRIBUTING.md) for:
+Thousands of apps have App Intents that could be added to ScPL-macOS-updated. See [CONTRIBUTING.md](./CONTRIBUTING.md) for:
 - 📝 How to extract action identifiers with Shortcut Source Tool
 - 🔧 How to create action definitions
 - 🚀 How to submit a PR
