@@ -1,6 +1,6 @@
 ---
-name: ScPL Shortcuts
-description: Create macOS Shortcuts using ScPL code. Use tools: create_shortcut, validate_scpl, list_actions. Write shortcuts as text instead of dragging blocks.
+name: "ScPL Shortcuts"
+description: "Create macOS Shortcuts using ScPL code. Use tools: create_shortcut, validate_scpl, list_actions. Write shortcuts as text instead of dragging blocks."
 ---
 
 # ScPL Shortcuts Skill
