@@ -8,7 +8,8 @@ import {
   ListResourcesRequestSchema,
   ReadResourceRequestSchema,
 } from "@modelcontextprotocol/sdk/types.js";
-import { convert } from "scpl-macos-updated";
+import pkg from "scpl-macos-updated";
+const { convert } = pkg;
 import { writeFileSync, readFileSync } from "fs";
 import { join } from "path";
 import { homedir } from "os";
