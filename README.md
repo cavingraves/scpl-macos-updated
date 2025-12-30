@@ -207,7 +207,17 @@ npx scpl-updated-mcp-server --setup
 npx scpl-updated-mcp-server --setup-codex
 ```
 
-That's it! This automatically configures everything. **Restart your AI tool**, then just ask:
+**For Codex forks (just-every/code, etc.):**
+```bash
+npx scpl-updated-mcp-server --setup-codex=$CODE_HOME
+```
+
+**Multiple tools at once:**
+```bash
+npx scpl-updated-mcp-server --setup --setup-codex --setup-codex=$CODE_HOME
+```
+
+That's it! **Restart your AI tool**, then just ask:
 
 > "Create a shortcut that gets clipboard text, asks ChatGPT to summarize it, and shows the result"
 
