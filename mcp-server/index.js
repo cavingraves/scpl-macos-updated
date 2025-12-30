@@ -29,13 +29,19 @@ USAGE:
   npx scpl-updated-mcp-server [OPTIONS]
 
 OPTIONS:
-  --setup         Auto-install for Claude Code (recommended)
-  --setup-codex   Auto-install for OpenAI Codex CLI
-  --help, -h      Show this help message
+  --setup                    Auto-install for Claude Code
+  --setup-codex              Auto-install for OpenAI Codex CLI (~/.codex)
+  --setup-codex=<dir>        Auto-install for Codex forks with custom directory
+  --help, -h                 Show this help message
 
 EXAMPLES:
-  npx scpl-updated-mcp-server --setup        # Install for Claude Code
-  npx scpl-updated-mcp-server --setup-codex  # Install for Codex
+  npx scpl-updated-mcp-server --setup
+  npx scpl-updated-mcp-server --setup-codex
+  npx scpl-updated-mcp-server --setup-codex=~/.code
+  npx scpl-updated-mcp-server --setup-codex=/path/to/code_config
+
+For Codex forks like just-every/code that use CODE_HOME or CODEX_HOME:
+  npx scpl-updated-mcp-server --setup-codex=$CODE_HOME
 
 After setup, restart your AI coding tool and ask:
   "Create a shortcut that starts a timer and plays a sound"
@@ -44,16 +50,29 @@ After setup, restart your AI coding tool and ask:
 }
 
 // ============================================================================
-// CODEX SETUP: Run with --setup-codex for OpenAI Codex CLI
+// CODEX SETUP: Run with --setup-codex or --setup-codex=<dir>
 // ============================================================================
-if (process.argv.includes("--setup-codex")) {
-  console.log("🚀 Setting up ScPL Shortcuts for Codex...\n");
+const codexArg = process.argv.find(arg => arg.startsWith("--setup-codex"));
+if (codexArg) {
+  // Check for custom directory: --setup-codex=/path/to/dir or --setup-codex=~/custom
+  let codexDir = join(homedir(), ".codex"); // default
 
-  const codexConfigPath = join(homedir(), ".codex", "config.toml");
-  const skillDir = join(homedir(), ".codex", "skills", "scpl-shortcuts");
+  if (codexArg.includes("=")) {
+    let customDir = codexArg.split("=")[1];
+    // Expand ~ to home directory
+    if (customDir.startsWith("~")) {
+      customDir = customDir.replace("~", homedir());
+    }
+    codexDir = customDir;
+  }
 
-  // Step 1: Add MCP server to ~/.codex/config.toml
-  console.log("📝 Step 1: Adding MCP server to ~/.codex/config.toml...");
+  console.log(`🚀 Setting up ScPL Shortcuts for Codex at ${codexDir}...\n`);
+
+  const codexConfigPath = join(codexDir, "config.toml");
+  const skillDir = join(codexDir, "skills", "scpl-shortcuts");
+
+  // Step 1: Add MCP server to config.toml
+  console.log(`📝 Step 1: Adding MCP server to ${codexConfigPath}...`);
   try {
     let config = "";
     if (existsSync(codexConfigPath)) {
@@ -84,8 +103,8 @@ startup_timeout_sec = 60.0
 `);
   }
 
-  // Step 2: Install skill to ~/.codex/skills/scpl-shortcuts/
-  console.log("📁 Step 2: Installing skill to ~/.codex/skills/scpl-shortcuts/...");
+  // Step 2: Install skill
+  console.log(`📁 Step 2: Installing skill to ${skillDir}...`);
   try {
     mkdirSync(skillDir, { recursive: true });
 
