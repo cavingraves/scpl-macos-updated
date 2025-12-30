@@ -7,3 +7,6 @@ test.shortcut
 test.xml
 built/*
 coverage
+
+# Comprehensive actions reference (too large for repo)
+../pretty much every action I have except niche apps.txt

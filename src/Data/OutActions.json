@@ -9730,7 +9730,8 @@
 		"ActionClass": "WFSocialAction",
 		"AppIdentifier": "com.facebook.Facebook",
 		"ConvertsAnimatedImagesToVideo": true,
-		"ICActionIdentifier": "com.facebook.Facebook.ShareExtension"
+		"ICActionIdentifier": "com.facebook.Facebook.ShareExtension",
+		"Name": "Post on Facebook"
 	},
 	"is.workflow.actions.previewdocument": {
 		"ActionClass": "WFQuickLookAction",
@@ -14602,5 +14603,1115 @@
 			}
 		],
 		"ShortName": "Add Task"
+	},
+	"com.apple.Notes.CreateChecklistItemLinkAction": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"AppIdentifier": "com.apple.Notes",
+		"Name": "Append Checklist Item"
+	},
+	"com.apple.Notes.ShowQuickNoteIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"AppIdentifier": "com.apple.Notes",
+		"Name": "Show Quick Note"
+	},
+	"com.apple.Notes.AddFileAttachmentLinkAction": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"AppIdentifier": "com.apple.Notes",
+		"Name": "Add File"
+	},
+	"com.apple.Notes.RenameFolderLinkAction": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"AppIdentifier": "com.apple.Notes",
+		"Name": "Rename Folder"
+	},
+	"com.apple.Notes.OpenTagLinkAction": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"AppIdentifier": "com.apple.Notes",
+		"Name": "Open Tag"
+	},
+	"com.apple.Notes.OpenAccountLinkAction": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"AppIdentifier": "com.apple.Notes",
+		"Name": "Open Account"
+	},
+	"com.apple.Notes.DeleteTagsLinkAction": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"AppIdentifier": "com.apple.Notes",
+		"Name": "Delete Tags"
+	},
+	"com.apple.Notes.DeleteFoldersLinkAction": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"AppIdentifier": "com.apple.Notes",
+		"Name": "Delete Folders"
+	},
+	"com.apple.Notes.CreateTagLinkAction": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"AppIdentifier": "com.apple.Notes",
+		"Name": "Create Tag"
+	},
+	"com.apple.Notes.CreateFolderLinkAction": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"AppIdentifier": "com.apple.Notes",
+		"Name": "Create Folder"
+	},
+	"com.apple.Notes.RemoveTagsFromNotesLinkAction": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"AppIdentifier": "com.apple.Notes",
+		"Name": "Remove Tags from Notes"
+	},
+	"com.apple.Notes.CloseNoteLinkAction": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"AppIdentifier": "com.apple.Notes",
+		"Name": "Close Note"
+	},
+	"com.apple.Notes.MoveNotesToFolderLinkAction": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"AppIdentifier": "com.apple.Notes",
+		"Name": "Move Notes to Folder"
+	},
+	"com.apple.Notes.AddTagsToNotesLinkAction": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"AppIdentifier": "com.apple.Notes",
+		"Name": "Add Tags to Notes"
+	},
+	"com.apple.Notes.ICNotesFolderIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"AppIdentifier": "com.apple.Notes",
+		"Name": "Show Notes Folder"
+	},
+	"com.apple.Notes.OpenAppLocationLinkAction": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"AppIdentifier": "com.apple.Notes",
+		"Name": "Open Notes View"
+	},
+	"com.apple.Notes.CloseAppLocationLinkAction": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"AppIdentifier": "com.apple.Notes",
+		"Name": "Close Notes View"
+	},
+	"com.apple.Notes.ChangeSettingLinkAction": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"AppIdentifier": "com.apple.Notes",
+		"Name": "Change Notes Setting"
+	},
+	"com.apple.Notes.PinNotesLinkAction": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"AppIdentifier": "com.apple.Notes",
+		"Name": "Pin Notes"
+	},
+	"com.apple.Notes.DeleteNotesLinkAction": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"AppIdentifier": "com.apple.Notes",
+		"Name": "Delete Notes"
+	},
+	"at.EternalStorms.Yoink-demo.ESSAddFilesToYoinkIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Add Files To Yoink",
+		"AppIdentifier": "at.EternalStorms.Yoink-demo"
+	},
+	"at.EternalStorms.Yoink-demo.ESSRemoveAllFilesIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Remove All Files",
+		"AppIdentifier": "at.EternalStorms.Yoink-demo"
+	},
+	"at.EternalStorms.Yoink-demo.ESSSaveClipboardContentsIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Save Clipboard Contents",
+		"AppIdentifier": "at.EternalStorms.Yoink-demo"
+	},
+	"at.EternalStorms.Yoink-demo.ESSSelectFilesIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Select Files",
+		"AppIdentifier": "at.EternalStorms.Yoink-demo"
+	},
+	"com.apple.clock.AddWorldClockIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Add World Clock",
+		"AppIdentifier": "com.apple.clock"
+	},
+	"com.apple.clock.DeleteAlarmIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Delete Alarm",
+		"AppIdentifier": "com.apple.clock"
+	},
+	"com.apple.clock.LapStopwatchIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Lap Stopwatch",
+		"AppIdentifier": "com.apple.clock"
+	},
+	"com.apple.clock.OpenTab": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Open Tab",
+		"AppIdentifier": "com.apple.clock"
+	},
+	"com.apple.clock.RemoveWorldClockIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Remove World Clock",
+		"AppIdentifier": "com.apple.clock"
+	},
+	"com.apple.clock.ResetStopwatchIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Reset Stopwatch",
+		"AppIdentifier": "com.apple.clock"
+	},
+	"com.apple.clock.StartStopwatchIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Start Stopwatch",
+		"AppIdentifier": "com.apple.clock"
+	},
+	"com.apple.clock.StopStopwatchIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Stop Stopwatch",
+		"AppIdentifier": "com.apple.clock"
+	},
+	"com.apple.freeform.CRLCreateBoardIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Create Board",
+		"AppIdentifier": "com.apple.freeform"
+	},
+	"com.apple.freeform.CRLDeleteBoardIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Delete Board",
+		"AppIdentifier": "com.apple.freeform"
+	},
+	"com.apple.freeform.CRLInsertFilesToBoardIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Insert Files To Board",
+		"AppIdentifier": "com.apple.freeform"
+	},
+	"com.apple.freeform.CRLOpenBoardIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Open Board",
+		"AppIdentifier": "com.apple.freeform"
+	},
+	"com.apple.freeform.CRLUpdateBoardIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Update Board",
+		"AppIdentifier": "com.apple.freeform"
+	},
+	"com.apple.helpviewer.CollectionOpenIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Collection Open",
+		"AppIdentifier": "com.apple.helpviewer"
+	},
+	"com.apple.Home.ToggleIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Toggle",
+		"AppIdentifier": "com.apple.Home"
+	},
+	"com.apple.HydraUSDAppIntents.ConvertToUSDZ": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Convert To USDZ",
+		"AppIdentifier": "com.apple.HydraUSDAppIntents"
+	},
+	"com.apple.iBooksX.BookAppEntity": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Book App Entity",
+		"AppIdentifier": "com.apple.iBooksX"
+	},
+	"com.apple.iBooksX.OpenBookIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Open Book",
+		"AppIdentifier": "com.apple.iBooksX"
+	},
+	"com.apple.iBooksX.OpenDefaultCollectionIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Open Default Collection",
+		"AppIdentifier": "com.apple.iBooksX"
+	},
+	"com.apple.iBooksX.openin": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "openin",
+		"AppIdentifier": "com.apple.iBooksX"
+	},
+	"com.apple.iBooksX.OpenTabBarItemIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Open Tab Bar Item",
+		"AppIdentifier": "com.apple.iBooksX"
+	},
+	"com.apple.iBooksX.PlayAudiobookIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Play Audiobook",
+		"AppIdentifier": "com.apple.iBooksX"
+	},
+	"com.apple.iBooksX.SearchBooksIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Search Books",
+		"AppIdentifier": "com.apple.iBooksX"
+	},
+	"com.apple.iCal.SetCalendarFocusConfiguration": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Set Calendar Focus Configuration",
+		"AppIdentifier": "com.apple.iCal"
+	},
+	"com.apple.iWork.Keynote.KNDocumentBackgroundExportIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Document Background Export",
+		"AppIdentifier": "com.apple.iWork.Keynote"
+	},
+	"com.apple.iWork.Keynote.KNDocumentPlayIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Document Play",
+		"AppIdentifier": "com.apple.iWork.Keynote"
+	},
+	"com.apple.iWork.Keynote.KNDocumentRehearseIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Document Rehearse",
+		"AppIdentifier": "com.apple.iWork.Keynote"
+	},
+	"com.apple.iWork.Keynote.KNNewDocumentIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "New Document",
+		"AppIdentifier": "com.apple.iWork.Keynote"
+	},
+	"com.apple.iWork.Keynote.TSADocumentCreateIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Document Create",
+		"AppIdentifier": "com.apple.iWork.Keynote"
+	},
+	"com.apple.iWork.Keynote.TSADocumentOpenIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Document Open",
+		"AppIdentifier": "com.apple.iWork.Keynote"
+	},
+	"com.apple.mail.MailFocusConfigurationAction": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Mail Focus Configuration",
+		"AppIdentifier": "com.apple.mail"
+	},
+	"com.apple.MobileSMS.ConversationEntity": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Conversation Entity",
+		"AppIdentifier": "com.apple.MobileSMS"
+	},
+	"com.apple.MobileSMS.ConversationListFocusFilterAction": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Conversation List Focus Filter",
+		"AppIdentifier": "com.apple.MobileSMS"
+	},
+	"com.apple.MobileSMS.MessageEntity": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Message Entity",
+		"AppIdentifier": "com.apple.MobileSMS"
+	},
+	"com.apple.MobileSMS.OpenConversationIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Open Conversation",
+		"AppIdentifier": "com.apple.MobileSMS"
+	},
+	"com.apple.mobiletimer-framework.MobileTimerIntents.MTCreateAlarmIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Create Alarm",
+		"AppIdentifier": "com.apple.mobiletimer-framework.MobileTimerIntents"
+	},
+	"com.apple.mobiletimer-framework.MobileTimerIntents.MTGetAlarmsIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Get Alarms",
+		"AppIdentifier": "com.apple.mobiletimer-framework.MobileTimerIntents"
+	},
+	"com.apple.mobiletimer-framework.MobileTimerIntents.MTToggleAlarmIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Toggle Alarm",
+		"AppIdentifier": "com.apple.mobiletimer-framework.MobileTimerIntents"
+	},
+	"com.apple.news.TagIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Tag",
+		"AppIdentifier": "com.apple.news"
+	},
+	"com.apple.news.TodayIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Today",
+		"AppIdentifier": "com.apple.news"
+	},
+	"com.apple.news.WFAppSettingEntityUpdaterAction": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "App Setting Entity Updater",
+		"AppIdentifier": "com.apple.news"
+	},
+	"com.apple.news.WFGetAppSettingAction": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Get App Setting",
+		"AppIdentifier": "com.apple.news"
+	},
+	"com.apple.Photos.FilterLibraryIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Filter Library",
+		"AppIdentifier": "com.apple.Photos"
+	},
+	"com.apple.Photos.OpenPersonIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Open Person",
+		"AppIdentifier": "com.apple.Photos"
+	},
+	"com.apple.Photos.PhotosSearchAssistantIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Photos Search Assistant",
+		"AppIdentifier": "com.apple.Photos"
+	},
+	"com.apple.Photos.RenameAlbumIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Rename Album",
+		"AppIdentifier": "com.apple.Photos"
+	},
+	"com.apple.printcenter.PrintDocuments": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Print Documents",
+		"AppIdentifier": "com.apple.printcenter"
+	},
+	"com.apple.reminders.TTRCreateListAppIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Create List App",
+		"AppIdentifier": "com.apple.reminders"
+	},
+	"com.apple.reminders.TTRSearchRemindersAppIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Search Reminders App",
+		"AppIdentifier": "com.apple.reminders"
+	},
+	"com.apple.Safari.OpenTabGroupForFocus": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Open Tab Group For Focus",
+		"AppIdentifier": "com.apple.Safari"
+	},
+	"com.apple.shortcuts.CreateFolderAction": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Create Folder",
+		"AppIdentifier": "com.apple.shortcuts"
+	},
+	"com.apple.shortcuts.CreateShortcutiCloudLinkAction": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Create Shortcuti Cloud Link",
+		"AppIdentifier": "com.apple.shortcuts"
+	},
+	"com.apple.shortcuts.CreateWorkflowAction": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Create Workflow",
+		"AppIdentifier": "com.apple.shortcuts"
+	},
+	"com.apple.shortcuts.DeleteWorkflowAction": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Delete Workflow",
+		"AppIdentifier": "com.apple.shortcuts"
+	},
+	"com.apple.shortcuts.MoveShortcutToFolderAction": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Move Shortcut To Folder",
+		"AppIdentifier": "com.apple.shortcuts"
+	},
+	"com.apple.shortcuts.OpenNavigationDestinationAction": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Open Navigation Destination",
+		"AppIdentifier": "com.apple.shortcuts"
+	},
+	"com.apple.shortcuts.OpenWorkflowAction": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Open Workflow",
+		"AppIdentifier": "com.apple.shortcuts"
+	},
+	"com.apple.shortcuts.RenameShortcutAction": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Rename Shortcut",
+		"AppIdentifier": "com.apple.shortcuts"
+	},
+	"com.apple.shortcuts.SearchShortcutsAction": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Search Shortcuts",
+		"AppIdentifier": "com.apple.shortcuts"
+	},
+	"com.apple.ShortcutsActions.GetOrientationAction": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Get Orientation",
+		"AppIdentifier": "com.apple.ShortcutsActions"
+	},
+	"com.apple.ShortcutsActions.GetPhysicalActivity": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Get Physical Activity",
+		"AppIdentifier": "com.apple.ShortcutsActions"
+	},
+	"com.apple.ShortcutsActions.TimeMachineAction": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Time Machine",
+		"AppIdentifier": "com.apple.ShortcutsActions"
+	},
+	"com.apple.ShortcutsActions.TranscribeAudioAction": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Transcribe Audio",
+		"AppIdentifier": "com.apple.ShortcutsActions"
+	},
+	"com.apple.stocks.AddSymbolToWatchlistIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Add Symbol To Watchlist",
+		"AppIdentifier": "com.apple.stocks"
+	},
+	"com.apple.stocks.DeleteSymbolFromWatchlistIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Delete Symbol From Watchlist",
+		"AppIdentifier": "com.apple.stocks"
+	},
+	"com.apple.stocks.DeleteWatchlistsIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Delete Watchlists",
+		"AppIdentifier": "com.apple.stocks"
+	},
+	"com.apple.stocks.NewWatchlistIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "New Watchlist",
+		"AppIdentifier": "com.apple.stocks"
+	},
+	"com.apple.stocks.OpenSymbolIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Open Symbol",
+		"AppIdentifier": "com.apple.stocks"
+	},
+	"com.apple.stocks.OpenWatchlistIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Open Watchlist",
+		"AppIdentifier": "com.apple.stocks"
+	},
+	"com.apple.UniversalAccess.UASettingsShortcuts.UASetBackgroundSoundIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Set Background Sound",
+		"AppIdentifier": "com.apple.UniversalAccess.UASettingsShortcuts"
+	},
+	"com.apple.UniversalAccess.UASettingsShortcuts.UASetBackgroundSoundsTimerIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Set Background Sounds Timer",
+		"AppIdentifier": "com.apple.UniversalAccess.UASettingsShortcuts"
+	},
+	"com.apple.UniversalAccess.UASettingsShortcuts.UASetBackgroundSoundsVolumeIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Set Background Sounds Volume",
+		"AppIdentifier": "com.apple.UniversalAccess.UASettingsShortcuts"
+	},
+	"com.apple.UniversalAccess.UASettingsShortcuts.UAToggleAccessibilityKeyboardIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Toggle Accessibility Keyboard",
+		"AppIdentifier": "com.apple.UniversalAccess.UASettingsShortcuts"
+	},
+	"com.apple.UniversalAccess.UASettingsShortcuts.UAToggleAlternatePointerActionsIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Toggle Alternate Pointer Actions",
+		"AppIdentifier": "com.apple.UniversalAccess.UASettingsShortcuts"
+	},
+	"com.apple.UniversalAccess.UASettingsShortcuts.UAToggleAudioDescriptionsIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Toggle Audio Descriptions",
+		"AppIdentifier": "com.apple.UniversalAccess.UASettingsShortcuts"
+	},
+	"com.apple.UniversalAccess.UASettingsShortcuts.UAToggleBackgroundSoundsIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Toggle Background Sounds",
+		"AppIdentifier": "com.apple.UniversalAccess.UASettingsShortcuts"
+	},
+	"com.apple.UniversalAccess.UASettingsShortcuts.UAToggleCaptionsIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Toggle Captions",
+		"AppIdentifier": "com.apple.UniversalAccess.UASettingsShortcuts"
+	},
+	"com.apple.UniversalAccess.UASettingsShortcuts.UAToggleClassicInvertIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Toggle Classic Invert",
+		"AppIdentifier": "com.apple.UniversalAccess.UASettingsShortcuts"
+	},
+	"com.apple.UniversalAccess.UASettingsShortcuts.UAToggleColorFiltersIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Toggle Color Filters",
+		"AppIdentifier": "com.apple.UniversalAccess.UASettingsShortcuts"
+	},
+	"com.apple.UniversalAccess.UASettingsShortcuts.UAToggleContrastIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Toggle Contrast",
+		"AppIdentifier": "com.apple.UniversalAccess.UASettingsShortcuts"
+	},
+	"com.apple.UniversalAccess.UASettingsShortcuts.UAToggleFullKeyboardAccessIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Toggle Full Keyboard Access",
+		"AppIdentifier": "com.apple.UniversalAccess.UASettingsShortcuts"
+	},
+	"com.apple.UniversalAccess.UASettingsShortcuts.UAToggleHeadPointerIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Toggle Head Pointer",
+		"AppIdentifier": "com.apple.UniversalAccess.UASettingsShortcuts"
+	},
+	"com.apple.UniversalAccess.UASettingsShortcuts.UAToggleHoverTextIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Toggle Hover Text",
+		"AppIdentifier": "com.apple.UniversalAccess.UASettingsShortcuts"
+	},
+	"com.apple.UniversalAccess.UASettingsShortcuts.UAToggleHoverTypingIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Toggle Hover Typing",
+		"AppIdentifier": "com.apple.UniversalAccess.UASettingsShortcuts"
+	},
+	"com.apple.UniversalAccess.UASettingsShortcuts.UAToggleLiveCaptionsIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Toggle Live Captions",
+		"AppIdentifier": "com.apple.UniversalAccess.UASettingsShortcuts"
+	},
+	"com.apple.UniversalAccess.UASettingsShortcuts.UAToggleLiveSpeechIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Toggle Live Speech",
+		"AppIdentifier": "com.apple.UniversalAccess.UASettingsShortcuts"
+	},
+	"com.apple.UniversalAccess.UASettingsShortcuts.UAToggleMonoAudioIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Toggle Mono Audio",
+		"AppIdentifier": "com.apple.UniversalAccess.UASettingsShortcuts"
+	},
+	"com.apple.UniversalAccess.UASettingsShortcuts.UAToggleMotionCuesIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Toggle Motion Cues",
+		"AppIdentifier": "com.apple.UniversalAccess.UASettingsShortcuts"
+	},
+	"com.apple.UniversalAccess.UASettingsShortcuts.UAToggleMouseKeysIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Toggle Mouse Keys",
+		"AppIdentifier": "com.apple.UniversalAccess.UASettingsShortcuts"
+	},
+	"com.apple.UniversalAccess.UASettingsShortcuts.UAToggleReduceMotionIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Toggle Reduce Motion",
+		"AppIdentifier": "com.apple.UniversalAccess.UASettingsShortcuts"
+	},
+	"com.apple.UniversalAccess.UASettingsShortcuts.UAToggleSlowKeysIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Toggle Slow Keys",
+		"AppIdentifier": "com.apple.UniversalAccess.UASettingsShortcuts"
+	},
+	"com.apple.UniversalAccess.UASettingsShortcuts.UAToggleSmartInvertIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Toggle Smart Invert",
+		"AppIdentifier": "com.apple.UniversalAccess.UASettingsShortcuts"
+	},
+	"com.apple.UniversalAccess.UASettingsShortcuts.UAToggleStickyKeysIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Toggle Sticky Keys",
+		"AppIdentifier": "com.apple.UniversalAccess.UASettingsShortcuts"
+	},
+	"com.apple.UniversalAccess.UASettingsShortcuts.UAToggleSwitchControlIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Toggle Switch Control",
+		"AppIdentifier": "com.apple.UniversalAccess.UASettingsShortcuts"
+	},
+	"com.apple.UniversalAccess.UASettingsShortcuts.UAToggleTransparencyIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Toggle Transparency",
+		"AppIdentifier": "com.apple.UniversalAccess.UASettingsShortcuts"
+	},
+	"com.apple.UniversalAccess.UASettingsShortcuts.UAToggleVoiceControlIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Toggle Voice Control",
+		"AppIdentifier": "com.apple.UniversalAccess.UASettingsShortcuts"
+	},
+	"com.apple.UniversalAccess.UASettingsShortcuts.UAToggleVoiceOverIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Toggle Voice Over",
+		"AppIdentifier": "com.apple.UniversalAccess.UASettingsShortcuts"
+	},
+	"com.apple.UniversalAccess.UASettingsShortcuts.UAToggleZoomIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Toggle Zoom",
+		"AppIdentifier": "com.apple.UniversalAccess.UASettingsShortcuts"
+	},
+	"com.apple.VoiceMemos.ChangeRecordingPlaybackSetting": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Change Recording Playback Setting",
+		"AppIdentifier": "com.apple.VoiceMemos"
+	},
+	"com.apple.VoiceMemos.CreateFolder": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Create Folder",
+		"AppIdentifier": "com.apple.VoiceMemos"
+	},
+	"com.apple.VoiceMemos.DeleteRecording": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Delete Recording",
+		"AppIdentifier": "com.apple.VoiceMemos"
+	},
+	"com.apple.VoiceMemos.OpenFolder": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Open Folder",
+		"AppIdentifier": "com.apple.VoiceMemos"
+	},
+	"com.apple.VoiceMemos.PlaybackVoiceMemoIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Playback Voice Memo",
+		"AppIdentifier": "com.apple.VoiceMemos"
+	},
+	"com.apple.VoiceMemos.RCRecordingEntity": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Recording Entity",
+		"AppIdentifier": "com.apple.VoiceMemos"
+	},
+	"com.apple.VoiceMemos.RecordVoiceMemoIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Record Voice Memo",
+		"AppIdentifier": "com.apple.VoiceMemos"
+	},
+	"com.apple.VoiceMemos.SearchRecordings": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Search Recordings",
+		"AppIdentifier": "com.apple.VoiceMemos"
+	},
+	"com.apple.VoiceMemos.SelectRecording": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Select Recording",
+		"AppIdentifier": "com.apple.VoiceMemos"
+	},
+	"com.apple.VoiceMemos.StopRecording": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Stop Recording",
+		"AppIdentifier": "com.apple.VoiceMemos"
+	},
+	"com.apple.VoiceMemos.WFAppSettingEntityUpdaterAction": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "App Setting Entity Updater",
+		"AppIdentifier": "com.apple.VoiceMemos"
+	},
+	"com.apple.VoiceMemos.WFGetAppSettingAction": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Get App Setting",
+		"AppIdentifier": "com.apple.VoiceMemos"
+	},
+	"com.apple.weather.AddSavedLocationIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Add Saved Location",
+		"AppIdentifier": "com.apple.weather"
+	},
+	"com.apple.weather.OpenNotificationsConfigurationIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Open Notifications Configuration",
+		"AppIdentifier": "com.apple.weather"
+	},
+	"com.apple.weather.RemoveSavedLocationIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Remove Saved Location",
+		"AppIdentifier": "com.apple.weather"
+	},
+	"com.apple.weather.WeatherIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Weather",
+		"AppIdentifier": "com.apple.weather"
+	},
+	"com.mitchellh.ghostty.CloseTerminalIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Close Terminal",
+		"AppIdentifier": "com.mitchellh.ghostty"
+	},
+	"com.mitchellh.ghostty.CommandPaletteIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Command Palette",
+		"AppIdentifier": "com.mitchellh.ghostty"
+	},
+	"com.mitchellh.ghostty.GetTerminalDetailsIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Get Terminal Details",
+		"AppIdentifier": "com.mitchellh.ghostty"
+	},
+	"com.mitchellh.ghostty.InputTextIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Input Text",
+		"AppIdentifier": "com.mitchellh.ghostty"
+	},
+	"com.mitchellh.ghostty.KeybindIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Keybind",
+		"AppIdentifier": "com.mitchellh.ghostty"
+	},
+	"com.mitchellh.ghostty.KeyEventIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Key Event",
+		"AppIdentifier": "com.mitchellh.ghostty"
+	},
+	"com.mitchellh.ghostty.MouseButtonIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Mouse Button",
+		"AppIdentifier": "com.mitchellh.ghostty"
+	},
+	"com.mitchellh.ghostty.MousePosIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Mouse Pos",
+		"AppIdentifier": "com.mitchellh.ghostty"
+	},
+	"com.mitchellh.ghostty.MouseScrollIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Mouse Scroll",
+		"AppIdentifier": "com.mitchellh.ghostty"
+	},
+	"com.mitchellh.ghostty.NewTerminalIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "New Terminal",
+		"AppIdentifier": "com.mitchellh.ghostty"
+	},
+	"com.mitchellh.ghostty.QuickTerminalIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Quick Terminal",
+		"AppIdentifier": "com.mitchellh.ghostty"
+	},
+	"com.mitchellh.ghostty.TerminalEntity": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Terminal Entity",
+		"AppIdentifier": "com.mitchellh.ghostty"
+	},
+	"io.bluewallet.bluewallet.PriceIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Price",
+		"AppIdentifier": "io.bluewallet.bluewallet"
+	},
+	"is.workflow.actions.addnewcalendar": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Addnewcalendar",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.addnewcontact": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Addnewcontact",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.appearance": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Appearance",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.calculateexpression": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Calculateexpression",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.compresspdf": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Compresspdf",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.connecttoservers": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Connecttoservers",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.converttimezone": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Converttimezone",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.dnd.getfocus": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Dnd Getfocus",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.ejectdisk": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Ejectdisk",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.extracttextfromimage": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Extracttextfromimage",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.file": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "File",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.file.getfoldercontents": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "File Getfoldercontents",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.file.label": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "File Label",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.file.move": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "File Move",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.file.rename": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "File Rename",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.file.reveal": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "File Reveal",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.file.select": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "File Select",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.filter.apps": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Filter Apps",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.filter.windows": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Filter Windows",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.finder.getselectedfiles": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Finder Getselectedfiles",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.getcurrentapp": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Getcurrentapp",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.getepisodesforpodcast": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Getepisodesforpodcast",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.gethomeaccessorystate": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Gethomeaccessorystate",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.getonscreencontent": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Getonscreencontent",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.getpodcastsfromlibrary": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Getpodcastsfromlibrary",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.gettextfrompdf": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Gettextfrompdf",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.homeaccessory": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Homeaccessory",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.image.removebackground": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Image Removebackground",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.importaudiofiles": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Importaudiofiles",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.location": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Location",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.lockscreen": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Lockscreen",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.makediskimage": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Makediskimage",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.makeimagefrompdfpage": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Makeimagefrompdfpage",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.makeimagefromrichtext": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Makeimagefromrichtext",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.makespokenaudiofromtext": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Makespokenaudiofromtext",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.mountdiskimage": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Mountdiskimage",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.movewindow": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Movewindow",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.nightshift.set": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Nightshift Set",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.openpasswords": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Openpasswords",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.output": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Output",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.overlaytext": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Overlaytext",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.photos.createalbum": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Photos Createalbum",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.playpodcast": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Playpodcast",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.podcasts.subscribe": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Podcasts Subscribe",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.properties.podcast": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Properties Podcast",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.properties.podcastshow": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Properties Podcastshow",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.reboot": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Reboot",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.reminders.showlist": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Reminders Showlist",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.removefromalbum": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Removefromalbum",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.resizewindow": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Resizewindow",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.ride.requestride": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Ride Requestride",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.runapplescript": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Runapplescript",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.runjavascriptforautomation": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Runjavascriptforautomation",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.safari.geturl": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Safari Geturl",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.searchpodcasts": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Searchpodcasts",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.seek": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Seek",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.setairdropreceiving": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Setairdropreceiving",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.setters.calendarevents": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Setters Calendarevents",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.setters.contacts": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Setters Contacts",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.setters.reminders": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Setters Reminders",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.splitpdf": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Splitpdf",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.stagemanager.set": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Stagemanager Set",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.takescreenshot": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Takescreenshot",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.text.trimwhitespace": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Text Trimwhitespace",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.truetone.set": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Truetone Set",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.vpn.set": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Vpn Set",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"is.workflow.actions.wallpaper.set": {
+		"ActionClass": "WFHandleIntentAction",
+		"Name": "Wallpaper Set",
+		"AppIdentifier": "is.workflow.actions"
+	},
+	"net.whatsapp.WhatsApp.EndCallingLiveActivityIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "End Calling Live Activity",
+		"AppIdentifier": "net.whatsapp.WhatsApp"
+	},
+	"net.whatsapp.WhatsApp.EndMetaAICallIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "End Meta AICall",
+		"AppIdentifier": "net.whatsapp.WhatsApp"
+	},
+	"net.whatsapp.WhatsApp.ToggleCallingMicIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Toggle Calling Mic",
+		"AppIdentifier": "net.whatsapp.WhatsApp"
+	},
+	"net.whatsapp.WhatsApp.ToggleMetaAICallMicIntent": {
+		"ActionClass": "WFAppIntentExecutionAction",
+		"Name": "Toggle Meta AICall Mic",
+		"AppIdentifier": "net.whatsapp.WhatsApp"
 	}
 }

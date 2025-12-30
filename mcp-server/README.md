@@ -6,7 +6,7 @@ Model Context Protocol server for creating macOS Shortcuts using ScPL (Shortcuts
 
 - **Create Shortcuts**: Convert ScPL code to .shortcut files
 - **Validate Syntax**: Check ScPL code without creating files
-- **Discover Actions**: Browse 294 available actions with descriptions
+- **Discover Actions**: Browse 493 available actions with descriptions
 - **Documentation**: Access action reference and examples
 
 ## ⚠️ Shortcut Signing & Installation

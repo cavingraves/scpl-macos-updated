@@ -32,6 +32,9 @@ actions["is.workflow.actions.repeat.each"].BlockInfo = {
 // append to note -> append to evernote note
 actions["is.workflow.actions.evernote.append"].AppInfo = "Evernote";
 
+// Add missing name for Facebook action
+actions["is.workflow.actions.postonfacebook"].Name = "Post on Facebook";
+
 function isContentItemPropertiesAction(
 	action: ShortcutsActionSpec
 ): action is ShortcutsContentItemPropertiesActionSpec {

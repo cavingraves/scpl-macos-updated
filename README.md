@@ -10,7 +10,7 @@
 
 <div align="center">
 
-[![Actions](https://img.shields.io/badge/actions-294-blue.svg)](./MACOS_TAHOE_UPDATES.md)
+[![Actions](https://img.shields.io/badge/actions-493-blue.svg)](./MACOS_TAHOE_UPDATES.md)
 [![macOS](https://img.shields.io/badge/macOS-Tahoe%2026.x%20%7C%20Intel%20%26%20Apple%20Silicon-purple.svg)](https://www.apple.com/macos/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
@@ -24,7 +24,7 @@
 
 ## 🎉 macOS Tahoe Updates
 
-This fork adds **22 new actions** for macOS Tahoe, plus **AI-powered shortcut creation** with the MCP server!
+This fork adds **222 new actions** including comprehensive coverage of Apple apps (Clock, Photos, Voice Memos, Books, Weather, Stocks, Freeform, Shortcuts management, Accessibility, and more), plus **AI-powered shortcut creation** with the MCP server!
 
 ### New Features:
 
@@ -35,6 +35,13 @@ This fork adds **22 new actions** for macOS Tahoe, plus **AI-powered shortcut cr
 ### 🤖 AI Assistants *(Intel & Apple Silicon)*
 - **ChatGPT & Claude** - Direct integration with AI assistants (requires apps installed)
 
+### 📝 Apple Notes Actions *(Intel & Apple Silicon)*
+Complete integration with Apple Notes app:
+- **Note Management** - Create, close, pin, and delete notes
+- **Folder Operations** - Create, rename, delete, and navigate folders
+- **Tag Management** - Create, add, remove, and delete tags
+- **Advanced Features** - Append checklist items, add files, move notes, show Quick Note
+
 ### ⚙️ System & Scripting *(Intel & Apple Silicon)*
 - Shell script execution (`runshellscript`, `runapplescript`, `runjavascriptforautomation`)
 - File operations (`file.rename`, `file.move`, `file.reveal`, and more)
@@ -42,7 +49,7 @@ This fork adds **22 new actions** for macOS Tahoe, plus **AI-powered shortcut cr
 
 **→** See [MACOS_TAHOE_UPDATES.md](./MACOS_TAHOE_UPDATES.md) for the complete list
 
-**→** Total: **294 actions** (original: 272, **+22 new**)
+**→** Total: **493 actions** (original scpl: 271, **+222 new actions**)
 
 ---
 
