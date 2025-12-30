@@ -195,55 +195,28 @@ scpl input.scpl output.shortcut
 
 ### AI-Powered Shortcut Creation 🤖
 
-Create shortcuts using natural language with Claude Code! The included skill provides a guided experience with access to all **493 actions**.
+Create shortcuts using natural language with Claude Code! One command installs everything:
 
-**Step 1: Install the MCP server**
 ```bash
-npm install -g scpl-updated-mcp-server
+npx scpl-updated-mcp-server --setup
 ```
 
-**Step 2: Register with Claude Code**
-```bash
-claude mcp add scpl-shortcuts npx scpl-updated-mcp-server
-```
+That's it! This automatically:
+- ✅ Adds the MCP server to your Claude Code config
+- ✅ Installs the plugin with the skill file
+- ✅ Registers everything so it just works
 
-Or manually add to `~/.claude.json`:
-```json
-{
-  "mcpServers": {
-    "scpl-shortcuts": {
-      "type": "stdio",
-      "command": "npx",
-      "args": ["-y", "scpl-updated-mcp-server"]
-    }
-  }
-}
-```
-
-**Step 3: Copy the skill to your Claude config**
-```bash
-# Create skills directory if it doesn't exist
-mkdir -p ~/.claude/skills
-
-# Copy the skill file
-cp .claude/skills/create-shortcut.md ~/.claude/skills/
-```
-
-**Step 4: Use it!**
-
-With the MCP server and skill installed, just ask Claude to create shortcuts naturally:
+**Restart Claude Code**, then just ask:
 
 > "Create a shortcut that gets clipboard text, asks ChatGPT to summarize it, and shows the result"
 
-> "Make a shortcut that starts a 25-minute timer and creates a voice memo folder"
+> "Make a shortcut that starts a 25-minute timer and creates a voice memo"
 
-> "Build a shortcut that organizes my other shortcuts into folders"
+> "Build a shortcut that takes a screenshot and saves it to a dated folder"
 
-The skill guides Claude with examples for all major categories: AI, Clock/Timers, Voice Memos, Photos, Shortcuts management, System control, and more!
+Claude will write the ScPL code, validate it, and generate the `.shortcut` file for you!
 
-Claude will write the ScPL code, validate it, and generate the .shortcut file for you!
-
-**→** See [mcp-server/README.md](./mcp-server/README.md) for full documentation
+**→** See [mcp-server/README.md](./mcp-server/README.md) for manual installation options
 
 ### Documentation
 
