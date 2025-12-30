@@ -9,14 +9,18 @@ import {
   ReadResourceRequestSchema,
 } from "@modelcontextprotocol/sdk/types.js";
 import pkg from "scpl-macos-updated";
-const { parse } = pkg;
-import { writeFileSync, readFileSync, existsSync, mkdirSync, appendFileSync } from "fs";
+const { parse, allActions } = pkg;
+import { writeFileSync, readFileSync, existsSync, mkdirSync } from "fs";
 import { join, dirname } from "path";
 import { homedir } from "os";
 import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
+
+// Read version from package.json
+const packageJson = JSON.parse(readFileSync(join(__dirname, "package.json"), "utf-8"));
+const VERSION = packageJson.version;
 
 // ============================================================================
 // HELP
@@ -414,7 +418,7 @@ if (didSetup) {
 const server = new Server(
   {
     name: "scpl-updated-mcp-server",
-    version: "1.0.0",
+    version: VERSION,
   },
   {
     capabilities: {
@@ -466,7 +470,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
       },
       {
         name: "list_actions",
-        description: "List available ScPL actions (493 total). Filter by category or search term.",
+        description: "List available ScPL actions. Filter by category or search term.",
         inputSchema: {
           type: "object",
           properties: {
@@ -490,13 +494,24 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 
   try {
     if (name === "create_shortcut") {
-      const { scpl_code, output_name, output_dir } = args;
+      const { scpl_code, output_name, output_dir } = args || {};
+
+      if (!scpl_code || !output_name) {
+        return { content: [{ type: "text", text: "Error: scpl_code and output_name are required" }], isError: true };
+      }
 
       const shortcutBuffer = parse(scpl_code, {
         makePlist: true,
       });
 
-      const dir = output_dir || join(homedir(), "Documents");
+      let dir = output_dir || join(homedir(), "Documents");
+      // Expand ~ to home directory
+      if (dir.startsWith("~")) {
+        dir = dir.replace("~", homedir());
+      }
+      // Ensure directory exists
+      mkdirSync(dir, { recursive: true });
+
       const outputPath = join(dir, `${output_name}.shortcut`);
 
       writeFileSync(outputPath, shortcutBuffer);
@@ -512,7 +527,11 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
     }
 
     if (name === "validate_scpl") {
-      const { scpl_code } = args;
+      const { scpl_code } = args || {};
+
+      if (!scpl_code) {
+        return { content: [{ type: "text", text: "Error: scpl_code is required" }], isError: true };
+      }
 
       try {
         parse(scpl_code, {});
@@ -525,44 +544,40 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
     if (name === "list_actions") {
       const { category, search } = args || {};
 
-      const topActions = {
-        "is.workflow.actions.askllm": { Name: "Ask LLM", Category: "AI" },
-        "is.workflow.actions.askchatgpt": { Name: "Ask ChatGPT", Category: "AI" },
-        "com.anthropic.claudeforipad.AskClaudeIntentExtension": { Name: "Ask Claude", Category: "AI" },
-        "com.apple.clock.StartStopwatchIntent": { Name: "Start Stopwatch", Category: "Clock" },
-        "com.apple.clock.StopStopwatchIntent": { Name: "Stop Stopwatch", Category: "Clock" },
-        "com.apple.clock.CreateAlarmIntent": { Name: "Create Alarm", Category: "Clock" },
-        "com.apple.VoiceMemos.CreateRecordingIntent": { Name: "Create Recording", Category: "Voice Memos" },
-        "com.apple.VoiceMemos.PlayRecordingIntent": { Name: "Play Recording", Category: "Voice Memos" },
-        "is.workflow.actions.appearance": { Name: "Set Dark/Light Mode", Category: "System" },
-        "is.workflow.actions.takescreenshot": { Name: "Take Screenshot", Category: "System" },
-        "is.workflow.actions.lockscreen": { Name: "Lock Screen", Category: "System" },
-        "is.workflow.actions.runshellscript": { Name: "Run Shell Script", Category: "Scripting" },
-        "is.workflow.actions.runapplescript": { Name: "Run AppleScript", Category: "Scripting" },
-        "is.workflow.actions.runjavascriptforautomation": { Name: "Run JavaScript", Category: "Scripting" },
-        "is.workflow.actions.file.getfile": { Name: "Get File", Category: "Files" },
-        "is.workflow.actions.file.savefile": { Name: "Save File", Category: "Files" },
-        "is.workflow.actions.showresult": { Name: "Show Result", Category: "Text" },
-        "is.workflow.actions.alert": { Name: "Show Alert", Category: "Text" },
-        "is.workflow.actions.setvariable": { Name: "Set Variable", Category: "Variables" },
-        "is.workflow.actions.getclipboard": { Name: "Get Clipboard", Category: "Clipboard" },
-        "is.workflow.actions.setclipboard": { Name: "Set Clipboard", Category: "Clipboard" },
-      };
-
-      let filtered = Object.entries(topActions);
+      let filtered = allActions;
 
       if (category) {
-        filtered = filtered.filter(([_, a]) => a.Category?.toLowerCase() === category.toLowerCase());
+        filtered = filtered.filter(a =>
+          a._data?.Category?.toLowerCase() === category.toLowerCase() ||
+          a._data?.Subcategory?.toLowerCase() === category.toLowerCase()
+        );
       }
       if (search) {
         const s = search.toLowerCase();
-        filtered = filtered.filter(([id, a]) =>
-          id.toLowerCase().includes(s) || a.Name?.toLowerCase().includes(s)
+        filtered = filtered.filter(a =>
+          a.name?.toLowerCase().includes(s) ||
+          a.shortName?.toLowerCase().includes(s) ||
+          a.id?.toLowerCase().includes(s) ||
+          a._data?.ActionKeywords?.some(k => k.toLowerCase().includes(s))
         );
       }
 
-      const results = filtered.map(([id, a]) => `• **${a.Name}** - \`${id}\``).join("\n");
-      return { content: [{ type: "text", text: `${filtered.length} actions:\n\n${results}\n\n(493 total available)` }] };
+      // Limit results to prevent overwhelming output
+      const limit = 50;
+      const total = filtered.length;
+      const limited = filtered.slice(0, limit);
+
+      const results = limited.map(a =>
+        `• **${a.name}** (\`${a.shortName}\`) - ${a._data?.Category || 'General'}`
+      ).join("\n");
+
+      let response = `${total} actions found`;
+      if (total > limit) {
+        response += ` (showing first ${limit})`;
+      }
+      response += `:\n\n${results}\n\n(${allActions.length} total available)`;
+
+      return { content: [{ type: "text", text: response }] };
     }
 
     throw new Error(`Unknown tool: ${name}`);
