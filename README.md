@@ -229,19 +229,17 @@ mkdir -p ~/.claude/skills
 cp .claude/skills/create-shortcut.md ~/.claude/skills/
 ```
 
-**Step 4: Use the skill!**
-```
-/create-shortcut
-```
+**Step 4: Use it!**
 
-Then just describe what you want:
+With the MCP server and skill installed, just ask Claude to create shortcuts naturally:
+
 > "Create a shortcut that gets clipboard text, asks ChatGPT to summarize it, and shows the result"
 
 > "Make a shortcut that starts a 25-minute timer and creates a voice memo folder"
 
 > "Build a shortcut that organizes my other shortcuts into folders"
 
-The skill has examples for all major categories: AI, Clock/Timers, Voice Memos, Photos, Shortcuts management, System control, and more!
+The skill guides Claude with examples for all major categories: AI, Clock/Timers, Voice Memos, Photos, Shortcuts management, System control, and more!
 
 Claude will write the ScPL code, validate it, and generate the .shortcut file for you!
 
