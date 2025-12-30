@@ -21,6 +21,8 @@
 
 </div>
 
+> 🍴 **Fork of [pfgithub/scpl](https://github.com/pfgithub/scpl)** — Updated for macOS Tahoe with 222 new actions, Apple Intelligence, and MCP server support
+
 > **💻 Intel Mac Compatible!** ScPL-macOS-updated and most actions work on both Intel and Apple Silicon Macs.
 > Only Apple Intelligence actions (Use Model, Image Playground) require Apple Silicon.
 
@@ -350,10 +352,11 @@ MIT License - Same as [original scpl](https://github.com/pfgithub/scpl)
 
 ---
 
-## 🙏 Credits
+## 🙏 Credits & Acknowledgments
 
-- **Original scpl:** [pfgithub/scpl](https://github.com/pfgithub/scpl)
-- **macOS Tahoe Updates:** Extracted from real shortcuts and community resources
+This project is a fork of **[ScPL (Shortcut Programming Language)](https://github.com/pfgithub/scpl)** by [@pfgithub](https://github.com/pfgithub). The original project created the foundation for text-based shortcut programming that this fork builds upon.
+
+**Additional thanks to:**
 - **Shortcut Source Tool:** [gluebyte](https://routinehub.co/user/gluebyte) on RoutineHub
 - **Action Discovery:** [xAlien95](https://github.com/xalien95/) for WFActions.plist analysis
 - **Shortcuts JS:** [Josh Farrant](https://github.com/joshfarrant/shortcuts-js) for glyph/color lists
