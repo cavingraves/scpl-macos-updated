@@ -29,17 +29,21 @@ USAGE:
   npx scpl-updated-mcp-server [OPTIONS]
 
 OPTIONS:
-  --setup                    Auto-install for Claude Code
+  --setup                    Auto-install for Claude Code (CLI)
+  --setup-desktop            Auto-install for Claude Desktop (GUI app)
   --setup-codex              Auto-install for OpenAI Codex CLI (~/.codex)
   --setup-codex=<dir>        Auto-install for Codex forks with custom directory
   --help, -h                 Show this help message
 
 You can combine multiple flags to set up multiple tools at once:
-  npx scpl-updated-mcp-server --setup --setup-codex --setup-codex=~/.code
+  npx scpl-updated-mcp-server --setup --setup-desktop --setup-codex
 
 EXAMPLES:
-  # Claude Code only
+  # Claude Code (CLI) only
   npx scpl-updated-mcp-server --setup
+
+  # Claude Desktop (GUI app) only
+  npx scpl-updated-mcp-server --setup-desktop
 
   # Codex only
   npx scpl-updated-mcp-server --setup-codex
@@ -47,8 +51,8 @@ EXAMPLES:
   # Custom Codex directory (just-every/code, etc.)
   npx scpl-updated-mcp-server --setup-codex=$CODE_HOME
 
-  # All at once: Claude + Codex + custom fork
-  npx scpl-updated-mcp-server --setup --setup-codex --setup-codex=~/.code
+  # All Claude + Codex tools at once
+  npx scpl-updated-mcp-server --setup --setup-desktop --setup-codex
 
 After setup, restart your AI coding tool and ask:
   "Create a shortcut that starts a timer and plays a sound"
@@ -115,7 +119,30 @@ function setupClaudeCode() {
     };
     writeFileSync(join(pluginsDir, "plugin.json"), JSON.stringify(pluginJson, null, 2));
 
-    const skillContent = `---
+    // Read comprehensive ScPL reference
+    const refPath = join(__dirname, "SCPL_REFERENCE.md");
+    let skillContent = "";
+    if (existsSync(refPath)) {
+      const reference = readFileSync(refPath, "utf-8");
+      skillContent = `---
+description: Create macOS Shortcuts using natural language with ScPL.
+tags: [shortcuts, automation, macos, scpl, apple-intelligence]
+---
+
+# ScPL Shortcuts Skill
+
+You have access to the ScPL MCP server with **493 actions**.
+
+## Available Tools
+- \`create_shortcut\` - Convert ScPL code to .shortcut file
+- \`validate_scpl\` - Check syntax without creating file
+- \`list_actions\` - Search available actions by category/keyword
+
+${reference}
+`;
+    } else {
+      // Fallback minimal skill if reference not found
+      skillContent = `---
 description: Create macOS Shortcuts using natural language.
 tags: [shortcuts, automation, macos, scpl]
 ---
@@ -123,19 +150,13 @@ tags: [shortcuts, automation, macos, scpl]
 # Create Shortcut Skill
 
 You have access to the ScPL MCP server with 493 actions.
+Tools: create_shortcut, validate_scpl, list_actions
 
-## Tools: create_shortcut, validate_scpl, list_actions
-
-## ScPL Syntax
-\`\`\`scpl
-Text "Hello"
-AskLLM model="Apple Intelligence" prompt="Make it fun"
-ShowResult
-\`\`\`
-
-## Categories
-AI, Clock, Voice Memos, System, Files, Scripting, Clipboard
+Basic syntax: \`ActionName "arg"\` or \`ActionName param=value\`
+Variables: \`v:Named\`, \`mv:Magic\`, \`s:Special\`
+Flow: \`If\`/\`End If\`, \`Repeat\`/\`End Repeat\`
 `;
+    }
     writeFileSync(join(pluginsDir, "skills", "create-shortcut.md"), skillContent);
     console.log("   ✅ Plugin files created!\n");
   } catch (error) {
@@ -171,6 +192,57 @@ AI, Clock, Voice Memos, System, Files, Scripting, Clipboard
   }
 
   console.log("✅ Claude Code setup complete!\n");
+}
+
+function setupClaudeDesktop() {
+  console.log("═══════════════════════════════════════════════════════════════");
+  console.log("🚀 Setting up ScPL Shortcuts for Claude Desktop...");
+  console.log("═══════════════════════════════════════════════════════════════\n");
+
+  // Determine config path based on OS
+  let configPath;
+  const platform = process.platform;
+  if (platform === "darwin") {
+    configPath = join(homedir(), "Library", "Application Support", "Claude", "claude_desktop_config.json");
+  } else if (platform === "win32") {
+    configPath = join(process.env.APPDATA || "", "Claude", "claude_desktop_config.json");
+  } else {
+    configPath = join(homedir(), ".config", "Claude", "claude_desktop_config.json");
+  }
+
+  console.log(`📝 Adding MCP server to ${configPath}...`);
+  try {
+    // Ensure directory exists
+    mkdirSync(dirname(configPath), { recursive: true });
+
+    let config = {};
+    if (existsSync(configPath)) {
+      config = JSON.parse(readFileSync(configPath, "utf-8"));
+    }
+
+    if (!config.mcpServers) {
+      config.mcpServers = {};
+    }
+
+    if (config.mcpServers["scpl-shortcuts"]) {
+      console.log("   ⏭️  Already configured, skipping...\n");
+    } else {
+      config.mcpServers["scpl-shortcuts"] = {
+        command: "npx",
+        args: ["-y", "scpl-updated-mcp-server"]
+      };
+      writeFileSync(configPath, JSON.stringify(config, null, 2));
+      console.log("   ✅ MCP server added!\n");
+    }
+  } catch (error) {
+    console.error("   ❌ Failed:", error.message, "\n");
+  }
+
+  console.log("✅ Claude Desktop setup complete!\n");
+  console.log("ℹ️  Note: Claude Desktop doesn't have plugins/skills.\n");
+  console.log("   The MCP tools (create_shortcut, validate_scpl, list_actions)");
+  console.log("   will be available, but Claude won't have the full ScPL reference");
+  console.log("   loaded as context. Consider using Claude Code for best results.\n");
 }
 
 function setupCodex(codexDir) {
@@ -210,7 +282,32 @@ startup_timeout_sec = 60.0
   try {
     mkdirSync(skillDir, { recursive: true });
 
-    const skillContent = `---
+    // Read comprehensive ScPL reference
+    const refPath = join(__dirname, "SCPL_REFERENCE.md");
+    let skillContent = "";
+    if (existsSync(refPath)) {
+      const reference = readFileSync(refPath, "utf-8");
+      skillContent = `---
+name: scpl-shortcuts
+description: Create macOS Shortcuts using natural language with ScPL.
+metadata:
+  short-description: Create macOS Shortcuts with AI
+---
+
+# ScPL Shortcuts Skill
+
+You have access to the ScPL MCP server with **493 actions**.
+
+## Available Tools
+- \`create_shortcut\` - Convert ScPL code to .shortcut file
+- \`validate_scpl\` - Check syntax without creating file
+- \`list_actions\` - Search available actions by category/keyword
+
+${reference}
+`;
+    } else {
+      // Fallback minimal skill
+      skillContent = `---
 name: scpl-shortcuts
 description: Create macOS Shortcuts using natural language.
 metadata:
@@ -221,21 +318,11 @@ metadata:
 
 493 actions available. Tools: create_shortcut, validate_scpl, list_actions
 
-## ScPL Syntax
-\`\`\`scpl
-Text "Hello"
-AskLLM model="Apple Intelligence" prompt="Make it fun"
-ShowResult
-\`\`\`
-
-## Categories
-AI, Clock, Voice Memos, System, Files, Scripting, Clipboard
-
-## Workflow
-1. Write ScPL code
-2. validate_scpl to check
-3. create_shortcut to generate .shortcut file
+Basic syntax: \`ActionName "arg"\` or \`ActionName param=value\`
+Variables: \`v:Named\`, \`mv:Magic\`, \`s:Special\`
+Flow: \`If\`/\`End If\`, \`Repeat\`/\`End Repeat\`
 `;
+    }
     writeFileSync(join(skillDir, "SKILL.md"), skillContent);
     console.log("   ✅ Skill installed!\n");
   } catch (error) {
@@ -254,6 +341,12 @@ let didSetup = false;
 // Claude Code setup
 if (process.argv.includes("--setup")) {
   setupClaudeCode();
+  didSetup = true;
+}
+
+// Claude Desktop setup
+if (process.argv.includes("--setup-desktop")) {
+  setupClaudeDesktop();
   didSetup = true;
 }
 
