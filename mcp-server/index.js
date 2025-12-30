@@ -50,7 +50,7 @@ if (process.argv.includes("--setup-codex")) {
   console.log("🚀 Setting up ScPL Shortcuts for Codex...\n");
 
   const codexConfigPath = join(homedir(), ".codex", "config.toml");
-  const agentsPath = join(homedir(), ".codex", "AGENTS.md");
+  const skillDir = join(homedir(), ".codex", "skills", "scpl-shortcuts");
 
   // Step 1: Add MCP server to ~/.codex/config.toml
   console.log("📝 Step 1: Adding MCP server to ~/.codex/config.toml...");
@@ -84,42 +84,92 @@ startup_timeout_sec = 60.0
 `);
   }
 
-  // Step 2: Add instructions to AGENTS.md
-  console.log("📁 Step 2: Adding skill instructions to AGENTS.md...");
+  // Step 2: Install skill to ~/.codex/skills/scpl-shortcuts/
+  console.log("📁 Step 2: Installing skill to ~/.codex/skills/scpl-shortcuts/...");
   try {
-    let agents = "";
-    if (existsSync(agentsPath)) {
-      agents = readFileSync(agentsPath, "utf-8");
-    }
+    mkdirSync(skillDir, { recursive: true });
 
-    if (agents.includes("## ScPL Shortcuts")) {
-      console.log("   ⏭️  Already in AGENTS.md, skipping...\n");
-    } else {
-      const agentBlock = `
+    const skillContent = `---
+name: scpl-shortcuts
+description: Create macOS Shortcuts using natural language. Use when users want to create, generate, or build Apple Shortcuts. Converts requests to ScPL code and generates .shortcut files.
+metadata:
+  short-description: Create macOS Shortcuts with AI
+---
 
-## ScPL Shortcuts
+# ScPL Shortcuts Skill
 
-You have access to the ScPL MCP server with 493 actions for creating macOS Shortcuts.
+Create macOS Shortcuts using natural language with 493 available actions.
 
-**Tools available:**
-- \`create_shortcut\` - Generate a .shortcut file from ScPL code
-- \`validate_scpl\` - Check if ScPL code is valid
-- \`list_actions\` - Search available actions
+## MCP Tools Available
 
-**ScPL syntax example:**
+You have access to the \`scpl-shortcuts\` MCP server with these tools:
+
+| Tool | Description |
+|------|-------------|
+| \`create_shortcut\` | Generate a .shortcut file from ScPL code |
+| \`validate_scpl\` | Check if ScPL code is valid before creating |
+| \`list_actions\` | Search available actions by category or keyword |
+
+## ScPL Syntax
+
+ScPL is line-based. Each line is an action. Parameters use \`key=value\` or \`key="value"\`.
+
 \`\`\`scpl
-Text "Hello"
-AskLLM model="Apple Intelligence" prompt="Make it fun"
+# Comments start with #
+Text "Hello World"
 ShowResult
+
+# Variables
+Text "some value"
+SetVariable v:myVar
+ShowResult v:myVar
+
+# AI actions
+AskLLM model="Apple Intelligence" prompt="Summarize this"
+AskChatGPT prompt="Explain this"
 \`\`\`
 
-When user asks to create a shortcut, write ScPL code, validate it, then create the file.
+## Popular Actions by Category
+
+**AI**: AskLLM, AskChatGPT, AskClaude
+**Clock**: StartStopwatch, StopStopwatch, CreateAlarm
+**Voice Memos**: CreateRecording, PlayRecording
+**System**: SetDarkMode, TakeScreenshot, LockScreen
+**Files**: GetFile, SaveFile, RenameFile, RevealInFinder
+**Scripting**: RunShellScript, RunAppleScript, RunJavaScriptForAutomation
+**Clipboard**: GetClipboard, SetClipboard
+
+## Workflow
+
+1. User describes what shortcut they want
+2. Use \`list_actions\` if you need to find specific actions
+3. Write ScPL code for the shortcut
+4. Use \`validate_scpl\` to check syntax
+5. Use \`create_shortcut\` to generate the .shortcut file
+6. Tell user to install via Shortcut Source Helper from RoutineHub
+
+## Example: Timer with Notification
+
+\`\`\`scpl
+# Start a 25-minute Pomodoro timer
+StartTimer minutes=25
+ShowAlert title="Timer Started" message="Focus for 25 minutes!"
+\`\`\`
+
+## Example: Clipboard AI Enhancement
+
+\`\`\`scpl
+GetClipboard
+SetVariable v:text
+AskChatGPT prompt="Improve this text: \\(v:text)"
+SetClipboard
+ShowAlert title="Done" message="Improved text copied!"
+\`\`\`
 `;
-      writeFileSync(agentsPath, agents + agentBlock);
-      console.log("   ✅ Instructions added!\n");
-    }
+    writeFileSync(join(skillDir, "SKILL.md"), skillContent);
+    console.log("   ✅ Skill installed!\n");
   } catch (error) {
-    console.error("   ❌ Failed to update AGENTS.md:", error.message, "\n");
+    console.error("   ❌ Failed to install skill:", error.message, "\n");
   }
 
   console.log("🎉 Setup complete! Restart Codex to use the shortcuts tools.\n");
