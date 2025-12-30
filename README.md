@@ -156,21 +156,53 @@ scpl input.scpl output.shortcut
 
 ### AI-Powered Shortcut Creation 🤖
 
-Create shortcuts using natural language with Claude Code!
+Create shortcuts using natural language with Claude Code! The included skill provides a guided experience with access to all **493 actions**.
 
+**Step 1: Install the MCP server**
 ```bash
-# Install the MCP server
 npm install -g scpl-updated-mcp-server
+```
 
-# Register with Claude Code
+**Step 2: Register with Claude Code**
+```bash
 claude mcp add scpl-shortcuts npx scpl-updated-mcp-server
+```
 
-# Use the skill in Claude Code
+Or manually add to `~/.claude.json`:
+```json
+{
+  "mcpServers": {
+    "scpl-shortcuts": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "scpl-updated-mcp-server"]
+    }
+  }
+}
+```
+
+**Step 3: Copy the skill to your Claude config**
+```bash
+# Create skills directory if it doesn't exist
+mkdir -p ~/.claude/skills
+
+# Copy the skill file
+cp .claude/skills/create-shortcut.md ~/.claude/skills/
+```
+
+**Step 4: Use the skill!**
+```
 /create-shortcut
 ```
 
 Then just describe what you want:
 > "Create a shortcut that gets clipboard text, asks ChatGPT to summarize it, and shows the result"
+
+> "Make a shortcut that starts a 25-minute timer and creates a voice memo folder"
+
+> "Build a shortcut that organizes my other shortcuts into folders"
+
+The skill has examples for all major categories: AI, Clock/Timers, Voice Memos, Photos, Shortcuts management, System control, and more!
 
 Claude will write the ScPL code, validate it, and generate the .shortcut file for you!
 

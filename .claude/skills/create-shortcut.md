@@ -17,14 +17,22 @@ Let me understand what you want your shortcut to do. Ask me:
 
 ## Step 2: Explore Available Actions
 
-I can check what actions are available using the MCP server. Let me search for relevant actions based on your needs.
+I can check what actions are available using the MCP server. With **493 actions** available, I can help you automate almost anything!
 
-For example:
-- **Apple Intelligence**: AskLLM, Image Playground
+**Popular categories:**
+- **Apple Intelligence**: AskLLM, Image Playground (Apple Silicon)
 - **AI Assistants**: ChatGPT, Claude
-- **File Operations**: GetFile, SaveFile, RenameFile
-- **Shell Scripts**: RunShellScript, RunAppleScript
-- **System**: GetClipboard, SetClipboard, ShowAlert
+- **Shortcuts Management**: Create/delete/organize shortcuts programmatically
+- **Clock & Timers**: Start/stop stopwatch, create alarms, world clocks
+- **Voice Memos**: Record, playback, organize recordings
+- **File Operations**: GetFile, SaveFile, RenameFile, MoveFile, RevealFile
+- **Shell Scripts**: RunShellScript, RunAppleScript, RunJavaScriptForAutomation
+- **System Control**: Dark mode, screenshots, window management, lock screen
+- **Photos**: Filter library, search, create albums
+- **Books & Audiobooks**: Open books, play audiobooks
+- **Weather**: Get weather, manage locations
+- **Accessibility**: All 24 accessibility features
+- **And much more!**
 
 Use the `list_actions` tool to find specific actions if needed.
 
@@ -94,12 +102,24 @@ If you have an Apple Developer account ($99/year), you can sign shortcuts with y
 
 ## Examples of What I Can Create
 
+**AI & Productivity:**
 - **AI-powered text improver**: Select text → Claude improves it → copies back
-- **Quick screenshot annotator**: Screenshot → add notes → save to folder
 - **Daily standup helper**: Ask for updates → format → send to Slack
-- **File organizer**: Select files → AI categorizes → moves to folders
 - **Voice memo transcriber**: Record → transcribe → save as text
-- **URL shortener**: Get clipboard → shorten → copy back
+
+**Automation & Organization:**
+- **Shortcut organizer**: Create folders and organize your shortcuts programmatically
+- **File organizer**: Select files → AI categorizes → moves to folders
+- **Auto dark mode**: Check time → switch appearance based on schedule
+
+**Time & Recording:**
+- **Pomodoro timer**: Start 25-min timer → alert → log work session
+- **Quick voice note**: Start recording → save to dated folder → notify
+
+**System Control:**
+- **Quick screenshot workflow**: Take screenshot → annotate → save to folder
+- **Window manager**: Arrange windows in specific layouts
+- **Focus mode**: Set VPN, night shift, do not disturb all at once
 
 ## Getting Started
 
