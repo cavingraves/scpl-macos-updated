@@ -10,7 +10,8 @@
   "files": [
     "index.js",
     "SCPL_REFERENCE.md",
-    "README.md"
+    "README.md",
+    "claude-desktop-skill/scpl-shortcuts.zip"
   ],
   "scripts": {
     "start": "node index.js"

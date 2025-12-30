@@ -239,10 +239,40 @@ function setupClaudeDesktop() {
   }
 
   console.log("✅ Claude Desktop setup complete!\n");
-  console.log("ℹ️  Note: Claude Desktop doesn't have plugins/skills.\n");
-  console.log("   The MCP tools (create_shortcut, validate_scpl, list_actions)");
-  console.log("   will be available, but Claude won't have the full ScPL reference");
-  console.log("   loaded as context. Consider using Claude Code for best results.\n");
+
+  // Copy skill ZIP to a user-accessible location
+  const skillZipSrc = join(__dirname, "claude-desktop-skill", "scpl-shortcuts.zip");
+  if (existsSync(skillZipSrc)) {
+    // Try Downloads, then Desktop
+    const destinations = [
+      join(homedir(), "Downloads", "scpl-shortcuts.zip"),
+      join(homedir(), "Desktop", "scpl-shortcuts.zip")
+    ];
+    let copied = false;
+    for (const dest of destinations) {
+      try {
+        const zipContent = readFileSync(skillZipSrc);
+        writeFileSync(dest, zipContent);
+        const shortPath = dest.replace(homedir(), "~");
+        console.log(`📦 Skill package copied to ${shortPath}\n`);
+        console.log("   To add the skill to Claude Desktop:");
+        console.log("   1. Open Claude Desktop → Settings → Skills");
+        console.log("   2. Click '+ Add' and import the ZIP file");
+        console.log("   3. Enable the skill\n");
+        copied = true;
+        break;
+      } catch (e) {
+        continue;
+      }
+    }
+    if (!copied) {
+      console.log("ℹ️  Skill ZIP available in npm package at:");
+      console.log("   node_modules/scpl-updated-mcp-server/claude-desktop-skill/scpl-shortcuts.zip\n");
+    }
+  } else {
+    console.log("ℹ️  For the full ScPL reference skill, download from:");
+    console.log("   https://github.com/cavingraves/scpl-macos-updated/tree/master/mcp-server/claude-desktop-skill\n");
+  }
 }
 
 function setupCodex(codexDir) {
