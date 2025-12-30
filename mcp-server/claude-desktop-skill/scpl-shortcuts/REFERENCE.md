@@ -238,13 +238,73 @@ GetFolderContents
 DeleteFiles immediately=true
 ```
 
-## Web
+## Web & APIs
 
 ```scpl
 URL "https://example.com"
 GetContentsOfURL
 ExpandURL
 GetComponentOfURL component="Host"
+```
+
+### GET Request (Basic)
+```scpl
+URL "https://api.example.com/data"
+GetContentsOfURL -> mv:Response
+GetDictionaryValue key="result"
+ShowResult
+```
+
+### POST Request with JSON Body
+```scpl
+URL "https://api.example.com/submit"
+GetContentsOfURL method="POST" headers={
+    "Content-Type": "application/json"
+    "Authorization": "Bearer YOUR_API_KEY"
+} body={
+    "name": "value"
+    "data": "content"
+}
+```
+
+### Parse Nested JSON
+```scpl
+URL "https://api.example.com/user"
+GetContentsOfURL -> mv:Response
+# Access nested: response.data.user.name
+mv:Response:data:user:name -> mv:UserName
+Text "Hello \(mv:UserName)"
+```
+
+### API with Error Handling
+```scpl
+URL "https://api.example.com/data"
+GetContentsOfURL -> mv:Response
+Count
+If Equals 0
+    ShowAlert title="Error" message="No data returned"
+    ExitShortcut
+End If
+GetDictionaryValue key="status" -> mv:Status
+If Equals "error"
+    GetDictionaryValue key="message"
+    ShowAlert title="API Error" message=mv:Message
+    ExitShortcut
+End If
+# Continue processing...
+```
+
+### Loop Through API Results
+```scpl
+URL "https://api.example.com/items"
+GetContentsOfURL -> mv:Response
+GetDictionaryValue key="items"
+RepeatWithEach
+    GetDictionaryValue key="name" -> mv:ItemName
+    Text "\(mv:ItemName)" -> mv:Output
+    AddToVariable v:AllItems
+End RepeatWithEach
+ShowResult v:AllItems
 ```
 
 ---
