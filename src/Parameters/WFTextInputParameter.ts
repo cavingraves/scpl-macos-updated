@@ -11,7 +11,7 @@ export class WFTextInputParameter extends WFParameter {
 	constructor(
 		data: ShortcutsTextInputParameterSpec,
 		name = "Text",
-		docs = "https://pfgithub.github.io/shortcutslang/gettingstarted#text-field"
+		docs = "../gettingstarted#text-field"
 	) {
 		super(data, name, docs);
 		this._data = data;

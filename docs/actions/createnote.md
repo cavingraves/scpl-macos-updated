@@ -20,7 +20,7 @@ CreateNote app=("string" | variable)] showComposeSheet=(true | false | variable)
 
 ---
 
-### app: Intent App Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### app: Intent App Picker [(Docs)](../gettingstarted#other-fields)
 **Default Value**: ```
 		com.apple.mobilenotes
 		```
@@ -32,7 +32,7 @@ CreateNote app=("string" | variable)] showComposeSheet=(true | false | variable)
 
 ---
 
-### showComposeSheet: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### showComposeSheet: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Default Value**: ```
 		true
 		```

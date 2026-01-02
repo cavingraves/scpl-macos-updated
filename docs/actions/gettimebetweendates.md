@@ -23,7 +23,7 @@ GetTimeBetweenDates getTimeFrom=("Right Now" | "Other" | variable) otherDate="st
 
 ---
 
-### getTimeFrom: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### getTimeFrom: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Right Now"`
 
 
@@ -35,7 +35,7 @@ containing one of the options:
 
 ---
 
-### otherDate: Date [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### otherDate: Date [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"September 9, 2014"`
 **Allows Variables**: true
 
@@ -47,7 +47,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### in: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### in: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Minutes"`
 **Allows Variables**: true
 

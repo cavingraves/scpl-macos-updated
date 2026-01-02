@@ -20,7 +20,7 @@ OpenIn showOpenInMenu=(true | false | variable) app=("app name" | "com.identifie
 
 ---
 
-### showOpenInMenu: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### showOpenInMenu: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Default Value**: ```
 		true
 		```
@@ -33,7 +33,7 @@ or a variable.
 
 ---
 
-### app: App [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### app: App [(Docs)](../gettingstarted#other-fields)
 **Allows Variables**: true
 
 **Only enabled if**: argument WFOpenInAskWhenRun == `false`
@@ -50,7 +50,7 @@ Supported apps are:
 
 ---
 
-### WFAppName: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### WFAppName: Text [(Docs)](../gettingstarted#text-field)
 **Allows Variables**: true
 
 **Only enabled if**: This action is always **disabled** inside Shortcutslang.

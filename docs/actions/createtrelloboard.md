@@ -20,7 +20,7 @@ CreateTrelloBoard name="string" WFTrelloDescription="string"
 
 ---
 
-### name: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### name: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Shortcuts"`
 **Allows Variables**: true
 
@@ -32,7 +32,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### WFTrelloDescription: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### WFTrelloDescription: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Description"`
 **Allows Variables**: true
 

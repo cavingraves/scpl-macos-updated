@@ -28,7 +28,17 @@ Text "This is my text"
 
 ## Try making shortcuts
 
-You can convert ScPL to .shortcut on the [tryit page](https://editor.scpl.dev). Copy the .shortcut file to your phone through airdrop or iCloud files and open it in Shortcuts.
+You can convert ScPL to .shortcut using the MCP server or npm package.
+
+### Signing Your Shortcuts
+
+**MCP Server auto-signs by default!** If using the MCP server, shortcuts are signed automatically.
+
+For manual signing:
+1. **CLI (Built into macOS 12+)**: `shortcuts sign --mode anyone --input file.shortcut --output signed.shortcut`
+2. **GUI**: Use [Shortcut Source Tool](https://routinehub.co/shortcut/5256/) from RoutineHub
+
+Copy the signed .shortcut file to your device through AirDrop or iCloud files and open it in Shortcuts.
 
 ### Argument Labels
 

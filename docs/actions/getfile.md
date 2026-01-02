@@ -25,7 +25,7 @@ GetFile service=("iCloud Drive" | "Dropbox") showDocumentPicker=(true | false | 
 
 ---
 
-### service: Storage Service Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### service: Storage Service Picker [(Docs)](../gettingstarted#enum-select-field)
 **Allows Variables**: true
 
 
@@ -39,7 +39,7 @@ containing one of the options:
 
 ---
 
-### showDocumentPicker: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### showDocumentPicker: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Default Value**: ```
 		true
 		```
@@ -52,7 +52,7 @@ or a variable.
 
 ---
 
-### selectMultiple: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### selectMultiple: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Allows Variables**: true
 
 **Only enabled if**: argument WFShowFilePicker == `true`
@@ -62,7 +62,7 @@ or a variable.
 
 ---
 
-### filePath: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### filePath: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"example.txt"`
 **Allows Variables**: true
 
@@ -74,7 +74,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### initialPath: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### initialPath: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"optional"`
 **Allows Variables**: true
 
@@ -86,7 +86,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### errorIfNotFound: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### errorIfNotFound: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Default Value**: ```
 		true
 		```

@@ -20,7 +20,7 @@ GetCurrentWeather at=("Current Location" | "Custom Location" | variable) locatio
 
 ---
 
-### at: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### at: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Current Location"`
 
 
@@ -32,7 +32,7 @@ containing one of the options:
 
 ---
 
-### location: Location [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### location: Location [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Cupertino, CA"`
 **Allows Variables**: true
 

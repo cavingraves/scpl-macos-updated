@@ -18,7 +18,7 @@ GetDetailsofDiffbotArticle ("Name" | "Title" | "Published Date" | "Author" | "Nu
 
 ---
 
-### get: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### get: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Allows Variables**: true
 
 

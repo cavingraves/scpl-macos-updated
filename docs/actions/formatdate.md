@@ -23,7 +23,7 @@ FormatDate dateFormat=("None" | "Short" | "Medium" | "Long" | "Relative" | "RFC 
 
 ---
 
-### dateFormat: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### dateFormat: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Short"`
 **Allows Variables**: true
 
@@ -44,7 +44,7 @@ containing one of the options:
 
 ---
 
-### alternateFormat: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### alternateFormat: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Medium"`
 **Allows Variables**: true
 
@@ -60,7 +60,7 @@ containing one of the options:
 
 ---
 
-### timeFormat: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### timeFormat: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Short"`
 **Allows Variables**: true
 
@@ -78,7 +78,7 @@ containing one of the options:
 
 ---
 
-### includeISO8601Time: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### includeISO8601Time: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Allows Variables**: true
 
 **Only enabled if**: argument WFDateFormatStyle == `ISO 8601`
@@ -88,7 +88,7 @@ or a variable.
 
 ---
 
-### formatString: Date Format String [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### formatString: Date Format String [(Docs)](../gettingstarted#text-field)
 **Allows Variables**: true
 
 **Only enabled if**: argument WFDateFormatStyle == `Custom`

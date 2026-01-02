@@ -18,7 +18,7 @@ ChangeCase ("UPPERCASE" | "lowercase" | "Capitalize Every Word" | "Capitalize wi
 
 ---
 
-### case: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### case: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"UPPERCASE"`
 **Allows Variables**: true
 

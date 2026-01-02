@@ -20,7 +20,7 @@ SearchWeb ("Amazon" | "Bing" | "DuckDuckGo" | "eBay" | "Google" | "Reddit" | "Tw
 
 ---
 
-### search: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### search: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Google"`
 **Allows Variables**: true
 

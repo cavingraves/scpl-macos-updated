@@ -18,7 +18,7 @@ Text "string"
 
 ---
 
-### WFTextActionText: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### WFTextActionText: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Enter text..."`
 **Allows Variables**: true
 

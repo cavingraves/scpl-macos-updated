@@ -22,7 +22,7 @@ RecordAudio audioQuality=("Normal" | "Very High") startRecording=("On Tap" | "Im
 
 ---
 
-### audioQuality: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### audioQuality: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Normal"`
 **Allows Variables**: true
 
@@ -37,7 +37,7 @@ containing one of the options:
 
 ---
 
-### startRecording: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### startRecording: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"On Tap"`
 **Allows Variables**: true
 
@@ -52,7 +52,7 @@ containing one of the options:
 
 ---
 
-### finishRecording: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### finishRecording: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"On Tap"`
 **Allows Variables**: true
 

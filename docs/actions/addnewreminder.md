@@ -24,7 +24,7 @@ AddNewReminder title="string" list=("string" | variable)] remindMe=(true | false
 
 ---
 
-### title: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### title: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Buy some milk"`
 **Allows Variables**: true
 
@@ -36,7 +36,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### list: Calendar Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### list: Calendar Picker [(Docs)](../gettingstarted#other-fields)
 **Allows Variables**: true
 
 
@@ -45,7 +45,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### remindMe: Expand Arrow [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### remindMe: Expand Arrow [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 
 
 Accepts a boolean for if this
@@ -57,7 +57,7 @@ labels, these can be ignored.
 
 ---
 
-### remind: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### remind: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Allows Variables**: true
 
 **Only enabled if**: argument WFCalendarItemAlert == `true`
@@ -71,7 +71,7 @@ containing one of the options:
 
 ---
 
-### whenI: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### whenI: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Allows Variables**: true
 
 **Only enabled if**: argument WFCalendarItemAlert == `true`
@@ -87,7 +87,7 @@ containing one of the options:
 
 ---
 
-### radius: Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#number-field)
+### radius: Number [(Docs)](../gettingstarted#number-field)
 **Placeholder**: `in meters`
 **Default Value**: `300`
 **Allows Variables**: true
@@ -102,7 +102,7 @@ containing one of the options:
 
 ---
 
-### ofLocation: Location [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### ofLocation: Location [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"One Apple Park Way, Cupertino, CA"`
 **Allows Variables**: true
 
@@ -116,7 +116,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### alertTime: Date [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### alertTime: Date [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Tomorrow at 4pm"`
 **Allows Variables**: true
 
@@ -130,7 +130,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### notes: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### notes: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Notes"`
 **Allows Variables**: true
 

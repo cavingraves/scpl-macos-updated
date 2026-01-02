@@ -18,7 +18,7 @@ SetDictionaryValue key="string" value="string"
 
 ---
 
-### key: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### key: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"name"`
 **Allows Variables**: true
 
@@ -30,7 +30,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### value: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### value: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"example"`
 **Allows Variables**: true
 

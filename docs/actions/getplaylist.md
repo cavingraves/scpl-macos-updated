@@ -20,7 +20,7 @@ GetPlaylist ("string" | variable)]
 
 ---
 
-### playlist: Music Playlist Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### playlist: Music Playlist Picker [(Docs)](../gettingstarted#other-fields)
 **Allows Variables**: true
 
 

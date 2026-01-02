@@ -25,7 +25,7 @@ AppendtoNoteEvernote noteTitle="string" mode=("Append" | "Prepend") inNotebook=(
 
 ---
 
-### noteTitle: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### noteTitle: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"example note"`
 **Allows Variables**: true
 
@@ -37,7 +37,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### mode: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### mode: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Append"`
 **Allows Variables**: true
 
@@ -52,7 +52,7 @@ containing one of the options:
 
 ---
 
-### inNotebook: Evernote Notebook Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### inNotebook: Evernote Notebook Picker [(Docs)](../gettingstarted#other-fields)
 **Allows Variables**: true
 
 

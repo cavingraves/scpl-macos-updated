@@ -20,7 +20,7 @@ GetItemsfromPocket WFPocketItemCount=number type=("Unread" | "Archived" | "All")
 
 ---
 
-### WFPocketItemCount: Stepper Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#stepper-number-fields)
+### WFPocketItemCount: Stepper Number [(Docs)](../gettingstarted#stepper-number-fields)
 **Allows Variables**: true
 
 
@@ -31,7 +31,7 @@ GetItemsfromPocket WFPocketItemCount=number type=("Unread" | "Archived" | "All")
 
 ---
 
-### type: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### type: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"All"`
 **Allows Variables**: true
 
@@ -47,7 +47,7 @@ containing one of the options:
 
 ---
 
-### search: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### search: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"optional"`
 **Allows Variables**: true
 
@@ -59,7 +59,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### tag: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### tag: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"optional"`
 **Allows Variables**: true
 

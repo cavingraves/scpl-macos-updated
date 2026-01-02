@@ -12,7 +12,7 @@ GetDetailsofMusic ("Last Played Date" | "File Extension" | "Release Date" | "Gen
 
 ---
 
-### get: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### get: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Allows Variables**: true
 
 

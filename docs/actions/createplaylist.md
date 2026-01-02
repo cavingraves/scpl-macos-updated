@@ -25,7 +25,7 @@ CreatePlaylist name="string" author="string" description="string"
 
 ---
 
-### name: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### name: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Greatest Hits"`
 **Allows Variables**: true
 
@@ -37,7 +37,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### author: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### author: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Shortcuts"`
 **Allows Variables**: true
 
@@ -49,7 +49,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### description: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### description: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"All of my favorites"`
 **Allows Variables**: true
 

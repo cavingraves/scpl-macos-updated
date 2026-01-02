@@ -14,7 +14,7 @@
 
 <div align="center">
 
-[![Actions](https://img.shields.io/badge/actions-493-blue.svg)](./MACOS_TAHOE_UPDATES.md)
+[![Actions](https://img.shields.io/badge/actions-495-blue.svg)](./MACOS_TAHOE_UPDATES.md)
 [![macOS](https://img.shields.io/badge/macOS-Tahoe%2026.x%20%7C%20Intel%20%26%20Apple%20Silicon-purple.svg)](https://www.apple.com/macos/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
@@ -57,7 +57,7 @@ Complete integration with Apple Notes app:
 
 **→** See [MACOS_TAHOE_UPDATES.md](./MACOS_TAHOE_UPDATES.md) for the complete list
 
-**→** Total: **493 actions** (original scpl: 271, **+222 new actions**)
+**→** Total: **495 actions** (original scpl: 271, **+224 new actions**)
 
 ---
 
@@ -241,7 +241,7 @@ Claude will write the ScPL code, validate it, and generate the `.shortcut` file 
 - 📖 [macOS Tahoe Actions Reference](./MACOS_TAHOE_UPDATES.md) - All 22 new actions
 - 🤖 [MCP Server Guide](./mcp-server/README.md) - AI-powered shortcut creation
 - 🤝 [Contributing Guide](./CONTRIBUTING.md) - Add your favorite app's actions
-- 📚 [Original ScPL Documentation](https://docs.scpl.dev/) - Core language reference (by pfgithub)
+- 📚 [ScPL Language Reference](./docs/gettingstarted.md) - Core language reference
 
 ---
 

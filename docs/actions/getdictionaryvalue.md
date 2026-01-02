@@ -23,7 +23,7 @@ GetDictionaryValue get=("Value" | "All Keys" | "All Values" | variable) key="str
 
 ---
 
-### get: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### get: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Value"`
 
 
@@ -36,7 +36,7 @@ containing one of the options:
 
 ---
 
-### key: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### key: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"example"`
 **Allows Variables**: true
 

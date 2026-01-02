@@ -20,7 +20,7 @@ GetLatestPhotos WFGetLatestPhotoCount=number includeScreenshots=(true | false | 
 
 ---
 
-### WFGetLatestPhotoCount: Stepper Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#stepper-number-fields)
+### WFGetLatestPhotoCount: Stepper Number [(Docs)](../gettingstarted#stepper-number-fields)
 **Default Value**: `1`
 **Allows Variables**: true
 
@@ -32,7 +32,7 @@ GetLatestPhotos WFGetLatestPhotoCount=number includeScreenshots=(true | false | 
 
 ---
 
-### includeScreenshots: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### includeScreenshots: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Default Value**: ```
 		true
 		```

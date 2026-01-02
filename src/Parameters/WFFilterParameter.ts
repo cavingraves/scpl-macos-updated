@@ -17,7 +17,7 @@ export class WFFilterParameter extends WFParameter {
 	constructor(
 		data: ShortcutsFilterParameterSpec,
 		name = "Filter",
-		docs = "https://pfgithub.github.io/shortcutslang/gettingstarted#filter-field"
+		docs = "../gettingstarted#filter-field"
 	) {
 		super(data, name, docs);
 		this._data = data;
@@ -75,7 +75,7 @@ Accepts a :filter{} of filters. This filter supports:
 					return;
 				}
 				if (!val.filter) {
-					return `~~${key}~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=${encodeURIComponent(
+					return `~~${key}~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=${encodeURIComponent(
 						`Add support for :filter{${key}} (in ${
 							this.coercionType
 						})`
@@ -86,7 +86,7 @@ Accepts a :filter{} of filters. This filter supports:
 						.join("%29")}))`;
 				}
 				if (!val.type) {
-					return `~~${key}~~ (Not yet supported, type is undefined but filter is defined. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=${encodeURIComponent(
+					return `~~${key}~~ (Not yet supported, type is undefined but filter is defined. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=${encodeURIComponent(
 						`Type is undefined but filter is defined in :filter{${key}} (in ${
 							this.coercionType
 						})`
@@ -98,7 +98,7 @@ Accepts a :filter{} of filters. This filter supports:
 				}
 				const itemType = getTypes[val.type];
 				if (!itemType.comparisonMethods) {
-					return `~~${key}~~ (Not yet supported, no comparison methods defined. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=${encodeURIComponent(
+					return `~~${key}~~ (Not yet supported, no comparison methods defined. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=${encodeURIComponent(
 						`Add :filter support for ${val.type}`
 					)
 						.split("(")

@@ -20,7 +20,7 @@ ShowResult "string"
 
 ---
 
-### text: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### text: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Enter text..."`
 **Allows Variables**: true
 

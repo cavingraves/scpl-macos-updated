@@ -10,7 +10,7 @@ export class WFTimeOffsetParameter extends WFParameter {
 	constructor(
 		data: ShortcutsTimeOffsetParameterSpec,
 		name = "Time Offset",
-		docs = "https://pfgithub.github.io/shortcutslang/gettingstarted#time-offset"
+		docs = "../gettingstarted#time-offset"
 	) {
 		super(data, name, docs);
 		this._data = data;

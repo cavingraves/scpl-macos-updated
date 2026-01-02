@@ -20,7 +20,7 @@ CopytoClipboard localOnly=(true | false | variable) expireAt="string"
 
 ---
 
-### localOnly: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### localOnly: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Allows Variables**: true
 
 
@@ -30,7 +30,7 @@ or a variable.
 
 ---
 
-### expireAt: Date [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### expireAt: Date [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Today at 3 PM"`
 **Allows Variables**: true
 

@@ -20,7 +20,7 @@ GetUpcomingEvents calendar=("string" | variable)] WFGetUpcomingItemCount=number 
 
 ---
 
-### calendar: Calendar Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### calendar: Calendar Picker [(Docs)](../gettingstarted#other-fields)
 **Allows Variables**: true
 
 
@@ -29,7 +29,7 @@ GetUpcomingEvents calendar=("string" | variable)] WFGetUpcomingItemCount=number 
 
 ---
 
-### WFGetUpcomingItemCount: Stepper Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#stepper-number-fields)
+### WFGetUpcomingItemCount: Stepper Number [(Docs)](../gettingstarted#stepper-number-fields)
 **Default Value**: `1`
 **Allows Variables**: true
 
@@ -41,7 +41,7 @@ GetUpcomingEvents calendar=("string" | variable)] WFGetUpcomingItemCount=number 
 
 ---
 
-### day: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### day: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Any Day"`
 **Allows Variables**: true
 
@@ -58,7 +58,7 @@ containing one of the options:
 
 ---
 
-### specifiedDay: Date [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### specifiedDay: Date [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"June 29, 2007"`
 **Allows Variables**: true
 

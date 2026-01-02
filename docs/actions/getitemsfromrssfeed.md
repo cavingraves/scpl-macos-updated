@@ -18,7 +18,7 @@ GetItemsfromRSSFeed uRL="string" WFRSSItemQuantity=number
 
 ---
 
-### uRL: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### uRL: Text [(Docs)](../gettingstarted#text-field)
 **Default Value**: `"https://www.apple.com/newsroom/rss-feed.rss"`
 **Allows Variables**: true
 
@@ -30,7 +30,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### WFRSSItemQuantity: Stepper Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#stepper-number-fields)
+### WFRSSItemQuantity: Stepper Number [(Docs)](../gettingstarted#stepper-number-fields)
 **Default Value**: `10`
 **Allows Variables**: true
 

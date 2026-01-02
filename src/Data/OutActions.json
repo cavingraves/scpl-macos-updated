@@ -15713,5 +15713,137 @@
 		"ActionClass": "WFAppIntentExecutionAction",
 		"Name": "Toggle Meta AICall Mic",
 		"AppIdentifier": "net.whatsapp.WhatsApp"
+	},
+	"is.workflow.actions.runshellscript": {
+		"ActionClass": "WFRunShellScriptAction",
+		"ActionKeywords": [
+			"shell",
+			"bash",
+			"zsh",
+			"script",
+			"terminal",
+			"command",
+			"unix",
+			"linux"
+		],
+		"AppIdentifier": "is.workflow.actions",
+		"Category": "Scripting",
+		"Description": {
+			"DescriptionInput": "The input passed to the shell script (stdin)",
+			"DescriptionResult": "The output from the shell script (stdout)",
+			"DescriptionSummary": "Runs a shell script using the specified shell."
+		},
+		"Input": {
+			"Multiple": false,
+			"Required": false,
+			"Types": [
+				"WFStringContentItem"
+			]
+		},
+		"Name": "Run Shell Script",
+		"Output": {
+			"Multiple": false,
+			"OutputName": "Shell Script Result",
+			"Types": [
+				"WFStringContentItem"
+			]
+		},
+		"Parameters": [
+			{
+				"Class": "WFEnumerationParameter",
+				"DefaultValue": "/bin/zsh",
+				"Items": [
+					"/bin/zsh",
+					"/bin/bash",
+					"/bin/sh",
+					"/usr/bin/python3",
+					"/usr/bin/perl",
+					"/usr/bin/ruby"
+				],
+				"Key": "Shell",
+				"Label": "Shell"
+			},
+			{
+				"Class": "WFTextInputParameter",
+				"Key": "Script",
+				"Label": "Script",
+				"Multiline": true,
+				"Placeholder": "Script"
+			},
+			{
+				"Class": "WFSwitchParameter",
+				"DefaultValue": true,
+				"Key": "WFInputPassthrough",
+				"Label": "Pass Input"
+			}
+		],
+		"Subcategory": "Shell"
+	},
+	"is.workflow.actions.askllm": {
+		"ActionClass": "WFAskLLMAction",
+		"ActionKeywords": [
+			"ai",
+			"llm",
+			"model",
+			"apple intelligence",
+			"chatgpt",
+			"prompt",
+			"generate",
+			"ask"
+		],
+		"AppIdentifier": "is.workflow.actions",
+		"Category": "Scripting",
+		"Description": {
+			"DescriptionSummary": "Sends a prompt to an AI model (Apple Intelligence or ChatGPT) and returns the response."
+		},
+		"IconName": "Scripting.png",
+		"Name": "Ask LLM",
+		"Output": {
+			"Multiple": false,
+			"OutputName": "LLM Response",
+			"Types": [
+				"NSString",
+				"NSNumber",
+				"WFBooleanContentItem"
+			]
+		},
+		"Parameters": [
+			{
+				"Class": "WFEnumerationParameter",
+				"DefaultValue": "Apple Intelligence",
+				"Items": [
+					"Apple Intelligence",
+					"Apple Intelligence on Device",
+					"ChatGPT"
+				],
+				"Key": "WFLLMModel",
+				"Label": "Model"
+			},
+			{
+				"Class": "WFTextInputParameter",
+				"Key": "WFLLMPrompt",
+				"Label": "Prompt",
+				"Multiline": true,
+				"Placeholder": "Enter your prompt..."
+			},
+			{
+				"Class": "WFSwitchParameter",
+				"DefaultValue": false,
+				"Key": "WFLLMFollowUp",
+				"Label": "Follow-Up"
+			},
+			{
+				"Class": "WFEnumerationParameter",
+				"DefaultValue": "Text",
+				"Items": [
+					"Text",
+					"Boolean",
+					"Number"
+				],
+				"Key": "WFLLMResultType",
+				"Label": "Result Type"
+			}
+		],
+		"Subcategory": "AI"
 	}
 }

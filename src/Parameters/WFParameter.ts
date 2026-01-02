@@ -26,7 +26,7 @@ export abstract class WFParameter {
 	constructor(
 		data: ShortcutsBaseParameterSpec,
 		typeName: string = "WFParameter",
-		docs: string = "https://pfgithub.github.io/shortcutslang/gettingstarted"
+		docs: string = "../gettingstarted"
 	) {
 		this._data = data;
 		this.isComplete = true;

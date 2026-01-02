@@ -34,7 +34,7 @@ GetTravelTime from=("Current Location" | "Custom Location" | variable) location=
 
 ---
 
-### from: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### from: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Current Location"`
 
 
@@ -46,7 +46,7 @@ containing one of the options:
 
 ---
 
-### location: Location [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### location: Location [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"One Apple Park Way"`
 **Allows Variables**: true
 
@@ -58,7 +58,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### transportationMode: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### transportationMode: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Driving"`
 **Allows Variables**: true
 

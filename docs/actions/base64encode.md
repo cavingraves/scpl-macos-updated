@@ -18,7 +18,7 @@ Base64Encode mode=("Encode" | "Decode") lineBreaks=("None" | "Every 64 Character
 
 ---
 
-### mode: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### mode: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Encode"`
 **Allows Variables**: true
 
@@ -33,7 +33,7 @@ containing one of the options:
 
 ---
 
-### lineBreaks: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### lineBreaks: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Every 76 Characters"`
 **Allows Variables**: true
 

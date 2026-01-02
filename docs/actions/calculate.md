@@ -18,7 +18,7 @@ Calculate operation=("+" | "-" | "×" | "÷" | "…") scientificOperation=("Modu
 
 ---
 
-### operation: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### operation: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"+"`
 **Allows Variables**: true
 
@@ -36,7 +36,7 @@ containing one of the options:
 
 ---
 
-### scientificOperation: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### scientificOperation: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Allows Variables**: true
 
 **Only enabled if**: argument WFMathOperation == `…`
@@ -63,7 +63,7 @@ containing one of the options:
 
 ---
 
-### operand: Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#number-field)
+### operand: Number [(Docs)](../gettingstarted#number-field)
 **Placeholder**: `0`
 **Allows Variables**: true
 
@@ -75,7 +75,7 @@ containing one of the options:
 
 ---
 
-### operand2: Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#number-field)
+### operand2: Number [(Docs)](../gettingstarted#number-field)
 **Placeholder**: `3`
 **Allows Variables**: true
 

@@ -20,7 +20,7 @@ EmailAddress ("string" | [list, of, strings] | variable)
 
 ---
 
-### WFEmailAddress: Email [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### WFEmailAddress: Email [(Docs)](../gettingstarted#other-fields)
 **Placeholder**: ```
 		Type in an email address
 		```

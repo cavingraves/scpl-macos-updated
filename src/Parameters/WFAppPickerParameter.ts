@@ -11,7 +11,7 @@ export class WFAppPickerParameter extends WFParameter {
 	constructor(
 		data: ShortcutsAppPickerParameterSpec,
 		name = "App",
-		docs: string = "https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields"
+		docs: string = "../gettingstarted#other-fields"
 	) {
 		super(data, name, docs);
 		this._data = data;

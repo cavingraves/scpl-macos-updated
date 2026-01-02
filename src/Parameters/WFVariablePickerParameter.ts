@@ -10,7 +10,7 @@ export class WFVariablePickerParameter extends WFParameter {
 	constructor(
 		data: ShortcutsVariablePickerParameterSpec,
 		name = "Variable Picker",
-		docs = "https://pfgithub.github.io/shortcutslang/gettingstarted#variable-picker-fields"
+		docs = "../gettingstarted#variable-picker-fields"
 	) {
 		super(data, name, docs);
 		this._data = data;

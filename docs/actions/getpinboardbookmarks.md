@@ -20,7 +20,7 @@ GetPinboardBookmarks tags="string" WFBookmarkCount=number
 
 ---
 
-### tags: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### tags: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"apple longread"`
 **Allows Variables**: true
 
@@ -32,7 +32,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### WFBookmarkCount: Stepper Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#stepper-number-fields)
+### WFBookmarkCount: Stepper Number [(Docs)](../gettingstarted#stepper-number-fields)
 **Default Value**: `5`
 **Allows Variables**: true
 

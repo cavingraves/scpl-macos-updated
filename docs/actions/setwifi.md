@@ -20,7 +20,7 @@ SetWiFi (true | false | variable)
 
 ---
 
-### wiFi: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### wiFi: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Default Value**: ```
 		true
 		```

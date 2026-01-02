@@ -29,7 +29,7 @@ SaveFile service=("iCloud Drive" | "Dropbox") askWheretoSave=(true | false | var
 
 ---
 
-### service: Storage Service Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### service: Storage Service Picker [(Docs)](../gettingstarted#enum-select-field)
 **Allows Variables**: true
 
 
@@ -43,7 +43,7 @@ containing one of the options:
 
 ---
 
-### askWheretoSave: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### askWheretoSave: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Default Value**: ```
 		true
 		```
@@ -56,7 +56,7 @@ or a variable.
 
 ---
 
-### destinationPath: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### destinationPath: Text [(Docs)](../gettingstarted#text-field)
 **Allows Variables**: true
 
 **Only enabled if**: argument WFAskWhereToSave == `false`
@@ -67,7 +67,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### overwriteIfFileExists: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### overwriteIfFileExists: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Allows Variables**: true
 
 **Only enabled if**: argument WFAskWhereToSave == `false`

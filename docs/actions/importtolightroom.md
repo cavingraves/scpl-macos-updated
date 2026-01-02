@@ -18,7 +18,7 @@ ImporttoLightroom applyPreset=(true | false | variable) presetGroup=("B&W" | "Co
 
 ---
 
-### applyPreset: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### applyPreset: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Allows Variables**: true
 
 
@@ -28,7 +28,7 @@ or a variable.
 
 ---
 
-### presetGroup: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### presetGroup: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Color"`
 **Allows Variables**: true
 
@@ -48,7 +48,7 @@ containing one of the options:
 
 ---
 
-### preset: Lightroom Preset Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### preset: Lightroom Preset Picker [(Docs)](../gettingstarted#other-fields)
 **Allows Variables**: true
 
 **Only enabled if**: argument applyPreset == `true`

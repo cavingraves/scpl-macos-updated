@@ -18,7 +18,7 @@ CreateFolder service=("iCloud Drive" | "Dropbox") path="string"
 
 ---
 
-### service: Storage Service Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### service: Storage Service Picker [(Docs)](../gettingstarted#enum-select-field)
 **Allows Variables**: true
 
 
@@ -32,7 +32,7 @@ containing one of the options:
 
 ---
 
-### path: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### path: Text [(Docs)](../gettingstarted#text-field)
 **Allows Variables**: true
 
 

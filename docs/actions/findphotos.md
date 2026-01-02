@@ -16,28 +16,28 @@ FindPhotos filter=:filter{...} sortby=("File Size" | "Camera Make" | "Last Modif
 
 ---
 
-### filter: Filter [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#filter-field)
+### filter: Filter [(Docs)](../gettingstarted#filter-field)
 
 
 Accepts a :filter{} of filters. This filter supports:
 
 - 
 - 
-- ~~lastmodifieddate~~ (Not yet supported, no comparison methods defined. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20%3Afilter%20support%20for%20WFDateContentItem))
+- ~~lastmodifieddate~~ (Not yet supported, no comparison methods defined. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20%3Afilter%20support%20for%20WFDateContentItem))
 - fileextension (Supported for is, isnot, contains, doesnotcontain, beginswith, endswith)
 - mediatype (Supported for is, isnot) (Must be one of: `Image`, `Video`, `Audio)`
-- ~~creationdate~~ (Not yet supported, no comparison methods defined. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20%3Afilter%20support%20for%20WFDateContentItem))
+- ~~creationdate~~ (Not yet supported, no comparison methods defined. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20%3Afilter%20support%20for%20WFDateContentItem))
 - 
 - album (Supported for is, isnot, contains, doesnotcontain, beginswith, endswith)
 - phototype (Supported for is, isnot) (Must be one of: `HDR`, `Panorama`, `Burst`, `Live Photo)`
-- ~~datetaken~~ (Not yet supported, no comparison methods defined. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20%3Afilter%20support%20for%20WFDateContentItem))
-- ~~duration~~ (Not yet supported, no comparison methods defined. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20%3Afilter%20support%20for%20WFTimeLengthContentItem))
-- ~~width~~ (Not yet supported, no comparison methods defined. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20%3Afilter%20support%20for%20WFNumberContentItem))
-- ~~timetaken~~ (Not yet supported, no comparison methods defined. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20%3Afilter%20support%20for%20WFTimeContentItem))
+- ~~datetaken~~ (Not yet supported, no comparison methods defined. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20%3Afilter%20support%20for%20WFDateContentItem))
+- ~~duration~~ (Not yet supported, no comparison methods defined. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20%3Afilter%20support%20for%20WFTimeLengthContentItem))
+- ~~width~~ (Not yet supported, no comparison methods defined. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20%3Afilter%20support%20for%20WFNumberContentItem))
+- ~~timetaken~~ (Not yet supported, no comparison methods defined. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20%3Afilter%20support%20for%20WFTimeContentItem))
 - isascreenshot (Supported for is)
 - ishidden (Supported for is)
-- ~~framerate~~ (Not yet supported, no comparison methods defined. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20%3Afilter%20support%20for%20WFNumberContentItem))
-- ~~height~~ (Not yet supported, no comparison methods defined. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20%3Afilter%20support%20for%20WFNumberContentItem))
+- ~~framerate~~ (Not yet supported, no comparison methods defined. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20%3Afilter%20support%20for%20WFNumberContentItem))
+- ~~height~~ (Not yet supported, no comparison methods defined. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20%3Afilter%20support%20for%20WFNumberContentItem))
 - 
 - isfavorite (Supported for is)
 - orientation (Supported for is, isnot) (Must be one of: `Up`, `Down`, `Left`, `Right`, `Up Mirrored`, `Down Mirrored`, `Left Mirrored`, `Right Mirrored)`
@@ -48,7 +48,7 @@ Example: `:filter{name is testname}`
 
 ---
 
-### sortby: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### sortby: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Allows Variables**: true
 
 
@@ -83,7 +83,7 @@ containing one of the options:
 
 ---
 
-### order: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### order: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Allows Variables**: true
 
 **Only enabled if**: argument WFContentItemSortProperty != `Random`
@@ -106,7 +106,7 @@ containing one of the options:
 
 ---
 
-### limit: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### limit: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Allows Variables**: true
 
 
@@ -116,7 +116,7 @@ or a variable.
 
 ---
 
-### getItems: Stepper Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#stepper-number-fields)
+### getItems: Stepper Number [(Docs)](../gettingstarted#stepper-number-fields)
 **Allows Variables**: true
 
 **Only enabled if**: argument WFSwitchParameter == `true`

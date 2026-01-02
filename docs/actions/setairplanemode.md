@@ -20,7 +20,7 @@ SetAirplaneMode (true | false | variable)
 
 ---
 
-### airplaneMode: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### airplaneMode: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Default Value**: ```
 		true
 		```

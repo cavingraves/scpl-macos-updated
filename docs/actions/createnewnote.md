@@ -27,7 +27,7 @@ CreateNewNote noteTitle="string" notebook=("string" | variable)] undefined=NotIm
 
 ---
 
-### noteTitle: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### noteTitle: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"optional"`
 **Allows Variables**: true
 
@@ -39,7 +39,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### notebook: Evernote Notebook Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### notebook: Evernote Notebook Picker [(Docs)](../gettingstarted#other-fields)
 **Allows Variables**: true
 
 

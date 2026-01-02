@@ -23,7 +23,7 @@ GetItemfromList get=("First Item" | "Last Item" | "Random Item" | "Item At Index
 
 ---
 
-### get: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### get: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"First Item"`
 **Allows Variables**: true
 
@@ -41,7 +41,7 @@ containing one of the options:
 
 ---
 
-### index: Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#number-field)
+### index: Number [(Docs)](../gettingstarted#number-field)
 **Placeholder**: `1`
 **Allows Variables**: true
 
@@ -53,7 +53,7 @@ containing one of the options:
 
 ---
 
-### getItemsFromIndex: Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#number-field)
+### getItemsFromIndex: Number [(Docs)](../gettingstarted#number-field)
 **Placeholder**: `optional`
 **Default Value**: `1`
 **Allows Variables**: true
@@ -66,7 +66,7 @@ containing one of the options:
 
 ---
 
-### toIndex: Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#number-field)
+### toIndex: Number [(Docs)](../gettingstarted#number-field)
 **Placeholder**: `optional`
 **Allows Variables**: true
 

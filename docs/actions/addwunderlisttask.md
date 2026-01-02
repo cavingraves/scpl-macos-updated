@@ -29,7 +29,7 @@ AddWunderlistTask title="string" list=("string" | variable)] dueDate="string" re
 
 ---
 
-### title: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### title: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Buy some milk"`
 **Allows Variables**: true
 
@@ -41,7 +41,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### list: Wunderlist List Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### list: Wunderlist List Picker [(Docs)](../gettingstarted#other-fields)
 **Allows Variables**: true
 
 
@@ -50,7 +50,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### dueDate: Date [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### dueDate: Date [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"optional"`
 **Allows Variables**: true
 
@@ -62,7 +62,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### reminder: Date [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### reminder: Date [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"optional"`
 **Allows Variables**: true
 
@@ -74,7 +74,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### starred: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### starred: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Allows Variables**: true
 
 
@@ -84,7 +84,7 @@ or a variable.
 
 ---
 
-### notes: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### notes: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Notes"`
 **Allows Variables**: true
 

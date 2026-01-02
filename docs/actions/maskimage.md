@@ -27,7 +27,7 @@ MaskImage type=("Rounded Rectangle" | "Ellipse" | "Icon" | "Custom Image" | vari
 
 ---
 
-### type: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### type: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 
 
 Accepts a string 
@@ -40,7 +40,7 @@ containing one of the options:
 
 ---
 
-### cornerRadius: Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#number-field)
+### cornerRadius: Number [(Docs)](../gettingstarted#number-field)
 **Placeholder**: `0`
 **Allows Variables**: true
 
@@ -52,7 +52,7 @@ containing one of the options:
 
 ---
 
-### imageMask: Variable Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#variable-picker-fields)
+### imageMask: Variable Picker [(Docs)](../gettingstarted#variable-picker-fields)
 **Allows Variables**: true
 
 **Only enabled if**: argument WFMaskType == `Custom Image`

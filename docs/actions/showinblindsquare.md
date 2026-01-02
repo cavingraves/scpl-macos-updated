@@ -20,7 +20,7 @@ ShowinBlindSquare (true | false | variable)
 
 ---
 
-### startSimulation: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### startSimulation: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Allows Variables**: true
 
 

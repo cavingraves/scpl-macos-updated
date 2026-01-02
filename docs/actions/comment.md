@@ -18,7 +18,7 @@ Comment "string"
 
 ---
 
-### WFCommentActionText: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### WFCommentActionText: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Enter comment..."`
 
 

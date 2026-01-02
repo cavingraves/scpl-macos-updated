@@ -27,7 +27,7 @@ end
 
 ---
 
-### prompt: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### prompt: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"optional"`
 **Allows Variables**: true
 
@@ -39,7 +39,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### items: List [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#list-field)
+### items: List [(Docs)](../gettingstarted#list-field)
 **Default Value**: ```
 		["One","Two"]
 		```

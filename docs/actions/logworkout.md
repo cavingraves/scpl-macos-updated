@@ -30,7 +30,7 @@ the values you want in this parameter.
 
 ---
 
-### date: Date [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### date: Date [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"optional"`
 **Allows Variables**: true
 

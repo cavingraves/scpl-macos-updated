@@ -20,7 +20,7 @@ CreateTrelloList name="string" board=("string" | variable)] position=("Top" | "B
 
 ---
 
-### name: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### name: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Shortcut Ideas"`
 **Allows Variables**: true
 
@@ -32,7 +32,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### board: Trello Board Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### board: Trello Board Picker [(Docs)](../gettingstarted#other-fields)
 **Allows Variables**: true
 
 
@@ -41,7 +41,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### position: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### position: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Top"`
 **Allows Variables**: true
 

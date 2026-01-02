@@ -20,14 +20,14 @@ PosttoSlack account=("string" | variable)] channel=("string" | variable)]
 
 ---
 
-### account: Account Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### account: Account Picker [(Docs)](../gettingstarted#other-fields)
 
 
 		Accepts a string or variable containing the option. Check the shortcuts app for a list of available options. 
 
 ---
 
-### channel: Slack Channel Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### channel: Slack Channel Picker [(Docs)](../gettingstarted#other-fields)
 **Allows Variables**: true
 
 

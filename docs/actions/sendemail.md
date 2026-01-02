@@ -20,7 +20,7 @@ SendEmail showComposeSheet=(true | false | variable) from=("string" | variable)]
 
 ---
 
-### showComposeSheet: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### showComposeSheet: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Default Value**: ```
 		true
 		```
@@ -33,7 +33,7 @@ or a variable.
 
 ---
 
-### from: Email Account Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### from: Email Account Picker [(Docs)](../gettingstarted#other-fields)
 **Allows Variables**: true
 
 **Only enabled if**: argument WFSendEmailActionShowComposeSheet == `false`
@@ -42,7 +42,7 @@ or a variable.
 
 ---
 
-### from2: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### from2: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"optional"`
 **Allows Variables**: true
 
@@ -56,7 +56,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### to: Email [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### to: Email [(Docs)](../gettingstarted#other-fields)
 **Placeholder**: ```
 		Email addresses
 		```
@@ -68,7 +68,7 @@ Accepts a string or string array or variable of email addresses.
 
 ---
 
-### cc: Email [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### cc: Email [(Docs)](../gettingstarted#other-fields)
 **Placeholder**: ```
 		Email addresses
 		```
@@ -80,7 +80,7 @@ Accepts a string or string array or variable of email addresses.
 
 ---
 
-### bcc: Email [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### bcc: Email [(Docs)](../gettingstarted#other-fields)
 **Placeholder**: ```
 		Email addresses
 		```
@@ -92,7 +92,7 @@ Accepts a string or string array or variable of email addresses.
 
 ---
 
-### subject: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### subject: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"optional"`
 **Allows Variables**: true
 

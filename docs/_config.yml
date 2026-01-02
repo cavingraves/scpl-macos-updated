@@ -1,2 +1,4 @@
-remote_theme: pfgithub/jekyll-theme-scpl
-title: ScPL
+remote_theme: pages-themes/minimal@v0.2.0
+title: ScPL - Shortcut Programming Language
+plugins:
+  - jekyll-remote-theme

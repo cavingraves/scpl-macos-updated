@@ -18,7 +18,7 @@ ConvertImage format=("JPEG" | "PNG" | "TIFF" | "GIF" | "JPEG-2000" | "BMP" | "PD
 
 ---
 
-### format: Image Format Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### format: Image Format Picker [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"JPEG"`
 **Allows Variables**: true
 
@@ -39,7 +39,7 @@ containing one of the options:
 
 ---
 
-### quality: Slider Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#slider-number-fields)
+### quality: Slider Number [(Docs)](../gettingstarted#slider-number-fields)
 **Default Value**: `0.75`
 **Allows Variables**: true
 
@@ -51,7 +51,7 @@ containing one of the options:
 
 ---
 
-### preserveMetadata: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### preserveMetadata: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Default Value**: ```
 		true
 		```

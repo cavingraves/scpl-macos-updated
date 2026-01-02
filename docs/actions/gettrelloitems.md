@@ -20,7 +20,7 @@ GetTrelloItems get=("Boards" | "Lists" | "Cards") board=("string" | variable)] l
 
 ---
 
-### get: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### get: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Boards"`
 **Allows Variables**: true
 
@@ -36,7 +36,7 @@ containing one of the options:
 
 ---
 
-### board: Trello Board Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### board: Trello Board Picker [(Docs)](../gettingstarted#other-fields)
 **Allows Variables**: true
 
 **Only enabled if**: argument WFTrelloItemType == `Lists` or `Cards`
@@ -45,7 +45,7 @@ containing one of the options:
 
 ---
 
-### list: Trello List Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### list: Trello List Picker [(Docs)](../gettingstarted#other-fields)
 **Allows Variables**: true
 
 **Only enabled if**: argument WFTrelloItemType == `Cards`

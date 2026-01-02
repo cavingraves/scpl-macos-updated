@@ -20,7 +20,7 @@ DictateText language=("string" | variable)] stopListening=("After Pause" | "Afte
 
 ---
 
-### language: Language Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### language: Language Picker [(Docs)](../gettingstarted#other-fields)
 **Allows Variables**: true
 
 
@@ -29,7 +29,7 @@ DictateText language=("string" | variable)] stopListening=("After Pause" | "Afte
 
 ---
 
-### stopListening: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### stopListening: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"After Pause"`
 **Allows Variables**: true
 

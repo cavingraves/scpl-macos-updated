@@ -25,7 +25,7 @@ SearchGiphy search="string" showGIFPicker=(true | false | variable) WFGiphyLimit
 
 ---
 
-### search: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### search: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"leave blank for trending"`
 **Allows Variables**: true
 
@@ -37,7 +37,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### showGIFPicker: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### showGIFPicker: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Default Value**: ```
 		true
 		```
@@ -50,7 +50,7 @@ or a variable.
 
 ---
 
-### WFGiphyLimit: Stepper Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#stepper-number-fields)
+### WFGiphyLimit: Stepper Number [(Docs)](../gettingstarted#stepper-number-fields)
 **Default Value**: `1`
 **Allows Variables**: true
 
@@ -62,7 +62,7 @@ or a variable.
 
 ---
 
-### selectMultiple: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### selectMultiple: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Allows Variables**: true
 
 **Only enabled if**: argument WFGiphyShowPicker == `true`

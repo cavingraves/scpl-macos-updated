@@ -18,7 +18,7 @@ GetNetworkDetails network=("Wi-Fi" | "Cellular") get=("Network Name" | "BSSID") 
 
 ---
 
-### network: Network Type Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### network: Network Type Picker [(Docs)](../gettingstarted#enum-select-field)
 **Allows Variables**: true
 
 
@@ -32,7 +32,7 @@ containing one of the options:
 
 ---
 
-### get: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### get: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Network Name"`
 **Allows Variables**: true
 
@@ -47,7 +47,7 @@ containing one of the options:
 
 ---
 
-### get2: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### get2: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Carrier Name"`
 **Allows Variables**: true
 

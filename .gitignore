@@ -9,4 +9,7 @@ built/*
 coverage
 
 # Comprehensive actions reference (too large for repo)
-../pretty much every action I have except niche apps.txt
+pretty much every action I have except niche apps.txt
+
+# Embedded git repos
+calendar-emoji-proposal/

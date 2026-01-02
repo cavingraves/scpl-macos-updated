@@ -170,7 +170,15 @@ npm install -g scpl
 scpl input.scpl output.shortcut
 ```
 
-Or use the online editor at: https://scpl.dev
+Or use the MCP server for AI-powered shortcut creation with Claude Code.
+
+### Signing Your Shortcuts
+
+**MCP Server auto-signs by default!** If using the MCP server, shortcuts are signed automatically using the built-in macOS `shortcuts sign` CLI.
+
+For manual signing:
+1. **CLI (Built into macOS 12+)**: `shortcuts sign --mode anyone --input file.shortcut --output signed.shortcut`
+2. **GUI**: Use [Shortcut Source Tool](https://routinehub.co/shortcut/5256/) from RoutineHub
 
 ## Compatibility
 

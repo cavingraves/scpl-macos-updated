@@ -25,7 +25,7 @@ SearchLocalBusinesses search="string" radiuskm=number
 
 ---
 
-### search: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### search: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"coffee shops"`
 **Allows Variables**: true
 
@@ -37,7 +37,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### radiuskm: Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#number-field)
+### radiuskm: Number [(Docs)](../gettingstarted#number-field)
 **Placeholder**: `1.5`
 **Default Value**: `1.5`
 **Allows Variables**: true

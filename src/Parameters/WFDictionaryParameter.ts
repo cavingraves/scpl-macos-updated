@@ -10,7 +10,7 @@ export class WFDictionaryParameter extends WFParameter {
 	constructor(
 		data: ShortcutsDictionaryParameterSpec,
 		name = "Dictionary",
-		docs = "https://pfgithub.github.io/shortcutslang/gettingstarted#dictionary-field"
+		docs = "../gettingstarted#dictionary-field"
 	) {
 		super(data, name, docs);
 		this._data = data;

@@ -20,7 +20,7 @@ GetUpcomingReminders list=("string" | variable)] WFGetUpcomingItemCount=number
 
 ---
 
-### list: Calendar Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### list: Calendar Picker [(Docs)](../gettingstarted#other-fields)
 **Allows Variables**: true
 
 
@@ -29,7 +29,7 @@ GetUpcomingReminders list=("string" | variable)] WFGetUpcomingItemCount=number
 
 ---
 
-### WFGetUpcomingItemCount: Stepper Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#stepper-number-fields)
+### WFGetUpcomingItemCount: Stepper Number [(Docs)](../gettingstarted#stepper-number-fields)
 **Default Value**: `1`
 **Allows Variables**: true
 

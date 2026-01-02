@@ -29,7 +29,7 @@ OverlayImage image=(v:myvar | mv:myvar | s:myvar) showImageEditor=(true | false 
 
 ---
 
-### image: Variable Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#variable-picker-fields)
+### image: Variable Picker [(Docs)](../gettingstarted#variable-picker-fields)
 **Allows Variables**: true
 
 
@@ -38,7 +38,7 @@ Accepts a variable.
 
 ---
 
-### showImageEditor: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### showImageEditor: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Default Value**: ```
 		true
 		```
@@ -51,7 +51,7 @@ or a variable.
 
 ---
 
-### position: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### position: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Center"`
 **Allows Variables**: true
 
@@ -70,7 +70,7 @@ containing one of the options:
 
 ---
 
-### width: Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#number-field)
+### width: Number [(Docs)](../gettingstarted#number-field)
 **Placeholder**: `Auto`
 **Allows Variables**: true
 
@@ -82,7 +82,7 @@ containing one of the options:
 
 ---
 
-### height: Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#number-field)
+### height: Number [(Docs)](../gettingstarted#number-field)
 **Placeholder**: `Auto`
 **Allows Variables**: true
 
@@ -94,7 +94,7 @@ containing one of the options:
 
 ---
 
-### xCoordinate: Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#number-field)
+### xCoordinate: Number [(Docs)](../gettingstarted#number-field)
 **Placeholder**: `0`
 **Allows Variables**: true
 
@@ -108,7 +108,7 @@ containing one of the options:
 
 ---
 
-### yCoordinate: Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#number-field)
+### yCoordinate: Number [(Docs)](../gettingstarted#number-field)
 **Placeholder**: `0`
 **Allows Variables**: true
 
@@ -122,7 +122,7 @@ containing one of the options:
 
 ---
 
-### rotationDegrees: Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#number-field)
+### rotationDegrees: Number [(Docs)](../gettingstarted#number-field)
 **Placeholder**: `0`
 **Allows Variables**: true
 
@@ -134,7 +134,7 @@ containing one of the options:
 
 ---
 
-### opacity: Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#number-field)
+### opacity: Number [(Docs)](../gettingstarted#number-field)
 **Placeholder**: `100%`
 **Default Value**: `100`
 **Allows Variables**: true

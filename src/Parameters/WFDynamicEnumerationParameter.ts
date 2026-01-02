@@ -10,7 +10,7 @@ export class WFDynamicEnumerationParameter extends WFParameter {
 	constructor(
 		data: ShortcutsDynamicEnumerationParameterSpec,
 		name = "Picker",
-		docs: string = "https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields"
+		docs: string = "../gettingstarted#other-fields"
 	) {
 		super(data, name, docs);
 		this._data = data;

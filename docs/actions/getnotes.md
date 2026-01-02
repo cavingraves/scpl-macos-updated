@@ -22,7 +22,7 @@ GetNotes titleSearch="string" undefined=NotImplemented inNotebook=("string" | va
 
 ---
 
-### titleSearch: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### titleSearch: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"optional"`
 **Allows Variables**: true
 
@@ -42,7 +42,7 @@ the values you want in this parameter.
 
 ---
 
-### inNotebook: Evernote Notebook Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### inNotebook: Evernote Notebook Picker [(Docs)](../gettingstarted#other-fields)
 **Allows Variables**: true
 
 
@@ -51,7 +51,7 @@ the values you want in this parameter.
 
 ---
 
-### WFEvernoteNotesCount: Stepper Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#stepper-number-fields)
+### WFEvernoteNotesCount: Stepper Number [(Docs)](../gettingstarted#stepper-number-fields)
 **Default Value**: `1`
 **Allows Variables**: true
 

@@ -25,7 +25,7 @@ UploadtoImgur uploadAnonymously=(true | false | variable) directLink=(true | fal
 
 ---
 
-### uploadAnonymously: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### uploadAnonymously: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Default Value**: ```
 		true
 		```
@@ -38,7 +38,7 @@ or a variable.
 
 ---
 
-### directLink: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### directLink: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Allows Variables**: true
 
 **Only enabled if**: argument WFImgurAlbum == `false`
@@ -48,7 +48,7 @@ or a variable.
 
 ---
 
-### createAlbum: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### createAlbum: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Allows Variables**: true
 
 
@@ -58,7 +58,7 @@ or a variable.
 
 ---
 
-### albumLayout: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### albumLayout: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Blog"`
 **Allows Variables**: true
 
@@ -75,7 +75,7 @@ containing one of the options:
 
 ---
 
-### albumPrivacy: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### albumPrivacy: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Hidden"`
 **Allows Variables**: true
 
@@ -91,7 +91,7 @@ containing one of the options:
 
 ---
 
-### title: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### title: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"optional"`
 **Allows Variables**: true
 
@@ -103,7 +103,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### description: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### description: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Description"`
 **Allows Variables**: true
 

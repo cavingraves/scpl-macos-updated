@@ -2,6 +2,21 @@
 
 ScPL (Shortcut Programming Language) lets you write Apple Shortcuts as text code instead of dragging blocks.
 
+## Available MCP Tools
+
+| Tool | Description |
+|------|-------------|
+| `create_shortcut` | Convert ScPL code to .shortcut file |
+| `validate_scpl` | Check syntax without creating file |
+| `list_actions` | Search 495 actions by category/keyword |
+| `get_action_details` | Get full parameter docs for any action |
+| `get_syntax_reference` | Get syntax docs (variables, flow, fields) |
+| `get_examples` | Get code examples for common patterns |
+
+**Pro tip:** Use `get_action_details` before writing any action to see exact parameter names, types, and valid options.
+
+---
+
 ## Basic Syntax
 
 ```scpl
@@ -52,12 +67,39 @@ Text "Clipboard: \(s:Clipboard)"
 
 ### If/Otherwise/End If
 
+**IMPORTANT:** The If action tests the **output of the previous action**. You don't specify what to test—it's implicit.
+
 ```scpl
+# The If tests the Text output (which is "test")
 Text "test"
 If Equals "test"
     ShowResult "Match!"
 Otherwise
     ShowResult "No match"
+End If
+```
+
+### Available Conditions
+
+| Condition | Use Case |
+|-----------|----------|
+| `Equals` | Exact string/number match |
+| `Contains` | Substring search |
+| `Begins With` | Prefix check |
+| `Ends With` | Suffix check |
+| `Is Greater Than` | Number comparison |
+| `Is Less Than` | Number comparison |
+| `Has Any Value` | Not empty/null |
+
+### File Existence Check Pattern
+
+```scpl
+GetFile path="~/file.txt" errorifnotfound=false
+Count
+If "Is Greater Than" 0
+    # File exists
+Otherwise
+    # File doesn't exist
 End If
 ```
 
@@ -507,6 +549,59 @@ CreateNote title="Voice Note" body=v:CleanedNote
 ShowNotification title="Saved" body="Voice note created"
 ```
 
+## Voice Journal with AI (Complete Example)
+
+Records voice, transcribes via local Whisper, processes with AI, sends to Drafts:
+
+```scpl
+# Check if Whisper server is running, start if not
+RunShellScript shell="/bin/zsh" script="if ! lsof -i :2023 > /dev/null 2>&1; then fish -c 'start-mcp-deepgram' & sleep 3; fi"
+
+# Record audio
+RecordAudio audioquality="Very High" startrecording="Immediately" finishrecording="On Tap" -> mv:Recording
+
+# Generate timestamp
+Date
+FormatDate dateformat="Custom" formatstring="yyyyMMdd_HHmmss" -> mv:TS
+
+# Save via stdin (base64 -> decode -> file)
+mv:Recording
+Base64Encode
+RunShellScript shell="/bin/zsh" script="mkdir -p /Users/username/Documents/VoiceJournals && base64 -d > /Users/username/Documents/VoiceJournals/VJ_\(mv:TS).wav && echo saved" passinput=true
+
+# Transcribe via local Whisper API
+RunShellScript shell="/bin/zsh" script="curl -s 'http://127.0.0.1:2023/v1/audio/transcriptions' -F 'file=@/Users/username/Documents/VoiceJournals/VJ_\(mv:TS).wav' -F 'model=whisper-1'" -> mv:WhisperJSON
+
+# Parse JSON response
+mv:WhisperJSON
+GetDictionaryValue key="text" -> mv:Transcript
+
+# Check if transcript is empty
+mv:Transcript
+Count count="Characters"
+If input="Equals" number=0
+    ShowAlert title="Transcription Failed" message="Check Whisper server"
+    ExitShortcut
+Otherwise
+    # Process with AI (Python handles escaping)
+    mv:Transcript
+    RunShellScript shell="/usr/bin/python3" script="import sys,json,urllib.request; t=sys.stdin.read(); req=urllib.request.Request('https://api.venice.ai/api/v1/chat/completions',headers={'Authorization':'Bearer YOUR_KEY','Content-Type':'application/json'},data=json.dumps({'model':'llama-3.3-70b','messages':[{'role':'user','content':'KEEP THE ORIGINAL WORDS. Fix transcription errors. Format paragraphs. Bold **spiritual** phrases. Add ## Summary. Text:\\n\\n'+t}]}).encode()); print(json.load(urllib.request.urlopen(req))['choices'][0]['message']['content'])" passinput=true -> mv:Formatted
+
+    # Build final output
+    Date
+    FormatDate dateformat="Custom" formatstring="EEEE, MMMM d yyyy h:mm a" -> mv:DateStr
+    Text "# Voice Journal\n\(mv:DateStr)\n\n\(mv:Formatted)" -> mv:Final
+
+    # Send to Drafts app
+    mv:Final
+    URLEncode -> mv:Enc
+    URL "drafts://x-callback-url/create?text=\(mv:Enc)&tag=journal"
+    OpenURLs
+
+    ShowNotification title="Done" body="Sent to Drafts"
+End If
+```
+
 ---
 
 # Tips & Common Patterns
@@ -561,4 +656,123 @@ End RepeatWithEach
 
 ---
 
-**493 total actions available.** Use `list_actions` tool to search by category or keyword.
+# Common Errors & Fixes
+
+## Menu Syntax
+**Wrong:** `Menu`, `case`, `end`
+**Correct:** `ChooseFromMenu prompt="..."`, `Case "..."`, `End Menu`
+
+## Variable Assignment
+**Wrong:** `SetVariable v:name` then `${v:name}`
+**Correct:** `-> mv:Name` then `\(mv:Name)`
+
+## Date Formatting
+**Wrong:** `GetCurrentDate` then `FormatDate "pattern"`
+**Correct:** `Date` then `FormatDate dateformat="Custom" formatstring="pattern"`
+
+## Action Not Found
+1. Use `list_actions search="keyword"` to find correct name
+2. Use `get_action_details action_name="name"` for parameters
+3. Check macOS version requirements
+
+## Parsing Errors
+- Close blocks: `If`→`End If`, `ChooseFromMenu`→`End Menu`, `Repeat`→`End Repeat`
+- Quote strings: `param="value"` not `param=value`
+- Space-separate params: `a="1" b="2"` not `a="1", b="2"`
+
+## HTTP API Requests
+**Headers**: Use `headers=true headers2={Key: "value"}` (not `headers={...}`)
+**Complex JSON**: Use shell scripts with curl instead of jsonvalues with nested arrays
+```scpl
+Text "curl -s URL -H 'Auth: Bearer KEY' -d '{...}' | python3 -c 'import sys,json; print(json.load(sys.stdin)[\"key\"])'"
+RunShellScript shell="/bin/zsh" -> mv:Result
+```
+
+## Shell Script Paths (CRITICAL)
+**Wrong:** `~`, `$HOME`, `/Documents`
+**Correct:** `/Users/username/Documents/` (full absolute path)
+
+Shortcuts cannot expand `~` or `$HOME` in shell scripts. Always use the complete path.
+
+```scpl
+# WRONG - these will fail
+RunShellScript shell="/bin/zsh" script="mkdir ~/Documents/MyFolder"
+RunShellScript shell="/bin/zsh" script="echo test > $HOME/file.txt"
+RunShellScript shell="/bin/zsh" script="cat /Documents/file.txt"
+
+# CORRECT - absolute path
+RunShellScript shell="/bin/zsh" script="mkdir -p /Users/username/Documents/MyFolder"
+```
+
+## Passing Binary Data to Shell Scripts
+Use Base64 encoding and `passinput=true` to pipe data through stdin:
+
+```scpl
+# Record audio and save via shell
+RecordAudio audioquality="Very High" -> mv:Recording
+
+Date
+FormatDate dateformat="Custom" formatstring="yyyyMMdd_HHmmss" -> mv:TS
+
+# Encode as base64, pipe to shell, decode and save
+mv:Recording
+Base64Encode
+RunShellScript shell="/bin/zsh" script="mkdir -p /Users/username/Documents/Recordings && base64 -d > /Users/username/Documents/Recordings/rec_\(mv:TS).wav" passinput=true
+```
+
+## If/Count Syntax
+The `Count` action requires explicit type, and `If` with numbers needs the `number=` parameter:
+
+```scpl
+# WRONG
+Count
+If Equals 0
+
+# CORRECT
+Count count="Characters"
+If input="Equals" number=0
+    ShowAlert title="Empty" message="No content"
+    ExitShortcut
+Otherwise
+    # Process content here
+End If
+```
+
+## Python for Complex API Calls
+When shell escaping gets complex, use Python with stdin:
+
+```scpl
+mv:TextContent
+RunShellScript shell="/usr/bin/python3" script="import sys,json,urllib.request; t=sys.stdin.read(); req=urllib.request.Request('https://api.example.com/v1/chat',headers={'Authorization':'Bearer KEY','Content-Type':'application/json'},data=json.dumps({'model':'gpt-4','messages':[{'role':'user','content':t}]}).encode()); print(json.load(urllib.request.urlopen(req))['choices'][0]['message']['content'])" passinput=true -> mv:Response
+```
+
+## iCloud Drive Limitations
+- `SaveFile service="iCloud Drive"` only works if connected to iCloud
+- If not connected, use shell scripts with absolute local paths instead
+- iCloud paths: `/Users/name/Library/Mobile Documents/com~apple~CloudDocs/...`
+
+---
+
+# Signing & Installation
+
+**Shortcuts are auto-signed by default!** The MCP server uses the built-in macOS `shortcuts sign` CLI.
+
+After creation:
+```bash
+# Double-click the file, or:
+open ~/Documents/MyShortcut.shortcut
+```
+
+## Manual Signing (if auto-sign fails)
+
+**CLI (Built into macOS 12+):**
+```bash
+shortcuts sign --mode anyone --input MyShortcut.shortcut --output MyShortcut_signed.shortcut
+open MyShortcut_signed.shortcut
+```
+
+**GUI Alternative:** Install [Shortcut Source Helper](https://routinehub.co/shortcut/10060/) from RoutineHub and drag-drop your file onto it.
+
+---
+
+**495 total actions available.** Use `list_actions` tool to search by category or keyword.

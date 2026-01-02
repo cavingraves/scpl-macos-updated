@@ -24,7 +24,7 @@ TakePhoto showCameraPreview=(true | false | variable) WFPhotoCount=number camera
 
 ---
 
-### showCameraPreview: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### showCameraPreview: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Default Value**: ```
 		true
 		```
@@ -37,7 +37,7 @@ or a variable.
 
 ---
 
-### WFPhotoCount: Stepper Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#stepper-number-fields)
+### WFPhotoCount: Stepper Number [(Docs)](../gettingstarted#stepper-number-fields)
 **Default Value**: `1`
 **Allows Variables**: true
 
@@ -49,7 +49,7 @@ or a variable.
 
 ---
 
-### camera: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### camera: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Back"`
 **Allows Variables**: true
 

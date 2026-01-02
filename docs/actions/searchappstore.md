@@ -18,7 +18,7 @@ SearchAppStore search="string" searchBy=("string" | variable)] results=("string"
 
 ---
 
-### search: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### search: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Shortcuts"`
 **Allows Variables**: true
 
@@ -30,7 +30,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### searchBy: Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### searchBy: Picker [(Docs)](../gettingstarted#other-fields)
 **Allows Variables**: true
 
 
@@ -39,7 +39,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### results: Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### results: Picker [(Docs)](../gettingstarted#other-fields)
 **Allows Variables**: true
 
 
@@ -48,7 +48,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### region: iTunes Store Country Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### region: iTunes Store Country Picker [(Docs)](../gettingstarted#other-fields)
 **Allows Variables**: true
 
 
@@ -57,7 +57,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### WFItemLimit: Stepper Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#stepper-number-fields)
+### WFItemLimit: Stepper Number [(Docs)](../gettingstarted#stepper-number-fields)
 **Default Value**: `25`
 **Allows Variables**: true
 

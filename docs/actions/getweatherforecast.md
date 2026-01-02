@@ -20,7 +20,7 @@ GetWeatherForecast at=("Current Location" | "Custom Location" | variable) locati
 
 ---
 
-### at: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### at: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Current Location"`
 
 
@@ -32,7 +32,7 @@ containing one of the options:
 
 ---
 
-### location: Location [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### location: Location [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Cupertino, CA"`
 **Allows Variables**: true
 
@@ -44,7 +44,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### type: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### type: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Daily"`
 **Allows Variables**: true
 

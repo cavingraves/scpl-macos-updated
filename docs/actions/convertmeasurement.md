@@ -20,7 +20,7 @@ ConvertMeasurement type=("string" | variable)] undefined=NotImplemented
 
 ---
 
-### type: Unit Type Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### type: Unit Type Picker [(Docs)](../gettingstarted#other-fields)
 **Default Value**: ```
 		Length
 		```

@@ -26,21 +26,21 @@ PosttoWordPress account=("string" | variable)] blog=("string" | variable)] title
 
 ---
 
-### account: Account Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### account: Account Picker [(Docs)](../gettingstarted#other-fields)
 
 
 		Accepts a string or variable containing the option. Check the shortcuts app for a list of available options. 
 
 ---
 
-### blog: Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### blog: Picker [(Docs)](../gettingstarted#other-fields)
 
 
 		Accepts a string or variable containing the option. Check the shortcuts app for a list of available options. 
 
 ---
 
-### title: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### title: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Quarterly Results"`
 **Allows Variables**: true
 
@@ -52,7 +52,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### type: Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### type: Picker [(Docs)](../gettingstarted#other-fields)
 **Allows Variables**: true
 
 
@@ -61,7 +61,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### format: Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### format: Picker [(Docs)](../gettingstarted#other-fields)
 **Allows Variables**: true
 
 
@@ -70,7 +70,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### status: Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### status: Picker [(Docs)](../gettingstarted#other-fields)
 **Allows Variables**: true
 
 
@@ -95,7 +95,7 @@ the values you want in this parameter.
 
 ---
 
-### advanced: Expand Arrow [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### advanced: Expand Arrow [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 
 
 Accepts a boolean for if this
@@ -107,7 +107,7 @@ labels, these can be ignored.
 
 ---
 
-### allowComments: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### allowComments: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Allows Variables**: true
 
 **Only enabled if**: argument Advanced == `true`
@@ -117,7 +117,7 @@ or a variable.
 
 ---
 
-### slug: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### slug: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"quarterly-results"`
 **Allows Variables**: true
 
@@ -129,7 +129,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### excerpt: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### excerpt: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"An overall great quarter"`
 **Allows Variables**: true
 
@@ -141,7 +141,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### publishDate: Date [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### publishDate: Date [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"optional"`
 **Allows Variables**: true
 
@@ -153,7 +153,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### template: Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### template: Picker [(Docs)](../gettingstarted#other-fields)
 **Allows Variables**: true
 
 **Only enabled if**: argument Advanced == `true`
@@ -162,7 +162,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### featuredImage: Variable Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#variable-picker-fields)
+### featuredImage: Variable Picker [(Docs)](../gettingstarted#variable-picker-fields)
 **Allows Variables**: true
 
 **Only enabled if**: argument Advanced == `true`
@@ -171,7 +171,7 @@ Accepts a variable.
 
 ---
 
-### customFields: Expand Arrow [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### customFields: Expand Arrow [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Only enabled if**: argument Advanced == `true`
 
 Accepts a boolean for if this
@@ -183,7 +183,7 @@ labels, these can be ignored.
 
 ---
 
-### customFields2: Dictionary [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#dictionary-field)
+### customFields2: Dictionary [(Docs)](../gettingstarted#dictionary-field)
 **Allows Variables**: true
 
 **Only enabled if**: argument Advanced == `true`

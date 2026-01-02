@@ -20,7 +20,7 @@ FaceTime app=("string" | variable)] callType=("Video" | "Audio")
 
 ---
 
-### app: Intent App Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### app: Intent App Picker [(Docs)](../gettingstarted#other-fields)
 **Default Value**: ```
 		com.apple.TelephonyUtilities.PhoneIntentHandler
 		```
@@ -32,7 +32,7 @@ FaceTime app=("string" | variable)] callType=("Video" | "Audio")
 
 ---
 
-### callType: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### callType: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Video"`
 **Allows Variables**: true
 

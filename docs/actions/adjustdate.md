@@ -25,7 +25,7 @@ AdjustDate ([Add|Subtract, number|v:variable, Seconds|Minutes|Hours|Days|Weeks|M
 
 ---
 
-### WFAdjustOffsetPicker: Time Offset [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#time-offset)
+### WFAdjustOffsetPicker: Time Offset [(Docs)](../gettingstarted#time-offset)
 **Allows Variables**: true
 
 

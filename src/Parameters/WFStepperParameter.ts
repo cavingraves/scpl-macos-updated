@@ -11,7 +11,7 @@ export class WFStepperParameter extends WFNumberFieldParameter {
 	constructor(
 		data: ShortcutsStepperParameterSpec,
 		name: string = "Stepper Number",
-		docs: string = "https://pfgithub.github.io/shortcutslang/gettingstarted#stepper-number-fields"
+		docs: string = "../gettingstarted#stepper-number-fields"
 	) {
 		super(data, name, docs);
 		this._data = data;

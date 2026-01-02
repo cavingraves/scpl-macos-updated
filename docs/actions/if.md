@@ -24,7 +24,7 @@ end
 
 ---
 
-### input: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### input: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Contains"`
 
 
@@ -38,7 +38,7 @@ containing one of the options:
 
 ---
 
-### number: Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#number-field)
+### number: Number [(Docs)](../gettingstarted#number-field)
 **Placeholder**: `7`
 **Allows Variables**: true
 
@@ -50,7 +50,7 @@ containing one of the options:
 
 ---
 
-### value: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### value: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"example"`
 **Allows Variables**: true
 

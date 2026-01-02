@@ -18,7 +18,7 @@ Date use=("Current Date" | "Specified Date") date="string"
 
 ---
 
-### use: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### use: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Current Date"`
 **Allows Variables**: true
 
@@ -33,7 +33,7 @@ containing one of the options:
 
 ---
 
-### date: Date [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### date: Date [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"June 29, 2007"`
 **Allows Variables**: true
 

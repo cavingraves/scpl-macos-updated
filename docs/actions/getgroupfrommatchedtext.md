@@ -18,7 +18,7 @@ GetGroupfromMatchedText get=("Group At Index" | "All Groups") groupIndex=number
 
 ---
 
-### get: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### get: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Group At Index"`
 **Allows Variables**: true
 
@@ -33,7 +33,7 @@ containing one of the options:
 
 ---
 
-### groupIndex: Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#number-field)
+### groupIndex: Number [(Docs)](../gettingstarted#number-field)
 **Placeholder**: `1`
 **Default Value**: `1`
 **Allows Variables**: true

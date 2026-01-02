@@ -24,7 +24,7 @@ TakeVideo camera=("Front" | "Back") quality=("Low" | "Medium" | "High") startRec
 
 ---
 
-### camera: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### camera: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Back"`
 **Allows Variables**: true
 
@@ -39,7 +39,7 @@ containing one of the options:
 
 ---
 
-### quality: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### quality: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Medium"`
 **Allows Variables**: true
 
@@ -55,7 +55,7 @@ containing one of the options:
 
 ---
 
-### startRecording: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### startRecording: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Immediately"`
 **Allows Variables**: true
 

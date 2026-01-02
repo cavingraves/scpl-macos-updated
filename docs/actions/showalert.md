@@ -20,7 +20,7 @@ ShowAlert title="string" message="string" showCancelButton=(true | false | varia
 
 ---
 
-### title: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### title: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Attention-grabbing title"`
 **Default Value**: `"Alert"`
 **Allows Variables**: true
@@ -33,7 +33,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### message: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### message: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Informational message"`
 **Default Value**: `"Do you want to continue?"`
 **Allows Variables**: true
@@ -46,7 +46,7 @@ with the text. Allows newlines.
 
 ---
 
-### showCancelButton: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### showCancelButton: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Default Value**: ```
 		true
 		```

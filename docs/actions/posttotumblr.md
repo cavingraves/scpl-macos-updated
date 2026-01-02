@@ -34,7 +34,7 @@ the values you want in this parameter.
 
 ---
 
-### blog: Tumblr Blog Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### blog: Tumblr Blog Picker [(Docs)](../gettingstarted#other-fields)
 **Allows Variables**: true
 
 **Only enabled if**: argument WFComposeInApp == `false`
@@ -43,7 +43,7 @@ the values you want in this parameter.
 
 ---
 
-### type: Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### type: Picker [(Docs)](../gettingstarted#other-fields)
 **Default Value**: ```
 		Text
 		```
@@ -55,7 +55,7 @@ the values you want in this parameter.
 
 ---
 
-### postStatus: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### postStatus: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Post Now"`
 **Allows Variables**: true
 
@@ -72,7 +72,7 @@ containing one of the options:
 
 ---
 
-### title: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### title: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"optional"`
 **Allows Variables**: true
 
@@ -84,7 +84,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### source: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### source: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"optional"`
 **Allows Variables**: true
 
@@ -96,7 +96,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### caption: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### caption: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"optional"`
 **Allows Variables**: true
 
@@ -110,7 +110,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### tags: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### tags: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"shortcuts, apple"`
 **Allows Variables**: true
 
@@ -122,7 +122,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### description: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### description: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Description"`
 **Allows Variables**: true
 

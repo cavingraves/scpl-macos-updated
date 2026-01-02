@@ -20,7 +20,7 @@ OpenApp app=("app name" | "com.identifier.for.app")] WFAppName="string"
 
 ---
 
-### app: App [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### app: App [(Docs)](../gettingstarted#other-fields)
 **Allows Variables**: true
 
 
@@ -37,7 +37,7 @@ Supported apps are:
 
 ---
 
-### WFAppName: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### WFAppName: Text [(Docs)](../gettingstarted#text-field)
 **Allows Variables**: true
 
 **Only enabled if**: This action is always **disabled** inside Shortcutslang.

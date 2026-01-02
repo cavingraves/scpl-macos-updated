@@ -18,7 +18,7 @@ GetHalfwayPoint firstLocation="string" secondLocation="string"
 
 ---
 
-### firstLocation: Location [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### firstLocation: Location [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"San Francisco, CA"`
 **Allows Variables**: true
 
@@ -30,7 +30,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### secondLocation: Location [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### secondLocation: Location [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Philadelphia, PA"`
 **Allows Variables**: true
 

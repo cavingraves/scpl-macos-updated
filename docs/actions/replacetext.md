@@ -18,7 +18,7 @@ ReplaceText findText="string" replaceWith="string" caseSensitive=(true | false |
 
 ---
 
-### findText: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### findText: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"hello"`
 **Allows Variables**: true
 
@@ -30,7 +30,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### replaceWith: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### replaceWith: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"world"`
 **Allows Variables**: true
 
@@ -42,7 +42,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### caseSensitive: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### caseSensitive: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Default Value**: ```
 		true
 		```
@@ -55,7 +55,7 @@ or a variable.
 
 ---
 
-### regularExpression: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### regularExpression: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Allows Variables**: true
 
 

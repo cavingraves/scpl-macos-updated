@@ -10,7 +10,7 @@ export class WFExpandingParameter extends WFParameter {
 	constructor(
 		data: ShortcutsExpandingParameterSpec,
 		name = "Expand Arrow",
-		docs = "https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields"
+		docs = "../gettingstarted#switch-or-expanding-or-boolean-fields"
 	) {
 		super(data, name, docs);
 		this._data = data;

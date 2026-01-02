@@ -22,7 +22,7 @@ MatchText pattern="string" caseSensitive=(true | false | variable)
 
 ---
 
-### pattern: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### pattern: Text [(Docs)](../gettingstarted#text-field)
 **Default Value**: `"[0-9a-zA-Z]"`
 **Allows Variables**: true
 
@@ -34,7 +34,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### caseSensitive: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### caseSensitive: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Default Value**: ```
 		true
 		```

@@ -1,7 +1,7 @@
 {
 	"name": "scpl-macos-updated",
-	"version": "2.0.0",
-	"description": "Code your Apple Shortcuts in text! 493 actions for macOS automation. AI-powered creation with Claude. Text-based shortcut programming language. Vibe code your workflows instead of clicking. Supports Apple Intelligence, Voice Memos, Clock automation, Window management, and more.",
+	"version": "2.3.1",
+	"description": "Code your Apple Shortcuts in text! 495 actions for macOS automation. AI-powered creation with Claude. Text-based shortcut programming language. Vibe code your workflows instead of clicking. Supports Apple Intelligence, Voice Memos, Clock automation, Window management, and more.",
 	"main": "built/index.js",
 	"types": "built/index.d.ts",
 	"license": "MIT",

@@ -22,7 +22,7 @@ TriggerIFTTTApplet triggerName=("string" | variable)] WFIFTTTExtraIngredients=(n
 
 ---
 
-### triggerName: IFTTT Trigger Name Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### triggerName: IFTTT Trigger Name Picker [(Docs)](../gettingstarted#other-fields)
 **Placeholder**: ```
 		Log to Google Sheets
 		```
@@ -34,7 +34,7 @@ TriggerIFTTTApplet triggerName=("string" | variable)] WFIFTTTExtraIngredients=(n
 
 ---
 
-### WFIFTTTExtraIngredients: Stepper Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#stepper-number-fields)
+### WFIFTTTExtraIngredients: Stepper Number [(Docs)](../gettingstarted#stepper-number-fields)
 
 
 		Accepts a number 
@@ -42,7 +42,7 @@ TriggerIFTTTApplet triggerName=("string" | variable)] WFIFTTTExtraIngredients=(n
 
 ---
 
-### ingredient1: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### ingredient1: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"optional"`
 **Allows Variables**: true
 
@@ -54,7 +54,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### ingredient2: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### ingredient2: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"optional"`
 **Allows Variables**: true
 
@@ -66,7 +66,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### ingredient3: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### ingredient3: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"optional"`
 **Allows Variables**: true
 
@@ -78,7 +78,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### ingredient4: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### ingredient4: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"optional"`
 **Allows Variables**: true
 
@@ -90,7 +90,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### ingredient5: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### ingredient5: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"optional"`
 **Allows Variables**: true
 
@@ -102,7 +102,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### ingredient6: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### ingredient6: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"optional"`
 **Allows Variables**: true
 
@@ -114,7 +114,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### ingredient7: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### ingredient7: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"optional"`
 **Allows Variables**: true
 
@@ -126,7 +126,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### ingredient8: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### ingredient8: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"optional"`
 **Allows Variables**: true
 
@@ -138,7 +138,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### ingredient9: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### ingredient9: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"optional"`
 **Allows Variables**: true
 
@@ -150,7 +150,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### ingredient10: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### ingredient10: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"optional"`
 **Allows Variables**: true
 

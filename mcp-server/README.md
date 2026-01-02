@@ -5,33 +5,38 @@ Model Context Protocol server for creating macOS Shortcuts using ScPL (Shortcuts
 ## Features
 
 - **Create Shortcuts**: Convert ScPL code to .shortcut files
+- **Auto-Sign**: Shortcuts are automatically signed and ready to use (macOS 12+)
 - **Validate Syntax**: Check ScPL code without creating files
-- **Discover Actions**: Browse 493 available actions with descriptions
+- **Discover Actions**: Browse 495 available actions with descriptions
 - **Documentation**: Access action reference and examples
 
-## ⚠️ Shortcut Signing & Installation
+## ✅ Automatic Signing (New!)
 
-Generated .shortcut files need to be signed before macOS will allow you to run them. You have two options:
+**Shortcuts are now auto-signed by default!** The MCP server uses the built-in macOS `shortcuts sign` CLI to sign shortcuts automatically. No setup required on macOS Monterey (12.0) or later.
 
-### Option 1: Shortcut Source Helper (Free - Recommended)
+```
+create_shortcut scpl_code="Text 'Hello'" output_name="MyShortcut"
+# → Creates a signed shortcut at ~/Documents/MyShortcut.shortcut
+# → Double-click to install, or: open ~/Documents/MyShortcut.shortcut
+```
 
-**Setup (one-time):**
-1. Install required shortcuts from RoutineHub:
-   - [Shortcut Source Helper](https://routinehub.co/shortcut/10060/)
-   - [Shortcut Source Tool](https://routinehub.co/shortcut/5256/)
-   - [Tinycut Builder](https://routinehub.co/shortcut/5217/)
-2. Add **Shortcut Source Helper** to your Dock for easy access
+To create an unsigned shortcut (for manual signing later):
+```
+create_shortcut scpl_code="..." output_name="MyShortcut" sign=false
+```
 
-**To install a generated shortcut:**
-1. Drag and drop the `.shortcut` file onto Shortcut Source Helper in your Dock
-2. Follow the prompts to sign and import
-3. The shortcut will be added to your Shortcuts app and ready to use!
+### Manual Signing (if auto-sign fails)
 
-### Option 2: Apple Developer Account
+**Option 1: CLI (Built into macOS 12+)**
+```bash
+shortcuts sign --mode anyone --input MyShortcut.shortcut --output MyShortcut_signed.shortcut
+```
 
-If you have an Apple Developer account ($99/year), you can sign shortcuts with your developer certificate for distribution.
+**Option 2: Shortcut Source Helper (GUI)**
+1. Install [Shortcut Source Helper](https://routinehub.co/shortcut/10060/) from RoutineHub
+2. Drag and drop the `.shortcut` file onto it in your Dock
 
-**Disclaimer**: We are not associated with Shortcut Source Tool/Helper or their creators. Use third-party tools at your own risk. Always review shortcuts before running them.
+**Disclaimer**: We are not associated with Shortcut Source Tool/Helper.
 
 ## Installation
 

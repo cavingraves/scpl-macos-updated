@@ -11,7 +11,7 @@ export class WFNumberFieldParameter extends WFParameter {
 	constructor(
 		data: ShortcutsNumberFieldParameterSpec,
 		name: string = "Number",
-		docs: string = "https://pfgithub.github.io/shortcutslang/gettingstarted#number-field"
+		docs: string = "../gettingstarted#number-field"
 	) {
 		super(data, name, docs);
 		this._data = data;

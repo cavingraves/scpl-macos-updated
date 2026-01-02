@@ -20,7 +20,7 @@ AddtoPinboard title="string" tags="string" public=(true | false | variable) unre
 
 ---
 
-### title: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### title: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"optional"`
 **Allows Variables**: true
 
@@ -32,7 +32,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### tags: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### tags: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"apple longread"`
 **Allows Variables**: true
 
@@ -44,7 +44,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### public: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### public: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Default Value**: ```
 		true
 		```
@@ -57,7 +57,7 @@ or a variable.
 
 ---
 
-### unread: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### unread: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Default Value**: ```
 		true
 		```
@@ -70,7 +70,7 @@ or a variable.
 
 ---
 
-### description: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### description: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Description"`
 **Allows Variables**: true
 

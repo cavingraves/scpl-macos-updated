@@ -29,7 +29,7 @@ RunShortcut shortcut=("string" | variable)] showWhileRunning=(true | false | var
 
 ---
 
-### shortcut: Shortcut Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### shortcut: Shortcut Picker [(Docs)](../gettingstarted#other-fields)
 **Allows Variables**: true
 
 
@@ -38,7 +38,7 @@ RunShortcut shortcut=("string" | variable)] showWhileRunning=(true | false | var
 
 ---
 
-### showWhileRunning: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### showWhileRunning: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Default Value**: ```
 		true
 		```

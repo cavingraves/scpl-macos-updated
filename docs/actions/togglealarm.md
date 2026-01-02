@@ -20,7 +20,7 @@ ToggleAlarm alarm=("string" | variable)] enabled=(true | false | variable)
 
 ---
 
-### alarm: Alarm Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### alarm: Alarm Picker [(Docs)](../gettingstarted#other-fields)
 **Allows Variables**: true
 
 
@@ -29,7 +29,7 @@ ToggleAlarm alarm=("string" | variable)] enabled=(true | false | variable)
 
 ---
 
-### enabled: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### enabled: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Allows Variables**: true
 
 

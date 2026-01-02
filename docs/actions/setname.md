@@ -18,7 +18,7 @@ SetName name="string" advanced=(true | false) dontIncludeFileExtension=(true | f
 
 ---
 
-### name: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### name: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"example"`
 **Allows Variables**: true
 
@@ -30,7 +30,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### advanced: Expand Arrow [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### advanced: Expand Arrow [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 
 
 Accepts a boolean for if this
@@ -42,7 +42,7 @@ labels, these can be ignored.
 
 ---
 
-### dontIncludeFileExtension: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### dontIncludeFileExtension: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Allows Variables**: true
 
 **Only enabled if**: argument Advanced == `true`

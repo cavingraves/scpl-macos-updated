@@ -20,7 +20,7 @@ AddTrelloCard name="string" board=("string" | variable)] list=("string" | variab
 
 ---
 
-### name: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### name: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Be productive"`
 **Allows Variables**: true
 
@@ -32,7 +32,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### board: Trello Board Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### board: Trello Board Picker [(Docs)](../gettingstarted#other-fields)
 **Allows Variables**: true
 
 
@@ -41,7 +41,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### list: Trello List Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### list: Trello List Picker [(Docs)](../gettingstarted#other-fields)
 **Allows Variables**: true
 
 
@@ -50,7 +50,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### due: Date [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### due: Date [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Tomorrow at 1pm"`
 **Allows Variables**: true
 
@@ -62,7 +62,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### position: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### position: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Top"`
 **Allows Variables**: true
 
@@ -77,7 +77,7 @@ containing one of the options:
 
 ---
 
-### attachments: Variable Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#variable-picker-fields)
+### attachments: Variable Picker [(Docs)](../gettingstarted#variable-picker-fields)
 **Allows Variables**: true
 
 
@@ -86,7 +86,7 @@ Accepts a variable.
 
 ---
 
-### WFTrelloDescription: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### WFTrelloDescription: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Description"`
 **Allows Variables**: true
 

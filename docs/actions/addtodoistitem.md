@@ -29,7 +29,7 @@ AddTodoistItem content="string" project=("string" | variable)] dueDate="string" 
 
 ---
 
-### content: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### content: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Buy some milk"`
 **Allows Variables**: true
 
@@ -41,7 +41,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### project: Todoist Project Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### project: Todoist Project Picker [(Docs)](../gettingstarted#other-fields)
 **Default Value**: ```
 		Inbox
 		```
@@ -53,7 +53,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### dueDate: Date [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### dueDate: Date [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"May 23"`
 **Allows Variables**: true
 
@@ -65,7 +65,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### remindMeOn: Date [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### remindMeOn: Date [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"May 23 at 1 PM"`
 **Allows Variables**: true
 
@@ -77,7 +77,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### reminderType: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### reminderType: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Email"`
 **Allows Variables**: true
 
@@ -93,7 +93,7 @@ containing one of the options:
 
 ---
 
-### priority: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### priority: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"4"`
 **Allows Variables**: true
 
@@ -110,7 +110,7 @@ containing one of the options:
 
 ---
 
-### notes: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### notes: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Notes"`
 **Allows Variables**: true
 

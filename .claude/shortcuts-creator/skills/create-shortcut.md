@@ -17,7 +17,7 @@ Let me understand what you want your shortcut to do. Ask me:
 
 ## Step 2: Explore Available Actions
 
-I can check what actions are available using the MCP server. With **493 actions** available, I can help you automate almost anything!
+I can check what actions are available using the MCP server. With **495 actions** available, I can help you automate almost anything!
 
 **Popular categories:**
 - **Apple Intelligence**: AskLLM, Image Playground (Apple Silicon)
@@ -34,71 +34,185 @@ I can check what actions are available using the MCP server. With **493 actions*
 - **Accessibility**: All 24 accessibility features
 - **And much more!**
 
-Use the `list_actions` tool to find specific actions if needed.
+**IMPORTANT**: Use the `list_actions` MCP tool to discover available actions!
+
+```
+# Search for specific actions
+list_actions search="notification"
+list_actions search="file"
+list_actions search="clipboard"
+
+# Browse by category
+list_actions category="Scripting"
+list_actions category="Files"
+list_actions category="Sharing"
+```
+
+Always check available actions before writing ScPL code to ensure the action exists and to see its correct parameter names.
 
 ## Step 3: Write ScPL Code
 
-Based on your requirements, I'll write the ScPL code. ScPL syntax is simple:
+Based on your requirements, I'll write the ScPL code. ScPL syntax reference:
 
 ```scpl
-# Comments start with #
-ActionName parameter1="value" parameter2="value"
+// Comments use // or --
+actionname parameter1="value" parameter2="value"
 
-# Variables
-SetVariable v:myVar
-UseVariable v:myVar
+// Variables - use v: prefix for named variables, mv: for magic variables
+text "Hello"
+setVariable v:myVar
+getVariable v:myVar
 
-# Conditionals
-If condition="Equals" value="test"
-    ShowResult "Match!"
-End If
+// Arrow assignment (alternative to setVariable)
+text "Hello" -> v:greeting
 
-# Menus
-ChooseFromMenu items=["Option 1", "Option 2"]
-Case "Option 1"
-    # Do something
-Case "Option 2"
-    # Do something else
-End Menu
+// Conditionals
+if Equals "test"
+    showResult "Match!"
+otherwise
+    showResult "No match"
+end
+
+// Menus - use | for menu items, case for handlers
+choosefrommenu "Pick an option"
+| First Choice
+| Second Choice
+| Third Choice
+case first
+    text "You picked first"
+case second
+    text "You picked second"
+case third
+    text "You picked third"
+end
+
+// Dictionaries
+Dictionary {
+    key1: "value1"
+    key2: v:someVariable
+}
+
+// Multi-line text with |
+text
+| Line 1
+| Line 2
+| With variable: \(v:myVar)
+
+// Repeat loops
+repeatWithEach ^(v:myList)
+    getVariable v:'Repeat Item'
+end repeat
+
+// Input/output
+askForInput "What's your name?" -> v:name
+showResult "Hello \(v:name)!"
+```
+
+**Key syntax rules:**
+- Action names are case-insensitive
+- Use `^()` for inline action results
+- Use `\()` for string interpolation
+- `end` closes if/menu/repeat blocks
+- `otherwise` is the else clause in if blocks
+
+### Advanced Syntax
+
+```scpl
+// Lists
+List []                              // Empty list
+List ["item1", "item2", "item3"]     // List with items
+getitemfromlist ^(v:myList) "Item At Index" 1
+getitemfromlist ^(v:myList) get="Items in Range" 1 5
+addToVariable v:myList               // Append to list variable
+
+// Dictionary operations
+Dictionary { key1: "value", key2: v:var }
+setDictionaryValue key="name" value="test"
+getDictionaryValue Value keyname -> v:result
+getVariable v:myDict:keyname         // Access nested key
+
+// Alternative parameter syntax with a{ }
+savefile a{
+  service="iCloud Drive",
+  askwheretosave=false,
+  destinationpath="/path/to/file.txt",
+  overwriteiffileexists=true
+}
+
+// Math calculations
+Calculate ^(v:number) "+" 1
+Calculate ^(v:number) "-" 1
+Calculate ^(v:number) "*" 2
+count Items                          // Count items in list
+count Characters                     // Count characters in text
+
+// Text operations
+replacetext "old" "new"
+splittext separator="Custom" custom="/"
+combinetext separator="New Lines"
+
+// Control flow
+nothing                              // Do nothing (useful in if blocks)
+exitShortcut                         // Exit shortcut
+exitShortcut ^(v:result)             // Exit with result
+
+// Special variables
+s:askwhenrun                         // Prompt user at runtime
+v:'Repeat Item'                      // Current item in repeat loop
+v:'Repeat Index'                     // Current index in repeat loop
+sv:ShortcutInput                     // Shortcut input
+
+// Inline conditionals (single line)
+if Equals "value"; doSomething; otherwise; doElse; end
 ```
 
 ## Step 4: Validate and Create
 
+**Always validate before creating!** Use these MCP tools:
+
+```
+# First, validate syntax
+validate_scpl scpl_code="your code here"
+
+# Then create the shortcut (auto-signs by default!)
+create_shortcut scpl_code="your code here" output_name="MyShortcut"
+```
+
 I'll:
-1. Validate the ScPL code using `validate_scpl`
+1. Validate the ScPL code using `validate_scpl` - fix any errors before proceeding
 2. Create the .shortcut file using `create_shortcut`
-3. Save it to your Documents folder (or specified location)
-4. Provide instructions on how to sign and install it
+3. **Auto-sign the shortcut** using the built-in macOS `shortcuts sign` CLI
+4. Save it to your Documents folder (or specified location)
+5. You can double-click to install or run `open ~/Documents/MyShortcut.shortcut`
 
 ## Step 5: Installation & Signing
 
-Generated shortcuts need to be signed before macOS will allow you to run them. You have two options:
+**Good news: Shortcuts are auto-signed by default!** The MCP server signs them using the built-in macOS CLI.
 
-### Option 1: Shortcut Source Helper (Free - Recommended)
+After creation, just:
+- Double-click the file to import to Shortcuts app, or
+- Run: `open ~/Documents/YourShortcut.shortcut`
 
-**One-time setup:**
-1. Install these free shortcuts from RoutineHub:
-   - [Shortcut Source Helper](https://routinehub.co/shortcut/10060/)
-   - [Shortcut Source Tool](https://routinehub.co/shortcut/5256/)
-   - [Tinycut Builder](https://routinehub.co/shortcut/5217/)
-2. Add **Shortcut Source Helper** to your Dock
+### Manual Signing (if needed)
 
-**For each generated shortcut:**
-1. Find the `.shortcut` file in your Documents folder
-2. **Drag and drop** it onto Shortcut Source Helper in your Dock
-3. Follow the prompts to sign and import
-4. The shortcut is now installed and ready to use!
+If auto-signing fails, you have two options:
 
-### Option 2: Apple Developer Account
+**Option 1: CLI (Built into macOS 12+)**
+```bash
+shortcuts sign --mode anyone --input MyShortcut.shortcut --output MyShortcut_signed.shortcut
+open MyShortcut_signed.shortcut
+```
 
-If you have an Apple Developer account ($99/year), you can sign shortcuts with your developer certificate for distribution.
+**Option 2: Shortcut Source Helper (GUI)**
+1. Install [Shortcut Source Helper](https://routinehub.co/shortcut/10060/) from RoutineHub
+2. Drag and drop the `.shortcut` file onto it in your Dock
 
-**After installation, you can:**
+**After signing, you can:**
 - ✅ Run it from Shortcuts app
 - ✅ AirDrop it to your iPhone/iPad
 - ✅ Share the signed version with others
 
-**Disclaimer**: We are not associated with Shortcut Source Tool/Helper or their creators. Use third-party tools at your own risk. Always review shortcuts before running them.
+**Disclaimer**: We are not associated with Shortcut Source Tool/Helper. Use third-party tools at your own risk.
 
 ## Examples of What I Can Create
 
@@ -120,6 +234,216 @@ If you have an Apple Developer account ($99/year), you can sign shortcuts with y
 - **Quick screenshot workflow**: Take screenshot → annotate → save to folder
 - **Window manager**: Arrange windows in specific layouts
 - **Focus mode**: Set VPN, night shift, do not disturb all at once
+
+## Common Errors & Fixes
+
+### ❌ Menu Syntax Errors
+
+**Wrong:**
+```scpl
+Menu "Pick one"
+case "Option 1"
+    Text "Selected 1"
+end
+```
+
+**Correct:**
+```scpl
+ChooseFromMenu prompt="Pick one"
+Case "Option 1"
+    Text "Selected 1"
+End Menu
+```
+
+**Key points:**
+- Use `ChooseFromMenu` not `Menu`
+- Use `Case` (capital C) not `case`
+- Close with `End Menu` (two words) not `end`
+
+---
+
+### ❌ Variable Assignment Errors
+
+**Wrong:**
+```scpl
+Text "Hello"
+SetVariable v:greeting
+Text "Value is ${v:greeting}"
+```
+
+**Correct:**
+```scpl
+Text "Hello" -> mv:Greeting
+Text "Value is \(mv:Greeting)"
+```
+
+**Key points:**
+- Use arrow syntax `-> mv:Name` for assignment
+- Use `mv:` prefix (magic variable) not `v:`
+- Interpolate with `\(mv:Name)` not `${v:name}`
+
+---
+
+### ❌ Date Formatting Errors
+
+**Wrong:**
+```scpl
+GetCurrentDate
+FormatDate "EEEE, MMMM d"
+```
+
+**Correct:**
+```scpl
+Date
+FormatDate dateformat="Custom" formatstring="EEEE, MMMM d" -> mv:FormattedDate
+```
+
+**Key points:**
+- Use `Date` action to get current date (not `GetCurrentDate`)
+- Specify `dateformat="Custom"` when using custom format strings
+- Use `formatstring=` parameter for the format pattern
+
+---
+
+### ❌ Action Not Found Errors
+
+If you get "This action could not be found":
+
+1. **Check exact action name** - Use `list_actions search="keyword"` to find correct name
+2. **Check parameter names** - Use `get_action_details action_name="actionname"` for correct params
+3. **macOS version** - Some actions require macOS 15+ (Sequoia) or Apple Silicon
+
+---
+
+### ❌ Parsing Errors
+
+Common causes:
+- **Unclosed blocks** - Every `If`, `ChooseFromMenu`, `Repeat` needs matching `End`/`End Menu`/`End Repeat`
+- **Missing quotes** - String values need quotes: `prompt="text"` not `prompt=text`
+- **Wrong parameter separator** - Use spaces, not commas: `param1="a" param2="b"`
+
+---
+
+### ❌ HTTP API Request Errors
+
+**Wrong (headers directly):**
+```scpl
+GetContentsOfURL method="POST" headers={"Authorization": "Bearer key"}
+```
+
+**Correct (use headers2):**
+```scpl
+GetContentsOfURL method="POST" headers=true headers2={Authorization: "Bearer key"}
+```
+
+**Complex JSON bodies fail** - use shell scripts instead:
+```scpl
+Text "curl -s 'https://api.example.com' -H 'Authorization: Bearer KEY' -H 'Content-Type: application/json' -d '{\"key\":\"value\"}'"
+RunShellScript shell="/bin/zsh" -> mv:Response
+```
+
+**Parse JSON responses with Python:**
+```scpl
+Text "curl ... | python3 -c \"import sys,json; print(json.load(sys.stdin)['key'])\""
+RunShellScript shell="/bin/zsh" -> mv:Value
+```
+
+---
+
+### 🔍 Debugging Tips
+
+1. **Validate first**: Always use `validate_scpl` before `create_shortcut`
+2. **Check action exists**: `list_actions search="actionname"`
+3. **Check parameters**: `get_action_details action_name="actionname"`
+4. **Start simple**: Build incrementally, testing each part
+5. **Use shell scripts for complex APIs**: curl + python parsing is more reliable than native HTTP actions with nested JSON
+
+---
+
+### ❌ Shell Script Path Errors
+
+**Wrong (will fail):**
+```scpl
+RunShellScript shell="/bin/zsh" script="mkdir ~/Documents/MyFolder"
+RunShellScript shell="/bin/zsh" script="echo test > $HOME/file.txt"
+RunShellScript shell="/bin/zsh" script="cat /Documents/file.txt"
+```
+
+**Correct (absolute paths):**
+```scpl
+RunShellScript shell="/bin/zsh" script="mkdir -p /Users/username/Documents/MyFolder"
+```
+
+**Key point:** Shortcuts cannot expand `~` or `$HOME`. Always use complete absolute paths like `/Users/username/Documents/`.
+
+---
+
+### ❌ If/Count Syntax Errors
+
+**Wrong:**
+```scpl
+Count
+If Equals 0
+```
+
+**Correct:**
+```scpl
+Count count="Characters"
+If input="Equals" number=0
+    ShowAlert title="Empty" message="No content"
+    ExitShortcut
+Otherwise
+    # Success path here - don't forget Otherwise!
+End If
+```
+
+**Key points:**
+- `Count` requires `count="Characters"` or `count="Items"`
+- `If` with numbers requires `number=0` parameter (not just `0`)
+- Always include `Otherwise` block or the shortcut exits after the If
+
+---
+
+### ✅ Passing Binary Data to Shell Scripts
+
+Use Base64 + stdin for audio, images, or other binary data:
+
+```scpl
+RecordAudio audioquality="Very High" -> mv:Recording
+
+Date
+FormatDate dateformat="Custom" formatstring="yyyyMMdd_HHmmss" -> mv:TS
+
+mv:Recording
+Base64Encode
+RunShellScript shell="/bin/zsh" script="mkdir -p /Users/username/Documents/Recordings && base64 -d > /Users/username/Documents/Recordings/rec_\(mv:TS).wav" passinput=true -> mv:FilePath
+```
+
+---
+
+### ✅ Python for Complex API Calls
+
+When text contains quotes or special characters that break shell escaping, use Python with stdin:
+
+```scpl
+mv:TextToProcess
+RunShellScript shell="/usr/bin/python3" script="import sys,json,urllib.request; t=sys.stdin.read(); req=urllib.request.Request('https://api.example.com/v1/chat',headers={'Authorization':'Bearer KEY','Content-Type':'application/json'},data=json.dumps({'model':'gpt-4','messages':[{'role':'user','content':t}]}).encode()); print(json.load(urllib.request.urlopen(req))['choices'][0]['message']['content'])" passinput=true -> mv:Response
+```
+
+---
+
+### ❌ iCloud Drive Errors
+
+**Problem:** `SaveFile service="iCloud Drive"` fails if not connected to iCloud
+
+**Solution:** Use shell scripts with absolute local paths instead:
+```scpl
+mv:FileData
+Base64Encode
+RunShellScript shell="/bin/zsh" script="base64 -d > /Users/username/Documents/myfile.txt" passinput=true
+```
+
+---
 
 ## Getting Started
 

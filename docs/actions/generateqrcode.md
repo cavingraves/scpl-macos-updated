@@ -18,7 +18,7 @@ GenerateQRCode ("Low" | "Medium" | "Quartile" | "High")
 
 ---
 
-### errorCorrection: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### errorCorrection: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Medium"`
 **Allows Variables**: true
 

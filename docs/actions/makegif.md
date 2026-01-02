@@ -22,7 +22,7 @@ MakeGIF secondsPerPhoto=number loopForever=(true | false | variable) WFMakeGIFAc
 
 ---
 
-### secondsPerPhoto: Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#number-field)
+### secondsPerPhoto: Number [(Docs)](../gettingstarted#number-field)
 **Placeholder**: `0.2`
 **Default Value**: `0.2`
 **Allows Variables**: true
@@ -35,7 +35,7 @@ MakeGIF secondsPerPhoto=number loopForever=(true | false | variable) WFMakeGIFAc
 
 ---
 
-### loopForever: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### loopForever: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Default Value**: ```
 		true
 		```
@@ -48,7 +48,7 @@ or a variable.
 
 ---
 
-### WFMakeGIFActionLoopCount: Stepper Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#stepper-number-fields)
+### WFMakeGIFActionLoopCount: Stepper Number [(Docs)](../gettingstarted#stepper-number-fields)
 **Allows Variables**: true
 
 **Only enabled if**: argument WFMakeGIFActionLoopEnabled == `false`
@@ -59,7 +59,7 @@ or a variable.
 
 ---
 
-### autoSize: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### autoSize: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Default Value**: ```
 		true
 		```
@@ -72,7 +72,7 @@ or a variable.
 
 ---
 
-### width: Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#number-field)
+### width: Number [(Docs)](../gettingstarted#number-field)
 **Placeholder**: `500`
 **Allows Variables**: true
 
@@ -84,7 +84,7 @@ or a variable.
 
 ---
 
-### height: Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#number-field)
+### height: Number [(Docs)](../gettingstarted#number-field)
 **Placeholder**: `500`
 **Allows Variables**: true
 

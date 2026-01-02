@@ -20,7 +20,7 @@ AddtoInstapaper ("string" | variable)]
 
 ---
 
-### folder: Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### folder: Picker [(Docs)](../gettingstarted#other-fields)
 **Allows Variables**: true
 
 

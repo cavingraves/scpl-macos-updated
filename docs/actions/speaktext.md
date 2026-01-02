@@ -18,7 +18,7 @@ SpeakText waitUntilFinished=(true | false | variable) rate=number pitch=number l
 
 ---
 
-### waitUntilFinished: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### waitUntilFinished: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Default Value**: ```
 		true
 		```
@@ -31,7 +31,7 @@ or a variable.
 
 ---
 
-### rate: Speak Text Rate [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#slider-number-fields)
+### rate: Speak Text Rate [(Docs)](../gettingstarted#slider-number-fields)
 **Allows Variables**: true
 
 
@@ -42,7 +42,7 @@ or a variable.
 
 ---
 
-### pitch: Slider Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#slider-number-fields)
+### pitch: Slider Number [(Docs)](../gettingstarted#slider-number-fields)
 **Default Value**: `1`
 **Allows Variables**: true
 
@@ -54,7 +54,7 @@ or a variable.
 
 ---
 
-### language: Speak Text Language Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### language: Speak Text Language Picker [(Docs)](../gettingstarted#other-fields)
 **Default Value**: ```
 		Default
 		```
@@ -66,7 +66,7 @@ or a variable.
 
 ---
 
-### voice: Speak Text Voice Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### voice: Speak Text Voice Picker [(Docs)](../gettingstarted#other-fields)
 **Default Value**: ```
 		Default
 		```

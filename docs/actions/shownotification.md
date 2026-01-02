@@ -25,7 +25,7 @@ ShowNotification title="string" body="string" playSound=(true | false | variable
 
 ---
 
-### title: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### title: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"optional"`
 **Allows Variables**: true
 
@@ -37,7 +37,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### body: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### body: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Charming notification message"`
 **Default Value**: `"Hello World"`
 **Allows Variables**: true
@@ -50,7 +50,7 @@ with the text. Allows newlines.
 
 ---
 
-### playSound: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### playSound: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Default Value**: ```
 		true
 		```

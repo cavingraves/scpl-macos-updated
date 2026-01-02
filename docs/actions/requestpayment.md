@@ -22,7 +22,7 @@ RequestPayment app=("string" | variable)] undefined=NotImplemented amount=number
 
 ---
 
-### app: Intent App Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### app: Intent App Picker [(Docs)](../gettingstarted#other-fields)
 **Default Value**: ```
 		com.apple.PassKit.PassKitIntentsExtension
 		```
@@ -40,7 +40,7 @@ the values you want in this parameter.
 
 ---
 
-### amount: Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#number-field)
+### amount: Number [(Docs)](../gettingstarted#number-field)
 **Placeholder**: `7.00`
 **Allows Variables**: true
 
@@ -52,7 +52,7 @@ the values you want in this parameter.
 
 ---
 
-### openinApp: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### openinApp: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Allows Variables**: true
 
 
@@ -62,7 +62,7 @@ or a variable.
 
 ---
 
-### showWhenRun: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### showWhenRun: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Default Value**: ```
 		true
 		```
@@ -75,7 +75,7 @@ or a variable.
 
 ---
 
-### note: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### note: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Note"`
 **Allows Variables**: true
 

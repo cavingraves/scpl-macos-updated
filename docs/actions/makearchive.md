@@ -22,7 +22,7 @@ MakeArchive archiveName="string" format=(".zip" | ".tar.gz" | ".tar.bz2" | ".tar
 
 ---
 
-### archiveName: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### archiveName: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"optional"`
 **Allows Variables**: true
 
@@ -34,7 +34,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### format: Archive Format [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### format: Archive Format [(Docs)](../gettingstarted#enum-select-field)
 **Allows Variables**: true
 
 

@@ -10,7 +10,7 @@ export class WFContentArrayParameter extends WFParameter {
 	constructor(
 		data: ShortcutsContentArrayParameterSpec,
 		typeName: string = "List",
-		docs: string = "https://pfgithub.github.io/shortcutslang/gettingstarted#list-field"
+		docs: string = "../gettingstarted#list-field"
 	) {
 		super(data, typeName, docs);
 		this._data = data;

@@ -27,7 +27,7 @@ RunScriptOverSSH host="string" port="string" user="string" password="string" scr
 
 ---
 
-### host: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### host: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"192.168.1.100"`
 **Allows Variables**: true
 
@@ -39,7 +39,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### port: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### port: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"22"`
 **Default Value**: `"22"`
 **Allows Variables**: true
@@ -52,7 +52,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### user: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### user: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"root"`
 **Allows Variables**: true
 
@@ -64,7 +64,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### password: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### password: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"••••••••"`
 **Allows Variables**: true
 
@@ -76,7 +76,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### script: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### script: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Script"`
 **Allows Variables**: true
 

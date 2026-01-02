@@ -20,7 +20,7 @@ Call ("string" | variable)]
 
 ---
 
-### app: Intent App Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### app: Intent App Picker [(Docs)](../gettingstarted#other-fields)
 **Default Value**: ```
 		com.apple.TelephonyUtilities.PhoneIntentHandler
 		```

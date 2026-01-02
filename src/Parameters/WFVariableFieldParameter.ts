@@ -10,7 +10,7 @@ export class WFVariableFieldParameter extends WFParameter {
 	constructor(
 		data: ShortcutsVariableFieldParameterSpec,
 		name = "Variable Input",
-		docs = "https://pfgithub.github.io/shortcutslang/gettingstarted#variable-field"
+		docs = "../gettingstarted#variable-field"
 	) {
 		super(data, name, docs);
 		this._data = data;

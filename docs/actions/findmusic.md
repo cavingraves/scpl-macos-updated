@@ -16,33 +16,33 @@ FindMusic filter=:filter{...} sortby=("Last Played Date" | "File Extension" | "R
 
 ---
 
-### filter: Filter [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#filter-field)
+### filter: Filter [(Docs)](../gettingstarted#filter-field)
 
 
 Accepts a :filter{} of filters. This filter supports:
 
-- ~~lastplayeddate~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Blastplayeddate%7D%20%28in%20WFMPMediaContentItem%29))
-- ~~fileextension~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Bfileextension%7D%20%28in%20WFMPMediaContentItem%29))
-- ~~releasedate~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Breleasedate%7D%20%28in%20WFMPMediaContentItem%29))
+- ~~lastplayeddate~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Blastplayeddate%7D%20%28in%20WFMPMediaContentItem%29))
+- ~~fileextension~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Bfileextension%7D%20%28in%20WFMPMediaContentItem%29))
+- ~~releasedate~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Breleasedate%7D%20%28in%20WFMPMediaContentItem%29))
 - genre (Supported for is, isnot, contains, doesnotcontain, beginswith, endswith)
 - mediakind (Supported for is, isnot) (Must be one of: `Movie`, `TV Show`, `Music`, `Podcast`, `Music Video`, `iTunes U`, `Audiobook)`
 - name (Supported for is, isnot, contains, doesnotcontain, beginswith, endswith)
 - artist (Supported for is, isnot, contains, doesnotcontain, beginswith, endswith)
-- ~~creationdate~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Bcreationdate%7D%20%28in%20WFMPMediaContentItem%29))
-- ~~composer~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Bcomposer%7D%20%28in%20WFMPMediaContentItem%29))
-- ~~duration~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Bduration%7D%20%28in%20WFMPMediaContentItem%29))
-- ~~disc~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Bdisc%7D%20%28in%20WFMPMediaContentItem%29))
-- ~~lastmodifieddate~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Blastmodifieddate%7D%20%28in%20WFMPMediaContentItem%29))
-- ~~dateadded~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Bdateadded%7D%20%28in%20WFMPMediaContentItem%29))
-- ~~playcount~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Bplaycount%7D%20%28in%20WFMPMediaContentItem%29))
-- ~~albumartwork~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Balbumartwork%7D%20%28in%20WFMPMediaContentItem%29))
-- ~~albumtrack~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Balbumtrack%7D%20%28in%20WFMPMediaContentItem%29))
+- ~~creationdate~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Bcreationdate%7D%20%28in%20WFMPMediaContentItem%29))
+- ~~composer~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Bcomposer%7D%20%28in%20WFMPMediaContentItem%29))
+- ~~duration~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Bduration%7D%20%28in%20WFMPMediaContentItem%29))
+- ~~disc~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Bdisc%7D%20%28in%20WFMPMediaContentItem%29))
+- ~~lastmodifieddate~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Blastmodifieddate%7D%20%28in%20WFMPMediaContentItem%29))
+- ~~dateadded~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Bdateadded%7D%20%28in%20WFMPMediaContentItem%29))
+- ~~playcount~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Bplaycount%7D%20%28in%20WFMPMediaContentItem%29))
+- ~~albumartwork~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Balbumartwork%7D%20%28in%20WFMPMediaContentItem%29))
+- ~~albumtrack~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Balbumtrack%7D%20%28in%20WFMPMediaContentItem%29))
 - hasalbumartwork (Supported for is)
-- ~~rating~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Brating%7D%20%28in%20WFMPMediaContentItem%29))
+- ~~rating~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Brating%7D%20%28in%20WFMPMediaContentItem%29))
 - isexplicit (Supported for is)
 - comments (Supported for is, isnot, contains, doesnotcontain, beginswith, endswith)
-- ~~skipcount~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Bskipcount%7D%20%28in%20WFMPMediaContentItem%29))
-- ~~filesize~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Bfilesize%7D%20%28in%20WFMPMediaContentItem%29))
+- ~~skipcount~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Bskipcount%7D%20%28in%20WFMPMediaContentItem%29))
+- ~~filesize~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Bfilesize%7D%20%28in%20WFMPMediaContentItem%29))
 - lyrics (Supported for is, isnot, contains, doesnotcontain, beginswith, endswith)
 - isclouditem (Supported for is)
 - albumartist (Supported for is, isnot, contains, doesnotcontain, beginswith, endswith)
@@ -52,7 +52,7 @@ Example: `:filter{name is testname}`
 
 ---
 
-### sortby: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### sortby: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Allows Variables**: true
 
 
@@ -91,7 +91,7 @@ containing one of the options:
 
 ---
 
-### order: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### order: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Allows Variables**: true
 
 **Only enabled if**: argument WFContentItemSortProperty != `Random`
@@ -114,7 +114,7 @@ containing one of the options:
 
 ---
 
-### limit: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### limit: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Allows Variables**: true
 
 
@@ -124,7 +124,7 @@ or a variable.
 
 ---
 
-### getItems: Stepper Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#stepper-number-fields)
+### getItems: Stepper Number [(Docs)](../gettingstarted#stepper-number-fields)
 **Allows Variables**: true
 
 **Only enabled if**: argument WFSwitchParameter == `true`

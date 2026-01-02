@@ -31,7 +31,7 @@ RequestUber showEstimate=(true | false | variable) undefined=NotImplemented unde
 
 ---
 
-### showEstimate: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### showEstimate: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Allows Variables**: true
 
 
@@ -57,7 +57,7 @@ the values you want in this parameter.
 
 ---
 
-### pickUpAt: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### pickUpAt: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Current Location"`
 **Allows Variables**: true
 
@@ -72,7 +72,7 @@ containing one of the options:
 
 ---
 
-### location: Location [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### location: Location [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"One Apple Park Way"`
 **Allows Variables**: true
 

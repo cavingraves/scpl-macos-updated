@@ -20,7 +20,7 @@ AskforInput question="string" defaultAnswer="string" defaultAnswer2="string" inp
 
 ---
 
-### question: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### question: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Enter text"`
 **Allows Variables**: true
 
@@ -32,7 +32,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### defaultAnswer: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### defaultAnswer: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"optional"`
 **Allows Variables**: true
 
@@ -44,7 +44,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### defaultAnswer2: Date [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### defaultAnswer2: Date [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"June 29, 2007"`
 **Allows Variables**: true
 
@@ -56,7 +56,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### inputType: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### inputType: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Text"`
 **Allows Variables**: true
 
@@ -73,7 +73,7 @@ containing one of the options:
 
 ---
 
-### granularity: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### granularity: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Date"`
 **Allows Variables**: true
 
@@ -89,7 +89,7 @@ containing one of the options:
 
 ---
 
-### skiptoWatchDictation: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### skiptoWatchDictation: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Allows Variables**: true
 
 **Only enabled if**: argument WFInputType != `Date`

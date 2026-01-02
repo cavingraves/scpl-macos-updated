@@ -12,7 +12,7 @@ export class WFEnumerationParameter extends WFParameter {
 	constructor(
 		data: ShortcutsEnumerationParameterSpec,
 		name: string = "Enumeration",
-		docs: string = "https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field"
+		docs: string = "../gettingstarted#enum-select-field"
 	) {
 		super(data, name, docs);
 		this._data = data;

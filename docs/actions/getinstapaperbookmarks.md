@@ -20,7 +20,7 @@ GetInstapaperBookmarks folder=("string" | variable)] WFBookmarkCount=number
 
 ---
 
-### folder: Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### folder: Picker [(Docs)](../gettingstarted#other-fields)
 **Allows Variables**: true
 
 
@@ -29,7 +29,7 @@ GetInstapaperBookmarks folder=("string" | variable)] WFBookmarkCount=number
 
 ---
 
-### WFBookmarkCount: Stepper Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#stepper-number-fields)
+### WFBookmarkCount: Stepper Number [(Docs)](../gettingstarted#stepper-number-fields)
 **Default Value**: `5`
 **Allows Variables**: true
 

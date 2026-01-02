@@ -20,7 +20,7 @@ SkipBack ("Beginning" | "Previous Song")
 
 ---
 
-### skipTo: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### skipTo: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Beginning"`
 **Allows Variables**: true
 

@@ -11,7 +11,7 @@ export class WFSpeakTextRateParameter extends WFNumberFieldParameter {
 	constructor(
 		data: ShortcutsSpeakTextRatePickerParameterSpec,
 		name: string = "Speak Text Rate",
-		docs: string = "https://pfgithub.github.io/shortcutslang/gettingstarted#slider-number-fields"
+		docs: string = "../gettingstarted#slider-number-fields"
 	) {
 		super(data, name, docs);
 		this._data = data;

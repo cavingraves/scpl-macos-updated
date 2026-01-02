@@ -11,7 +11,7 @@ export class WFSliderParameter extends WFNumberFieldParameter {
 	constructor(
 		data: ShortcutsSliderParameterSpec,
 		name: string = "Slider Number",
-		docs: string = "https://pfgithub.github.io/shortcutslang/gettingstarted#slider-number-fields"
+		docs: string = "../gettingstarted#slider-number-fields"
 	) {
 		super(data, name, docs);
 		this._data = data;

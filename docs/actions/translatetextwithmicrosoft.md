@@ -23,7 +23,7 @@ TranslateTextwithMicrosoft from=("string" | variable)] to=("string" | variable)]
 
 ---
 
-### from: Translate Language Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### from: Translate Language Picker [(Docs)](../gettingstarted#other-fields)
 **Allows Variables**: true
 
 
@@ -32,7 +32,7 @@ TranslateTextwithMicrosoft from=("string" | variable)] to=("string" | variable)]
 
 ---
 
-### to: Translate Language Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### to: Translate Language Picker [(Docs)](../gettingstarted#other-fields)
 **Allows Variables**: true
 
 

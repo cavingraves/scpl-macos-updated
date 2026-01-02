@@ -14,25 +14,25 @@ FilterArticles filter=:filter{...} sortby=("Name" | "Title" | "Published Date" |
 
 ---
 
-### filter: Filter [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#filter-field)
+### filter: Filter [(Docs)](../gettingstarted#filter-field)
 
 
 Accepts a :filter{} of filters. This filter supports:
 
 - name (Supported for is, isnot, contains, doesnotcontain, beginswith, endswith)
-- ~~title~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Btitle%7D%20%28in%20WFArticleContentItem%29))
-- ~~publisheddate~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Bpublisheddate%7D%20%28in%20WFArticleContentItem%29))
-- ~~author~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Bauthor%7D%20%28in%20WFArticleContentItem%29))
-- ~~numberofwords~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Bnumberofwords%7D%20%28in%20WFArticleContentItem%29))
-- ~~mainimageurl~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Bmainimageurl%7D%20%28in%20WFArticleContentItem%29))
-- ~~url~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Burl%7D%20%28in%20WFArticleContentItem%29))
-- ~~excerpt~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Bexcerpt%7D%20%28in%20WFArticleContentItem%29)).
+- ~~title~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Btitle%7D%20%28in%20WFArticleContentItem%29))
+- ~~publisheddate~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Bpublisheddate%7D%20%28in%20WFArticleContentItem%29))
+- ~~author~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Bauthor%7D%20%28in%20WFArticleContentItem%29))
+- ~~numberofwords~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Bnumberofwords%7D%20%28in%20WFArticleContentItem%29))
+- ~~mainimageurl~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Bmainimageurl%7D%20%28in%20WFArticleContentItem%29))
+- ~~url~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Burl%7D%20%28in%20WFArticleContentItem%29))
+- ~~excerpt~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Bexcerpt%7D%20%28in%20WFArticleContentItem%29)).
 			
 Example: `:filter{name is testname}`
 
 ---
 
-### sortby: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### sortby: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Allows Variables**: true
 
 
@@ -53,7 +53,7 @@ containing one of the options:
 
 ---
 
-### order: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### order: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Allows Variables**: true
 
 **Only enabled if**: argument WFContentItemSortProperty != `Random`
@@ -76,7 +76,7 @@ containing one of the options:
 
 ---
 
-### limit: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### limit: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Allows Variables**: true
 
 
@@ -86,7 +86,7 @@ or a variable.
 
 ---
 
-### getItems: Stepper Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#stepper-number-fields)
+### getItems: Stepper Number [(Docs)](../gettingstarted#stepper-number-fields)
 **Allows Variables**: true
 
 **Only enabled if**: argument WFSwitchParameter == `true`

@@ -10,7 +10,7 @@ export class WFEmailAddressFieldParameter extends WFParameter {
 	constructor(
 		data: ShortcutsEmailAddressFieldParameterSpec,
 		name = "Email",
-		docs = "https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields"
+		docs = "../gettingstarted#other-fields"
 	) {
 		super(data, name, docs);
 		this._data = data;

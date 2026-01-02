@@ -20,7 +20,7 @@ ChoosefromList prompt="string" selectMultiple=(true | false | variable) selectAl
 
 ---
 
-### prompt: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### prompt: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"optional"`
 **Allows Variables**: true
 
@@ -32,7 +32,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### selectMultiple: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### selectMultiple: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Allows Variables**: true
 
 
@@ -42,7 +42,7 @@ or a variable.
 
 ---
 
-### selectAllInitially: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### selectAllInitially: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Allows Variables**: true
 
 **Only enabled if**: argument WFChooseFromListActionSelectMultiple == `true`

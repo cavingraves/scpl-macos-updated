@@ -18,7 +18,7 @@ SetFlashlight flashlight=("Off" | "On" | "Toggle") brightness=number
 
 ---
 
-### flashlight: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### flashlight: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"On"`
 **Allows Variables**: true
 
@@ -34,7 +34,7 @@ containing one of the options:
 
 ---
 
-### brightness: Slider Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#slider-number-fields)
+### brightness: Slider Number [(Docs)](../gettingstarted#slider-number-fields)
 **Default Value**: `1`
 **Allows Variables**: true
 

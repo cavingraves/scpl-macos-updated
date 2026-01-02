@@ -1,17 +1,17 @@
 ---
 name: "scpl-shortcuts"
-description: "Create macOS Shortcuts using ScPL code. Use tools: create_shortcut, validate_scpl, list_actions. Write shortcuts as text instead of dragging blocks."
+description: "Create macOS Shortcuts using ScPL code. Shortcuts are auto-signed and ready to use. Tools: create_shortcut, validate_scpl, list_actions."
 ---
 
 # ScPL Shortcuts Skill
 
-Create Apple Shortcuts using text-based ScPL code instead of the visual editor.
+Create Apple Shortcuts using text-based ScPL code instead of the visual editor. **Shortcuts are auto-signed by default!**
 
 ## Available MCP Tools
 
-- `create_shortcut` - Convert ScPL code to .shortcut file
+- `create_shortcut` - Convert ScPL code to signed .shortcut file (auto-signs by default)
 - `validate_scpl` - Check syntax without creating file
-- `list_actions` - Search 493 available actions
+- `list_actions` - Search 495 available actions
 
 ## Quick Reference
 
@@ -60,5 +60,10 @@ AskForInput prompt="Question"
 RunShellScript shell="/bin/zsh" script="echo hi"
 AskLLM model="Apple Intelligence" prompt="Help me"
 ```
+
+### After Creating
+Shortcuts are auto-signed. To install:
+- Double-click the file, or
+- Run: `open ~/Documents/YourShortcut.shortcut`
 
 See REFERENCE.md for complete documentation.

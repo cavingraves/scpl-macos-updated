@@ -23,7 +23,7 @@ ResizeImage width=number height=number
 
 ---
 
-### width: Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#number-field)
+### width: Number [(Docs)](../gettingstarted#number-field)
 **Placeholder**: `Auto`
 **Default Value**: `640`
 **Allows Variables**: true
@@ -36,7 +36,7 @@ ResizeImage width=number height=number
 
 ---
 
-### height: Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#number-field)
+### height: Number [(Docs)](../gettingstarted#number-field)
 **Placeholder**: `Auto`
 **Allows Variables**: true
 

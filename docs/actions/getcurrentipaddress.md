@@ -18,7 +18,7 @@ GetCurrentIPAddress address=("External" | "Local") type=("IPv4" | "IPv6")
 
 ---
 
-### address: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### address: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"External"`
 **Allows Variables**: true
 
@@ -33,7 +33,7 @@ containing one of the options:
 
 ---
 
-### type: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### type: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"IPv4"`
 **Allows Variables**: true
 

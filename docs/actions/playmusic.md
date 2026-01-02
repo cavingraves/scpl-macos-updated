@@ -25,7 +25,7 @@ PlayMusic shuffle=("Off" | "Songs") repeat=("None" | "One" | "All")
 
 ---
 
-### shuffle: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### shuffle: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Allows Variables**: true
 
 
@@ -39,7 +39,7 @@ containing one of the options:
 
 ---
 
-### repeat: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### repeat: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Allows Variables**: true
 
 

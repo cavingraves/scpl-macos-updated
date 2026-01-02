@@ -18,7 +18,7 @@ MakePDF includeMargin=(true | false | variable) include=("All Pages" | "Single P
 
 ---
 
-### includeMargin: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### includeMargin: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Allows Variables**: true
 
 
@@ -28,7 +28,7 @@ or a variable.
 
 ---
 
-### include: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### include: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"All Pages"`
 **Allows Variables**: true
 
@@ -44,7 +44,7 @@ containing one of the options:
 
 ---
 
-### page: Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#number-field)
+### page: Number [(Docs)](../gettingstarted#number-field)
 **Placeholder**: `1`
 **Allows Variables**: true
 
@@ -56,7 +56,7 @@ containing one of the options:
 
 ---
 
-### startPage: Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#number-field)
+### startPage: Number [(Docs)](../gettingstarted#number-field)
 **Placeholder**: `1`
 **Allows Variables**: true
 
@@ -68,7 +68,7 @@ containing one of the options:
 
 ---
 
-### endPage: Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#number-field)
+### endPage: Number [(Docs)](../gettingstarted#number-field)
 **Placeholder**: `3`
 **Allows Variables**: true
 

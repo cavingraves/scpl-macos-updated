@@ -18,7 +18,7 @@ SetDoNotDisturb doNotDisturb=(true | false | variable) until=("Turned Off" | "Ti
 
 ---
 
-### doNotDisturb: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### doNotDisturb: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Allows Variables**: true
 
 
@@ -28,7 +28,7 @@ or a variable.
 
 ---
 
-### until: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### until: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Turned Off"`
 **Allows Variables**: true
 
@@ -47,7 +47,7 @@ containing one of the options:
 
 ---
 
-### event: Variable Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#variable-picker-fields)
+### event: Variable Picker [(Docs)](../gettingstarted#variable-picker-fields)
 **Allows Variables**: true
 
 **Only enabled if**: argument Enabled == `true`
@@ -60,7 +60,7 @@ Accepts a variable.
 
 ---
 
-### time: Date [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### time: Date [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"7 PM"`
 **Allows Variables**: true
 

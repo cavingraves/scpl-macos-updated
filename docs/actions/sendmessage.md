@@ -22,7 +22,7 @@ SendMessage app=("string" | variable)] showWhenRun=(true | false | variable) und
 
 ---
 
-### app: Intent App Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### app: Intent App Picker [(Docs)](../gettingstarted#other-fields)
 **Default Value**: ```
 		com.apple.MobileSMS
 		```
@@ -36,7 +36,7 @@ SendMessage app=("string" | variable)] showWhenRun=(true | false | variable) und
 
 ---
 
-### showWhenRun: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### showWhenRun: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Default Value**: ```
 		true
 		```
@@ -57,7 +57,7 @@ the values you want in this parameter.
 
 ---
 
-### WFSendMessageContent: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### WFSendMessageContent: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Message"`
 **Allows Variables**: true
 
@@ -69,7 +69,7 @@ with the text. Allows newlines.
 
 ---
 
-### prefix: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### prefix: Text [(Docs)](../gettingstarted#text-field)
 **Allows Variables**: true
 
 **Only enabled if**: This action is always **disabled** inside Shortcutslang.

@@ -18,7 +18,7 @@ SplitText separator=("New Lines" | "Spaces" | "Every Character" | "Custom") cust
 
 ---
 
-### separator: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### separator: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"New Lines"`
 **Allows Variables**: true
 
@@ -35,7 +35,7 @@ containing one of the options:
 
 ---
 
-### custom: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### custom: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Text"`
 **Allows Variables**: true
 

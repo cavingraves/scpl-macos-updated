@@ -24,7 +24,7 @@ OpenXCallbackURL customCallback=(true | false | variable) successKey="string" ca
 
 ---
 
-### customCallback: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### customCallback: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Allows Variables**: true
 
 
@@ -34,7 +34,7 @@ or a variable.
 
 ---
 
-### successKey: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### successKey: Text [(Docs)](../gettingstarted#text-field)
 **Default Value**: `"x-success"`
 **Allows Variables**: true
 
@@ -46,7 +46,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### cancelKey: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### cancelKey: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"optional"`
 **Allows Variables**: true
 
@@ -58,7 +58,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### errorKey: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### errorKey: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"optional"`
 **Allows Variables**: true
 
@@ -70,7 +70,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### customXSuccessURL: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### customXSuccessURL: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Allows Variables**: true
 
 
@@ -80,7 +80,7 @@ or a variable.
 
 ---
 
-### xSuccessURL: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### xSuccessURL: Text [(Docs)](../gettingstarted#text-field)
 **Default Value**: `"shortcuts://callback"`
 **Allows Variables**: true
 

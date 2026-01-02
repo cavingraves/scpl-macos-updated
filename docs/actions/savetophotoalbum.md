@@ -34,7 +34,7 @@ SavetoPhotoAlbum ("string" | variable)]
 
 ---
 
-### album: Photo Album Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### album: Photo Album Picker [(Docs)](../gettingstarted#other-fields)
 **Allows Variables**: true
 
 

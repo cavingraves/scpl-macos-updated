@@ -27,7 +27,7 @@ AppendtoFile service=("iCloud Drive" | "Dropbox") filePath="string" mode=("Appen
 
 ---
 
-### service: Storage Service Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### service: Storage Service Picker [(Docs)](../gettingstarted#enum-select-field)
 **Allows Variables**: true
 
 
@@ -41,7 +41,7 @@ containing one of the options:
 
 ---
 
-### filePath: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### filePath: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"example.txt"`
 **Allows Variables**: true
 
@@ -53,7 +53,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### mode: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### mode: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Append"`
 **Allows Variables**: true
 
@@ -68,7 +68,7 @@ containing one of the options:
 
 ---
 
-### makeNewLine: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### makeNewLine: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Default Value**: ```
 		true
 		```

@@ -24,7 +24,7 @@ AddNewEvent title="string" location="string" calendar=("string" | variable)] dat
 
 ---
 
-### title: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### title: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Lunch with Tim"`
 **Allows Variables**: true
 
@@ -36,7 +36,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### location: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### location: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"optional"`
 **Allows Variables**: true
 
@@ -48,7 +48,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### calendar: Calendar Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields)
+### calendar: Calendar Picker [(Docs)](../gettingstarted#other-fields)
 **Allows Variables**: true
 
 
@@ -57,7 +57,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### date: Expand Arrow [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### date: Expand Arrow [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 
 
 Accepts a boolean for if this
@@ -69,7 +69,7 @@ labels, these can be ignored.
 
 ---
 
-### startDate: Date [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### startDate: Date [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Tomorrow at noon"`
 **Allows Variables**: true
 
@@ -81,7 +81,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### endDate: Date [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### endDate: Date [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Tomorrow at 1pm"`
 **Allows Variables**: true
 
@@ -93,7 +93,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### allDay: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### allDay: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Allows Variables**: true
 
 **Only enabled if**: argument WFCalendarItemDates == `true`
@@ -103,7 +103,7 @@ or a variable.
 
 ---
 
-### alert: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### alert: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Allows Variables**: true
 
 
@@ -125,7 +125,7 @@ containing one of the options:
 
 ---
 
-### alertTime: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### alertTime: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Tomorrow at 4pm"`
 **Allows Variables**: true
 
@@ -137,7 +137,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### notes: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### notes: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Notes"`
 **Allows Variables**: true
 

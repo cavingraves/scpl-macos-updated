@@ -28,7 +28,7 @@ FormatFileSize format=("Automatic" | "Bytes" | "KB" | "MB" | "GB" | "TB" | "PB" 
 
 ---
 
-### format: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### format: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Automatic"`
 **Allows Variables**: true
 
@@ -51,7 +51,7 @@ containing one of the options:
 
 ---
 
-### includeUnits: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### includeUnits: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Default Value**: ```
 		true
 		```

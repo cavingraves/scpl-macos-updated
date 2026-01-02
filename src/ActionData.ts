@@ -87,7 +87,7 @@ class WFCustomDateFormatParameter extends WFTextInputParameter {
 	constructor(
 		data: ShortcutsCustomDateFormatParameterSpec,
 		name: string = "Date Format String",
-		docs: string = "https://pfgithub.github.io/shortcutslang/gettingstarted#text-field"
+		docs: string = "../gettingstarted#text-field"
 	) {
 		super(data, name, docs);
 	}
@@ -98,7 +98,7 @@ class WFCountryFieldParameter extends WFTextInputParameter {
 	constructor(
 		data: ShortcutsCountryFieldParameterSpec,
 		name: string = "Country",
-		docs: string = "https://pfgithub.github.io/shortcutslang/gettingstarted#text-field"
+		docs: string = "../gettingstarted#text-field"
 	) {
 		super(data, name, docs);
 	}
@@ -109,7 +109,7 @@ class WFDateFieldParameter extends WFTextInputParameter {
 	constructor(
 		data: ShortcutsDateFieldParameterSpec,
 		name = "Date",
-		docs = "https://pfgithub.github.io/shortcutslang/gettingstarted#text-field"
+		docs = "../gettingstarted#text-field"
 	) {
 		super(data, name, docs);
 	}
@@ -120,7 +120,7 @@ class WFLocationFieldParameter extends WFTextInputParameter {
 	constructor(
 		data: ShortcutsLocationFieldParameterSpec,
 		name = "Location",
-		docs = "https://pfgithub.github.io/shortcutslang/gettingstarted#text-field"
+		docs = "../gettingstarted#text-field"
 	) {
 		super(data, name, docs);
 	}
@@ -158,7 +158,7 @@ function addStaticEnum(
 		constructor(
 			data: ShortcutsEnumerationParameterSpec,
 			name: string = visibleName,
-			docs: string = "https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field"
+			docs: string = "../gettingstarted#enum-select-field"
 		) {
 			super(data, name, docs);
 			this.options = options;
@@ -172,7 +172,7 @@ function addDynamicEnum(internalName: string, visibleName: string) {
 		constructor(
 			data: ShortcutsDynamicEnumerationParameterSpec,
 			name: string = visibleName,
-			docs: string = "https://pfgithub.github.io/shortcutslang/gettingstarted#other-fields"
+			docs: string = "../gettingstarted#other-fields"
 		) {
 			super(data, name, docs);
 		}
@@ -299,12 +299,22 @@ export class WFAction {
 		this._parameters = [];
 		this.internalName = this.id;
 		let name = this._data.Name;
+		let displayName = name;
 		if (data.AppInfo) {
-			name += ` (${data.AppInfo})`;
+			// Use prefix style for app-specific actions: "appname + actionname"
+			const appPrefix = data.AppInfo.toLowerCase().replace(
+				/[^a-z0-9]/g,
+				""
+			);
+			this.shortName = appPrefix + genShortName(name, this.internalName);
+			this.readableName =
+				appPrefix + genShortName(name, this.internalName, true);
+			displayName = `${name} (${data.AppInfo})`;
+		} else {
+			this.shortName = genShortName(name, this.internalName);
+			this.readableName = genShortName(name, this.internalName, true);
 		}
-		this.shortName = genShortName(name, this.internalName);
-		this.readableName = genShortName(name, this.internalName, true);
-		this.name = name || this.shortName;
+		this.name = displayName || this.shortName;
 		const parameterNames: { [key: string]: true | undefined } = {};
 		if (this._data.Parameters) {
 			this._parameters = this._data.Parameters.map(
@@ -754,17 +764,53 @@ class RawAction {
 const actionsByName: { [key: string]: WFAction } = {};
 const actionsByID: { [key: string]: WFAction } = {};
 
+// Extract a short app prefix from AppIdentifier (e.g., "com.apple.VoiceMemos" -> "voicememos")
+function getAppPrefix(appId: string | undefined, actionId: string): string {
+	if (appId) {
+		// Get last component of bundle ID: com.apple.VoiceMemos -> voicememos
+		const parts = appId.split(".");
+		const lastPart = parts[parts.length - 1];
+		// Clean it up: remove common suffixes, lowercase
+		return lastPart
+			.replace(/Intents?$/i, "")
+			.replace(/Extension$/i, "")
+			.replace(/Action$/i, "")
+			.toLowerCase()
+			.replace(/[^a-z0-9]/g, "");
+	}
+	// Fallback: extract from action ID
+	// e.g., "com.apple.Notes.CreateFolderLinkAction" -> "notes"
+	const match = actionId.match(/com\.apple\.([^.]+)/i);
+	if (match) {
+		return match[1].toLowerCase().replace(/[^a-z0-9]/g, "");
+	}
+	return "app";
+}
+
 Object.keys(actionList).forEach(key => {
 	// console.log(key);
 	const value = actionList[key];
 	const action = new WFAction(value, key);
 
 	if (actionsByName[action.shortName]) {
-		//eslint-disable-next-line no-console
-		console.warn(
-			`WARNING, ${action.shortName} (${action.internalName}) is already defined`
-		);
-		return;
+		// Duplicate detected - prefix with app name
+		const appPrefix = getAppPrefix(value.AppIdentifier, key);
+		const prefixedShortName = appPrefix + action.shortName;
+		const prefixedReadableName = appPrefix + action.readableName;
+
+		// Check if prefixed name also conflicts (unlikely but possible)
+		if (actionsByName[prefixedShortName]) {
+			//eslint-disable-next-line no-console
+			console.warn(
+				`WARNING, ${prefixedShortName} (${action.internalName}) still conflicts, skipping`
+			);
+			return;
+		}
+
+		// Update the action's names with prefix
+		action.shortName = prefixedShortName;
+		action.readableName = prefixedReadableName;
+		action.name = `${action.name} (${appPrefix})`;
 	}
 
 	actionsByID[key] = action;
@@ -787,10 +833,6 @@ export function genReadme() {
 		);
 	return `# ScPL
 
-[Getting Started Guide](https://pfgithub.github.io/shortcutslang/gettingstarted.html)
-
-[Try Shortcutslang in a web browser](https://editor.scpl.dev)
-
 ${completedActions}/${totalActions} builtin actions supported
 
 ## All Actions:
@@ -801,7 +843,7 @@ ${Object.values(actionsByID)
 		action =>
 			`- [${action.name} (\`${action.readableName}\`)](actions/${
 				action.shortName
-			})${action.isComplete ? "" : " (Incomplete)"}`
+			}.md)${action.isComplete ? "" : " (Incomplete)"}`
 	)
 	.join(`\n`)}
 

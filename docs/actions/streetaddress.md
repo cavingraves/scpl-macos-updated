@@ -18,7 +18,7 @@ StreetAddress line1="string" line2="string" city="string" state="string" postalC
 
 ---
 
-### line1: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### line1: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"One Apple Park Way"`
 **Allows Variables**: true
 
@@ -30,7 +30,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### line2: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### line2: Text [(Docs)](../gettingstarted#text-field)
 **Allows Variables**: true
 
 
@@ -41,7 +41,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### city: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### city: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Cupertino"`
 **Allows Variables**: true
 
@@ -53,7 +53,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### state: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### state: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"California"`
 **Allows Variables**: true
 
@@ -65,7 +65,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### postalCode: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### postalCode: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"95014"`
 **Allows Variables**: true
 
@@ -77,7 +77,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### region: Country [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### region: Country [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"United States"`
 **Allows Variables**: true
 

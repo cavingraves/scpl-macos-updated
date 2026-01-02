@@ -14,28 +14,28 @@ FilterLocations filter=:filter{...} sortby=("Phone Number" | "State" | "Altitude
 
 ---
 
-### filter: Filter [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#filter-field)
+### filter: Filter [(Docs)](../gettingstarted#filter-field)
 
 
 Accepts a :filter{} of filters. This filter supports:
 
-- ~~phonenumber~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Bphonenumber%7D%20%28in%20WFLocationContentItem%29))
-- ~~state~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Bstate%7D%20%28in%20WFLocationContentItem%29))
-- ~~altitude~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Baltitude%7D%20%28in%20WFLocationContentItem%29))
+- ~~phonenumber~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Bphonenumber%7D%20%28in%20WFLocationContentItem%29))
+- ~~state~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Bstate%7D%20%28in%20WFLocationContentItem%29))
+- ~~altitude~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Baltitude%7D%20%28in%20WFLocationContentItem%29))
 - name (Supported for is, isnot, contains, doesnotcontain, beginswith, endswith)
-- ~~longitude~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Blongitude%7D%20%28in%20WFLocationContentItem%29))
-- ~~country~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Bcountry%7D%20%28in%20WFLocationContentItem%29))
-- ~~city~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Bcity%7D%20%28in%20WFLocationContentItem%29))
-- ~~street~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Bstreet%7D%20%28in%20WFLocationContentItem%29))
-- ~~url~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Burl%7D%20%28in%20WFLocationContentItem%29))
-- ~~latitude~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Blatitude%7D%20%28in%20WFLocationContentItem%29))
-- ~~zipcode~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Bzipcode%7D%20%28in%20WFLocationContentItem%29)).
+- ~~longitude~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Blongitude%7D%20%28in%20WFLocationContentItem%29))
+- ~~country~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Bcountry%7D%20%28in%20WFLocationContentItem%29))
+- ~~city~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Bcity%7D%20%28in%20WFLocationContentItem%29))
+- ~~street~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Bstreet%7D%20%28in%20WFLocationContentItem%29))
+- ~~url~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Burl%7D%20%28in%20WFLocationContentItem%29))
+- ~~latitude~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Blatitude%7D%20%28in%20WFLocationContentItem%29))
+- ~~zipcode~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Bzipcode%7D%20%28in%20WFLocationContentItem%29)).
 			
 Example: `:filter{name is testname}`
 
 ---
 
-### sortby: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### sortby: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Allows Variables**: true
 
 
@@ -59,7 +59,7 @@ containing one of the options:
 
 ---
 
-### order: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### order: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Allows Variables**: true
 
 **Only enabled if**: argument WFContentItemSortProperty != `Random`
@@ -82,7 +82,7 @@ containing one of the options:
 
 ---
 
-### limit: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### limit: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Allows Variables**: true
 
 
@@ -92,7 +92,7 @@ or a variable.
 
 ---
 
-### getItems: Stepper Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#stepper-number-fields)
+### getItems: Stepper Number [(Docs)](../gettingstarted#stepper-number-fields)
 **Allows Variables**: true
 
 **Only enabled if**: argument WFSwitchParameter == `true`

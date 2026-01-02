@@ -18,7 +18,7 @@ CombineImages mode=("Side-by-Side" | "Grid") direction=("Horizontal" | "Vertical
 
 ---
 
-### mode: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### mode: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Side-by-Side"`
 **Allows Variables**: true
 
@@ -33,7 +33,7 @@ containing one of the options:
 
 ---
 
-### direction: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### direction: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Horizontal"`
 **Allows Variables**: true
 
@@ -48,7 +48,7 @@ containing one of the options:
 
 ---
 
-### spacing: Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#number-field)
+### spacing: Number [(Docs)](../gettingstarted#number-field)
 **Placeholder**: `0`
 **Allows Variables**: true
 

@@ -14,39 +14,39 @@ FilterImages filter=:filter{...} sortby=("Width" | "Time Taken" | "Is a Screensh
 
 ---
 
-### filter: Filter [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#filter-field)
+### filter: Filter [(Docs)](../gettingstarted#filter-field)
 
 
 Accepts a :filter{} of filters. This filter supports:
 
-- ~~width~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Bwidth%7D%20%28in%20WFImageContentItem%29))
-- ~~timetaken~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Btimetaken%7D%20%28in%20WFImageContentItem%29))
+- ~~width~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Bwidth%7D%20%28in%20WFImageContentItem%29))
+- ~~timetaken~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Btimetaken%7D%20%28in%20WFImageContentItem%29))
 - isascreenshot (Supported for is)
-- ~~mediatype~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Bmediatype%7D%20%28in%20WFImageContentItem%29))
-- ~~height~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Bheight%7D%20%28in%20WFImageContentItem%29))
-- ~~location~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Blocation%7D%20%28in%20WFImageContentItem%29))
-- ~~orientation~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Borientation%7D%20%28in%20WFImageContentItem%29))
-- ~~datetaken~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Bdatetaken%7D%20%28in%20WFImageContentItem%29))
-- ~~duration~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Bduration%7D%20%28in%20WFImageContentItem%29))
-- ~~cameramake~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Bcameramake%7D%20%28in%20WFImageContentItem%29))
+- ~~mediatype~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Bmediatype%7D%20%28in%20WFImageContentItem%29))
+- ~~height~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Bheight%7D%20%28in%20WFImageContentItem%29))
+- ~~location~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Blocation%7D%20%28in%20WFImageContentItem%29))
+- ~~orientation~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Borientation%7D%20%28in%20WFImageContentItem%29))
+- ~~datetaken~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Bdatetaken%7D%20%28in%20WFImageContentItem%29))
+- ~~duration~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Bduration%7D%20%28in%20WFImageContentItem%29))
+- ~~cameramake~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Bcameramake%7D%20%28in%20WFImageContentItem%29))
 - ishidden (Supported for is)
-- ~~framerate~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Bframerate%7D%20%28in%20WFImageContentItem%29))
-- ~~fileextension~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Bfileextension%7D%20%28in%20WFImageContentItem%29))
-- ~~cameramodel~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Bcameramodel%7D%20%28in%20WFImageContentItem%29))
+- ~~framerate~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Bframerate%7D%20%28in%20WFImageContentItem%29))
+- ~~fileextension~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Bfileextension%7D%20%28in%20WFImageContentItem%29))
+- ~~cameramodel~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Bcameramodel%7D%20%28in%20WFImageContentItem%29))
 - isfavorite (Supported for is)
-- ~~creationdate~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Bcreationdate%7D%20%28in%20WFImageContentItem%29))
-- ~~album~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Balbum%7D%20%28in%20WFImageContentItem%29))
-- ~~metadatadictionary~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Bmetadatadictionary%7D%20%28in%20WFImageContentItem%29))
-- ~~filesize~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Bfilesize%7D%20%28in%20WFImageContentItem%29))
-- ~~phototype~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Bphototype%7D%20%28in%20WFImageContentItem%29))
-- ~~lastmodifieddate~~ (Not yet supported. [Submit an Issue](https://github.com/pfgithub/shortcutslang/issues/new?title=Add%20support%20for%20%3Afilter%7Blastmodifieddate%7D%20%28in%20WFImageContentItem%29))
+- ~~creationdate~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Bcreationdate%7D%20%28in%20WFImageContentItem%29))
+- ~~album~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Balbum%7D%20%28in%20WFImageContentItem%29))
+- ~~metadatadictionary~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Bmetadatadictionary%7D%20%28in%20WFImageContentItem%29))
+- ~~filesize~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Bfilesize%7D%20%28in%20WFImageContentItem%29))
+- ~~phototype~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Bphototype%7D%20%28in%20WFImageContentItem%29))
+- ~~lastmodifieddate~~ (Not yet supported. [Submit an Issue](https://github.com/cavingraves/scpl-macos-updated/issues/new?title=Add%20support%20for%20%3Afilter%7Blastmodifieddate%7D%20%28in%20WFImageContentItem%29))
 - name (Supported for is, isnot, contains, doesnotcontain, beginswith, endswith).
 			
 Example: `:filter{name is testname}`
 
 ---
 
-### sortby: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### sortby: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Allows Variables**: true
 
 
@@ -81,7 +81,7 @@ containing one of the options:
 
 ---
 
-### order: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### order: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Allows Variables**: true
 
 **Only enabled if**: argument WFContentItemSortProperty != `Random`
@@ -104,7 +104,7 @@ containing one of the options:
 
 ---
 
-### limit: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### limit: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Allows Variables**: true
 
 
@@ -114,7 +114,7 @@ or a variable.
 
 ---
 
-### getItems: Stepper Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#stepper-number-fields)
+### getItems: Stepper Number [(Docs)](../gettingstarted#stepper-number-fields)
 **Allows Variables**: true
 
 **Only enabled if**: argument WFSwitchParameter == `true`

@@ -18,7 +18,7 @@ EncodeMedia audioOnly=(true | false | variable) format=("M4A" | "AIFF") size=("6
 
 ---
 
-### audioOnly: Switch [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### audioOnly: Switch [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Allows Variables**: true
 
 
@@ -28,7 +28,7 @@ or a variable.
 
 ---
 
-### format: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### format: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"M4A"`
 **Allows Variables**: true
 
@@ -43,7 +43,7 @@ containing one of the options:
 
 ---
 
-### size: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### size: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Passthrough"`
 **Allows Variables**: true
 
@@ -63,7 +63,7 @@ containing one of the options:
 
 ---
 
-### speed: Enumeration [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#enum-select-field)
+### speed: Enumeration [(Docs)](../gettingstarted#enum-select-field)
 **Default Value**: `"Normal"`
 **Allows Variables**: true
 
@@ -80,7 +80,7 @@ containing one of the options:
 
 ---
 
-### customSpeed: Number [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#number-field)
+### customSpeed: Number [(Docs)](../gettingstarted#number-field)
 **Placeholder**: `1.0`
 **Allows Variables**: true
 
@@ -92,7 +92,7 @@ containing one of the options:
 
 ---
 
-### metadata: Expand Arrow [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#switch-or-expanding-or-boolean-fields)
+### metadata: Expand Arrow [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 
 
 Accepts a boolean for if this
@@ -104,7 +104,7 @@ labels, these can be ignored.
 
 ---
 
-### title: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### title: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"My Great Track"`
 **Allows Variables**: true
 
@@ -116,7 +116,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### artist: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### artist: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Nicholas Fryingpan"`
 **Allows Variables**: true
 
@@ -128,7 +128,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### album: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### album: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Abbey Road"`
 **Allows Variables**: true
 
@@ -140,7 +140,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### genre: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### genre: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"Indie"`
 **Allows Variables**: true
 
@@ -152,7 +152,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### year: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### year: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"2001"`
 **Allows Variables**: true
 
@@ -164,7 +164,7 @@ with the text. Does not allow newlines.
 
 ---
 
-### artwork: Variable Picker [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#variable-picker-fields)
+### artwork: Variable Picker [(Docs)](../gettingstarted#variable-picker-fields)
 **Allows Variables**: true
 
 **Only enabled if**: argument Metadata == `true`

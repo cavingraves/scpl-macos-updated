@@ -18,7 +18,7 @@ URL "string"
 
 ---
 
-### uRL: Text [(Docs)](https://pfgithub.github.io/shortcutslang/gettingstarted#text-field)
+### uRL: Text [(Docs)](../gettingstarted#text-field)
 **Placeholder**: `"example.com"`
 **Allows Variables**: true
 
