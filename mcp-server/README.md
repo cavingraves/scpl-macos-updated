@@ -248,10 +248,41 @@ Case "Option 2"
     Text "You chose 2"
 End Menu
 
-# Loops
-RepeatWithEachItem
-    ShowResult
-End Repeat
+# Loops - IMPORTANT: name the loop variable!
+List ["a", "b", "c"]
+RepeatWithEach -> mv:Item
+    ShowResult "\(mv:Item)"
+End RepeatWithEach
+```
+
+### ⚠️ Common Gotchas
+
+```scpl
+# ❌ WRONG: mv:RepeatItem doesn't exist
+RepeatWithEach
+    Text "\(mv:RepeatItem)"
+
+# ✅ CORRECT: Name your loop variable
+RepeatWithEach -> mv:Item
+    Text "\(mv:Item)"
+
+# ❌ WRONG: Multi-line text can't use ->
+Text
+| Line 1
+| Line 2
+-> v:MyVar
+
+# ✅ CORRECT: Use SetVariable on next line
+Text
+| Line 1
+| Line 2
+SetVariable v:MyVar
+
+# ❌ WRONG: Wait only takes integers
+Wait 0.5
+
+# ✅ CORRECT: Use whole numbers
+Wait 1
 ```
 
 ## Examples
@@ -319,6 +350,31 @@ Check the error message for line numbers and syntax issues. Common mistakes:
 - Forgetting to close `Menu` with `End Menu`
 - Using wrong parameter names (use `list_actions` to check)
 - Missing quotes around text values
+
+## Skill Architecture (For AI Maintainers)
+
+The ScPL skills are distributed through **three different mechanisms**:
+
+| Platform | Skill Source | Update Process |
+|----------|--------------|----------------|
+| **Claude Code** | `.claude/shortcuts-creator/skills/create-shortcut.md` | Edit file directly |
+| **Claude Desktop** | `claude-desktop-skill/scpl-shortcuts.zip` (contains Skill.md + REFERENCE.md) | Edit files, regenerate zip |
+| **Codex** | Generated dynamically from `SCPL_REFERENCE.md` by `index.js` | Edit SCPL_REFERENCE.md |
+
+### Source of Truth
+- **`SCPL_REFERENCE.md`** - The master reference document. Codex skill is generated from this.
+- **`claude-desktop-skill/scpl-shortcuts/REFERENCE.md`** - Should match SCPL_REFERENCE.md
+- All platforms should have the same gotcha documentation (RepeatWithEach, multi-line text, etc.)
+
+### Updating Skills
+1. Edit `SCPL_REFERENCE.md` and `create-shortcut.md` with fixes
+2. Copy changes to `claude-desktop-skill/scpl-shortcuts/REFERENCE.md`
+3. Update `claude-desktop-skill/scpl-shortcuts/Skill.md` if needed
+4. Regenerate zip: `cd claude-desktop-skill && zip -r scpl-shortcuts.zip scpl-shortcuts/`
+5. Bump version in `package.json` and publish to npm
+
+### How Codex Skill Works
+The `setupCodex()` function in `index.js` (line ~315) reads `SCPL_REFERENCE.md` at runtime and wraps it with YAML frontmatter to create `~/.codex/skills/scpl-shortcuts/SKILL.md`. There is no separate Codex skill file in the repo.
 
 ## Contributing
 

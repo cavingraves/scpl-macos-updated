@@ -98,10 +98,11 @@ text
 | Line 2
 | With variable: \(v:myVar)
 
-// Repeat loops
-repeatWithEach ^(v:myList)
-    getVariable v:'Repeat Item'
-end repeat
+// Repeat loops - IMPORTANT: name the loop variable with ->
+List ["a", "b", "c"]
+RepeatWithEach -> mv:Item
+    ShowResult "\(mv:Item)"
+End RepeatWithEach
 
 // Input/output
 askForInput "What's your name?" -> v:name
@@ -441,6 +442,53 @@ RunShellScript shell="/usr/bin/python3" script="import sys,json,urllib.request; 
 mv:FileData
 Base64Encode
 RunShellScript shell="/bin/zsh" script="base64 -d > /Users/username/Documents/myfile.txt" passinput=true
+```
+
+---
+
+## Known Limitations & Workarounds
+
+### Multi-line Text Cannot Use Arrow Assignment
+```scpl
+# WRONG
+Text
+| Line 1
+| Line 2
+-> v:MyVar
+
+# CORRECT - use SetVariable on next line
+Text
+| Line 1
+| Line 2
+
+SetVariable v:MyVar
+```
+
+### Calculate Operand: Use Direct Variable Reference
+```scpl
+# WRONG
+Calculate operation="+" operand="\(v:Addend)"
+
+# CORRECT
+Calculate operation="+" operand=v:Addend
+```
+
+### RepeatWithEach: Must Name Loop Variable
+`mv:RepeatItem` is NOT predefined. You must name it with `->`:
+```scpl
+# WRONG
+RepeatWithEach
+    Text "\(mv:RepeatItem)"  # Not defined!
+
+# CORRECT
+RepeatWithEach -> mv:Item
+    Text "\(mv:Item)"
+```
+
+### Wait Requires Integers
+```scpl
+# WRONG: Wait 0.5
+# CORRECT: Wait 1
 ```
 
 ---

@@ -71,9 +71,19 @@ End Repeat
 
 ### Repeat with Each
 
+**IMPORTANT:** You must name the loop variable using `->` syntax. `mv:RepeatItem` is NOT a predefined variable.
+
 ```scpl
-RepeatWithEach [item1, item2, item3]
-    ShowResult "Processing: \(mv:RepeatItem)"
+# Correct: Name the loop variable with arrow
+List ["item1", "item2", "item3"]
+RepeatWithEach -> mv:Item
+    ShowResult "Processing: \(mv:Item)"
+End RepeatWithEach
+
+# Also works: Use bare RepeatItem as direct reference (not in interpolation)
+List ["a", "b", "c"]
+RepeatWithEach
+    ShowResult RepeatItem
 End RepeatWithEach
 ```
 
@@ -299,7 +309,8 @@ End If
 URL "https://api.example.com/items"
 GetContentsOfURL -> mv:Response
 GetDictionaryValue key="items"
-RepeatWithEach
+RepeatWithEach -> mv:Item
+    GetVariable mv:Item
     GetDictionaryValue key="name" -> mv:ItemName
     Text "\(mv:ItemName)" -> mv:Output
     AddToVariable v:AllItems
@@ -481,13 +492,19 @@ ShowResult
 
 ```scpl
 GetSelectedFiles -> mv:Files
-RepeatWithEach mv:Files
+GetVariable mv:Files
+RepeatWithEach -> mv:CurrentFile
+    GetVariable mv:CurrentFile
     GetDetailsOfFiles detail="File Extension" -> mv:Ext
 
+    GetVariable mv:Ext
     If Equals "pdf"
+        GetVariable mv:CurrentFile
         MoveFile destination="~/Documents/PDFs/"
     Otherwise
+        GetVariable mv:Ext
         If Equals "jpg"
+            GetVariable mv:CurrentFile
             MoveFile destination="~/Pictures/"
         End If
     End If
@@ -536,8 +553,11 @@ End If
 URL "https://api.example.com/data"
 GetContentsOfURL -> mv:Response
 GetDictionaryValue key="items"
-RepeatWithEach
-    # Process each item
+RepeatWithEach -> mv:Item
+    # Process each item using mv:Item
+    GetVariable mv:Item
+    GetDictionaryValue key="name" -> mv:Name
+    ShowResult mv:Name
 End RepeatWithEach
 ```
 
@@ -561,4 +581,80 @@ End RepeatWithEach
 
 ---
 
-**493 total actions available.** Use `list_actions` tool to search by category or keyword.
+# Known Limitations & Workarounds
+
+## Multi-line Text Cannot Use Arrow Assignment
+
+Multi-line text blocks (using `|` syntax) cannot use `->` directly. Use `SetVariable` on the next line instead.
+
+```scpl
+# WRONG - will fail to parse
+Text
+| Line 1
+| Line 2
+-> v:MyVar
+
+# CORRECT - use SetVariable
+Text
+| Line 1
+| Line 2
+
+SetVariable v:MyVar
+```
+
+## Calculate Operand Cannot Use String Interpolation
+
+The `operand` parameter in Calculate must use direct variable reference, not string interpolation.
+
+```scpl
+Number 10 -> v:Base
+Number 5 -> v:Addend
+
+# WRONG - string interpolation fails
+GetVariable v:Base
+Calculate operation="+" operand="\(v:Addend)"
+
+# CORRECT - direct variable reference
+GetVariable v:Base
+Calculate operation="+" operand=v:Addend
+```
+
+## RepeatWithEach Loop Variable
+
+`mv:RepeatItem` is NOT a predefined magic variable. You must name your loop variable explicitly using the `->` syntax.
+
+```scpl
+# WRONG - mv:RepeatItem doesn't exist
+List ["a", "b", "c"]
+RepeatWithEach
+    Text "\(mv:RepeatItem)"  # ERROR: not defined
+End RepeatWithEach
+
+# CORRECT - name the variable
+List ["a", "b", "c"]
+RepeatWithEach -> mv:Item
+    Text "\(mv:Item)"
+End RepeatWithEach
+
+# ALSO WORKS - bare RepeatItem (not in interpolation)
+List ["a", "b", "c"]
+RepeatWithEach
+    ShowResult RepeatItem  # Works as direct reference
+End RepeatWithEach
+```
+
+## Wait/Stepper Fields Require Integers
+
+Stepper fields (like `Wait`) only accept positive integers, not decimals.
+
+```scpl
+# WRONG - decimal fails
+Wait 0.5
+
+# CORRECT - integer only
+Wait 1
+```
+
+---
+
+**495 total actions available.** Use `list_actions` tool to search by category or keyword.

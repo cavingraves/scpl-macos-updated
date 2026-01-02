@@ -61,9 +61,24 @@ RunShellScript shell="/bin/zsh" script="echo hi"
 AskLLM model="Apple Intelligence" prompt="Help me"
 ```
 
+### RepeatWithEach - IMPORTANT
+**You MUST name the loop variable with `->`:**
+```scpl
+List ["a", "b", "c"]
+RepeatWithEach -> mv:Item       # Name it!
+    ShowResult "\(mv:Item)"
+End RepeatWithEach
+```
+`mv:RepeatItem` is NOT predefined.
+
+### Critical Gotchas
+- **Multi-line text can't use `->` directly** - use `SetVariable` on next line
+- **Calculate operand** - use `operand=v:Var` not `operand="\(v:Var)"`
+- **Wait/Stepper fields** - integers only (`Wait 1` not `Wait 0.5`)
+
 ### After Creating
 Shortcuts are auto-signed. To install:
 - Double-click the file, or
 - Run: `open ~/Documents/YourShortcut.shortcut`
 
-See REFERENCE.md for complete documentation.
+See REFERENCE.md for complete documentation and more examples.
