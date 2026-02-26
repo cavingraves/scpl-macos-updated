@@ -336,9 +336,13 @@ export class WFAction {
 							if (existing instanceof WFExpandingParameter) {
 								// Rename the expanding toggle to "show{name}" and
 								// let the more useful parameter keep the clean name
-								existing.shortName = "show" + existing.shortName;
-								existing.readableName = "show" +
-									existing.readableName.charAt(0).toUpperCase() +
+								existing.shortName =
+									"show" + existing.shortName;
+								existing.readableName =
+									"show" +
+									existing.readableName
+										.charAt(0)
+										.toUpperCase() +
 									existing.readableName.slice(1);
 								delete parameterNames[paramVal.shortName];
 								parameterNames[existing.shortName] = existing;
