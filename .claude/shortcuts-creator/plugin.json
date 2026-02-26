@@ -12,7 +12,7 @@
   "mcp": {
     "server": "scpl-shortcuts",
     "command": "npx",
-    "args": ["scpl-updated-mcp-server"],
+    "args": ["scpl-updated-mcp"],
     "description": "ScPL Updated MCP server for creating shortcuts programmatically"
   }
 }

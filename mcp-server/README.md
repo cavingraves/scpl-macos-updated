@@ -43,7 +43,7 @@ shortcuts sign --mode anyone --input MyShortcut.shortcut --output MyShortcut_sig
 ### Step 1: Install the Package
 
 ```bash
-npm install -g scpl-updated-mcp-server
+npm install -g scpl-updated-mcp
 ```
 
 ### Step 2: Register with Your AI Assistant
@@ -55,7 +55,7 @@ Choose your platform below:
 **Option 1: CLI command** (may not always work):
 
 ```bash
-claude mcp add scpl-shortcuts npx scpl-updated-mcp-server
+claude mcp add scpl-shortcuts npx scpl-updated-mcp
 ```
 
 **Option 2: Manual config** (recommended):
@@ -68,7 +68,7 @@ Add this to the `mcpServers` section in `~/.claude.json`:
   "command": "npx",
   "args": [
     "-y",
-    "scpl-updated-mcp-server"
+    "scpl-updated-mcp"
   ]
 }
 ```
@@ -84,7 +84,7 @@ Add to `~/Library/Application Support/Claude/claude_desktop_config.json`:
   "mcpServers": {
     "scpl-shortcuts": {
       "command": "npx",
-      "args": ["scpl-updated-mcp-server"]
+      "args": ["scpl-updated-mcp"]
     }
   }
 }
@@ -97,7 +97,7 @@ Add to `~/.code/config.toml` (or `~/.codex/config.toml`):
 ```toml
 [mcp_servers.scpl-shortcuts]
 command = "npx"
-args = ["scpl-updated-mcp-server"]
+args = ["scpl-updated-mcp"]
 startup_timeout_sec = 60.0
 tool_timeout_sec = 120
 ```
@@ -322,11 +322,11 @@ ShowResult "Files on Desktop"
 
 ## Troubleshooting
 
-### "Command not found: scpl-updated-mcp-server"
+### "Command not found: scpl-updated-mcp"
 
 Make sure you installed globally:
 ```bash
-npm install -g scpl-updated-mcp-server
+npm install -g scpl-updated-mcp
 ```
 
 ### "Error: Cannot find module 'scpl-macos-updated'"

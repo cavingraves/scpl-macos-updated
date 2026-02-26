@@ -201,27 +201,27 @@ Create shortcuts using natural language! One command installs everything:
 
 **For Claude Code (CLI):**
 ```bash
-npx scpl-updated-mcp-server --setup
+npx scpl-updated-mcp --setup
 ```
 
 **For Claude Desktop (GUI app):**
 ```bash
-npx scpl-updated-mcp-server --setup-desktop
+npx scpl-updated-mcp --setup-desktop
 ```
 
 **For OpenAI Codex:**
 ```bash
-npx scpl-updated-mcp-server --setup-codex
+npx scpl-updated-mcp --setup-codex
 ```
 
 **For Codex forks (just-every/code, etc.):**
 ```bash
-npx scpl-updated-mcp-server --setup-codex=$CODE_HOME
+npx scpl-updated-mcp --setup-codex=$CODE_HOME
 ```
 
 **Multiple tools at once:**
 ```bash
-npx scpl-updated-mcp-server --setup --setup-desktop --setup-codex
+npx scpl-updated-mcp --setup --setup-desktop --setup-codex
 ```
 
 That's it! **Restart your AI tool**, then just ask:

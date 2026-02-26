@@ -63,7 +63,7 @@ if (process.argv.includes("--help") || process.argv.includes("-h")) {
 ScPL Updated MCP Server - Create macOS Shortcuts with AI
 
 USAGE:
-  npx scpl-updated-mcp-server [OPTIONS]
+  npx scpl-updated-mcp [OPTIONS]
 
 OPTIONS:
   --setup                    Auto-install for Claude Code (CLI)
@@ -73,23 +73,23 @@ OPTIONS:
   --help, -h                 Show this help message
 
 You can combine multiple flags to set up multiple tools at once:
-  npx scpl-updated-mcp-server --setup --setup-desktop --setup-codex
+  npx scpl-updated-mcp --setup --setup-desktop --setup-codex
 
 EXAMPLES:
   # Claude Code (CLI) only
-  npx scpl-updated-mcp-server --setup
+  npx scpl-updated-mcp --setup
 
   # Claude Desktop (GUI app) only
-  npx scpl-updated-mcp-server --setup-desktop
+  npx scpl-updated-mcp --setup-desktop
 
   # Codex only
-  npx scpl-updated-mcp-server --setup-codex
+  npx scpl-updated-mcp --setup-codex
 
   # Custom Codex directory (just-every/code, etc.)
-  npx scpl-updated-mcp-server --setup-codex=$CODE_HOME
+  npx scpl-updated-mcp --setup-codex=$CODE_HOME
 
   # All Claude + Codex tools at once
-  npx scpl-updated-mcp-server --setup --setup-desktop --setup-codex
+  npx scpl-updated-mcp --setup --setup-desktop --setup-codex
 
 After setup, restart your AI coding tool and ask:
   "Create a shortcut that starts a timer and plays a sound"
@@ -128,7 +128,7 @@ function setupClaudeCode() {
       claudeConfig.mcpServers["scpl-shortcuts"] = {
         type: "stdio",
         command: "npx",
-        args: ["-y", "scpl-updated-mcp-server"]
+        args: ["-y", "scpl-updated-mcp"]
       };
       writeFileSync(claudeJsonPath, JSON.stringify(claudeConfig, null, 2));
       console.log("   ✅ MCP server added!\n");
@@ -266,7 +266,7 @@ function setupClaudeDesktop() {
     } else {
       config.mcpServers["scpl-shortcuts"] = {
         command: "npx",
-        args: ["-y", "scpl-updated-mcp-server"]
+        args: ["-y", "scpl-updated-mcp"]
       };
       writeFileSync(configPath, JSON.stringify(config, null, 2));
       console.log("   ✅ MCP server added!\n");
@@ -304,7 +304,7 @@ function setupClaudeDesktop() {
     }
     if (!copied) {
       console.log("ℹ️  Skill ZIP available in npm package at:");
-      console.log("   node_modules/scpl-updated-mcp-server/claude-desktop-skill/scpl-shortcuts.zip\n");
+      console.log("   node_modules/scpl-updated-mcp/claude-desktop-skill/scpl-shortcuts.zip\n");
     }
   } else {
     console.log("ℹ️  For the full ScPL reference skill, download from:");
@@ -334,7 +334,7 @@ function setupCodex(codexDir) {
       const tomlBlock = `
 [mcp_servers.scpl-shortcuts]
 command = "npx"
-args = ["-y", "scpl-updated-mcp-server"]
+args = ["-y", "scpl-updated-mcp"]
 startup_timeout_sec = 60.0
 `;
       writeFileSync(codexConfigPath, config + tomlBlock);
@@ -459,7 +459,7 @@ if (didSetup) {
 
 const server = new Server(
   {
-    name: "scpl-updated-mcp-server",
+    name: "scpl-updated-mcp",
     version: VERSION,
   },
   {
