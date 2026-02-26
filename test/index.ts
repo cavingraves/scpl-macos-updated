@@ -196,21 +196,21 @@ test("invert a boolean", () => {
 		`Dictionary {<boolean> a: false, <boolean> b: true, <boolean> c: false, <file> d: s:shortcutinput}`
 	);
 });
-test("invert headers2", () => {
+test("invert headers (with auto-expand)", () => {
 	const icc = new InverseConvertingContext();
 	expect(
 		icc.createActionsAble(
 			Shortcut.inverse(
 				parse(
 					`
-                getcontentsofurl headers=false headers2={<file> t: v:"Repeat Item"}
+                getcontentsofurl showheaders=false headers={<file> t: v:"Repeat Item"}
                 `,
 					{ make: ["shortcutjson"] }
 				).shortcutjson
 			)
 		)
 	).toEqual(
-		`GetContentsofURL headers=false headers2={<file> t: v:"Repeat Item"}`
+		`GetContentsofURL advanced=true showHeaders=false headers={<file> t: v:"Repeat Item"}`
 	);
 });
 

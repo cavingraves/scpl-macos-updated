@@ -315,7 +315,7 @@ export class WFAction {
 			this.readableName = genShortName(name, this.internalName, true);
 		}
 		this.name = displayName || this.shortName;
-		const parameterNames: { [key: string]: true | undefined } = {};
+		const parameterNames: { [key: string]: WFParameter | undefined } = {};
 		if (this._data.Parameters) {
 			this._parameters = this._data.Parameters.map(
 				(param: ShortcutsParameterSpec) => {
@@ -326,20 +326,28 @@ export class WFAction {
 							? _debugTypes[param.Class].count + 1
 							: 1
 					};
-					// if(param.Class === "WFExpandingParameter") {
-					// 	return;
-					// }
 					if (types[param.Class]) {
 						const type: InstanceOfParameterType<any> = types[
 							param.Class
 						]!;
-						const paramVal: WFParameter = new type(param); // false. it has a consistent call structure.
-						if (parameterNames[paramVal.shortName]) {
-							// console.warn(`IN: ${this.internalName}: Two parameters named ${paramVal.shortName} exist.`);
-							paramVal.shortName += "2";
-							paramVal.readableName += "2";
+						const paramVal: WFParameter = new type(param);
+						const existing = parameterNames[paramVal.shortName];
+						if (existing) {
+							if (existing instanceof WFExpandingParameter) {
+								// Rename the expanding toggle to "show{name}" and
+								// let the more useful parameter keep the clean name
+								existing.shortName = "show" + existing.shortName;
+								existing.readableName = "show" +
+									existing.readableName.charAt(0).toUpperCase() +
+									existing.readableName.slice(1);
+								delete parameterNames[paramVal.shortName];
+								parameterNames[existing.shortName] = existing;
+							} else {
+								paramVal.shortName += "2";
+								paramVal.readableName += "2";
+							}
 						}
-						parameterNames[paramVal.shortName] = true;
+						parameterNames[paramVal.shortName] = paramVal;
 						if (!paramVal.isComplete) {
 							this.isComplete = false;
 						}
@@ -591,6 +599,14 @@ ${JSON.stringify(this._data, null, "\t")}
 			action.parameters.set("WFControlFlowMode", number);
 			action.parameters.set("GroupingIdentifier", uuid);
 		}
+		// Collect internal keys of all expanding parameters for auto-expansion
+		const expandingKeys = new Set<string>();
+		for (const p of this._parameters) {
+			if (p instanceof WFExpandingParameter) {
+				expandingKeys.add(p.internalName);
+			}
+		}
+
 		let vi = 0;
 		ArgParser<string | WFParameter>(
 			this._parameters.map(param => ({
@@ -609,6 +625,21 @@ ${JSON.stringify(this._data, null, "\t")}
 						cc,
 						"Data is string. This should have been caught earlier. This should never happen."
 					);
+				}
+				// Auto-expand: if this parameter depends on an expanding toggle,
+				// automatically set that toggle to true (unless user explicitly set it)
+				if (!(name.data instanceof WFExpandingParameter)) {
+					for (const resource of name.data.requiredResources) {
+						const argKey = (resource as any).argInternalName;
+						if (
+							argKey &&
+							expandingKeys.has(argKey) &&
+							(resource as any).argValue === true &&
+							!action.parameters.has(argKey)
+						) {
+							action.parameters.set(argKey, true);
+						}
+					}
 				}
 				if (param.canBeRaw(cc)) {
 					return action.parameters.set(

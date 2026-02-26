@@ -1140,14 +1140,15 @@ GetDictionaryValue key="result"
 ShowResult
 \`\`\`
 
-## POST with JSON
+## POST with JSON and Headers
 \`\`\`scpl
 URL "https://api.example.com/submit"
 GetContentsOfURL method="POST" headers={
     "Content-Type": "application/json"
-} body={
+    "Authorization": "Bearer my-token"
+} requestbody="JSON" jsonvalues={
     "name": "Test"
-    "value": 123
+    "value": "123"
 }
 \`\`\`
 `,

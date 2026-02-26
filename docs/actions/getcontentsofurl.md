@@ -20,7 +20,7 @@ The fetched data
 
 ### usage
 ```
-GetContentsofURL advanced=(true | false) method=("GET" | "POST" | "PUT" | "PATCH" | "DELETE") headers=(true | false) headers2={dictionary} requestBody=("JSON" | "Form" | "File" | variable) formValues={dictionary} jSONValues={dictionary} file=(v:myvar | mv:myvar | s:myvar)
+GetContentsofURL advanced=(true | false) method=("GET" | "POST" | "PUT" | "PATCH" | "DELETE") showHeaders=(true | false) headers={dictionary} requestBody=("JSON" | "Form" | "File" | variable) formValues={dictionary} jSONValues={dictionary} file=(v:myvar | mv:myvar | s:myvar)
 ```
 
 ### arguments
@@ -57,7 +57,7 @@ containing one of the options:
 
 ---
 
-### headers: Expand Arrow [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
+### showHeaders: Expand Arrow [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Only enabled if**: argument Advanced == `true`
 
 Accepts a boolean for if this
@@ -69,7 +69,7 @@ labels, these can be ignored.
 
 ---
 
-### headers2: Dictionary [(Docs)](../gettingstarted#dictionary-field)
+### headers: Dictionary [(Docs)](../gettingstarted#dictionary-field)
 **Allows Variables**: true
 
 **Only enabled if**: argument Advanced == `true`

@@ -19,7 +19,7 @@ The URL of the new blog post
 
 ### usage
 ```
-PosttoWordPress account=("string" | variable)] blog=("string" | variable)] title="string" type=("string" | variable)] format=("string" | variable)] status=("string" | variable)] undefined=NotImplemented undefined=NotImplemented advanced=(true | false) allowComments=(true | false | variable) slug="string" excerpt="string" publishDate="string" template=("string" | variable)] featuredImage=(v:myvar | mv:myvar | s:myvar) customFields=(true | false) customFields2={dictionary}
+PosttoWordPress account=("string" | variable)] blog=("string" | variable)] title="string" type=("string" | variable)] format=("string" | variable)] status=("string" | variable)] undefined=NotImplemented undefined=NotImplemented advanced=(true | false) allowComments=(true | false | variable) slug="string" excerpt="string" publishDate="string" template=("string" | variable)] featuredImage=(v:myvar | mv:myvar | s:myvar) showCustomFields=(true | false) customFields={dictionary}
 ```
 
 ### arguments
@@ -171,7 +171,7 @@ Accepts a variable.
 
 ---
 
-### customFields: Expand Arrow [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
+### showCustomFields: Expand Arrow [(Docs)](../gettingstarted#switch-or-expanding-or-boolean-fields)
 **Only enabled if**: argument Advanced == `true`
 
 Accepts a boolean for if this
@@ -183,7 +183,7 @@ labels, these can be ignored.
 
 ---
 
-### customFields2: Dictionary [(Docs)](../gettingstarted#dictionary-field)
+### customFields: Dictionary [(Docs)](../gettingstarted#dictionary-field)
 **Allows Variables**: true
 
 **Only enabled if**: argument Advanced == `true`

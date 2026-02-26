@@ -701,7 +701,7 @@ End RepeatWithEach
 - Space-separate params: `a="1" b="2"` not `a="1", b="2"`
 
 ## HTTP API Requests
-**Headers**: Use `headers=true headers2={Key: "value"}` (not `headers={...}`)
+**Headers**: Use `headers={Key: "value"}` (expanding toggles are auto-set)
 **Complex JSON**: Use shell scripts with curl instead of jsonvalues with nested arrays
 ```scpl
 Text "curl -s URL -H 'Auth: Bearer KEY' -d '{...}' | python3 -c 'import sys,json; print(json.load(sys.stdin)[\"key\"])'"

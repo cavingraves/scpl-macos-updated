@@ -325,16 +325,11 @@ Common causes:
 
 ---
 
-### ❌ HTTP API Request Errors
+### HTTP Headers
 
-**Wrong (headers directly):**
+**Correct — headers are set directly (expanding toggles are auto-set):**
 ```scpl
 GetContentsOfURL method="POST" headers={"Authorization": "Bearer key"}
-```
-
-**Correct (use headers2):**
-```scpl
-GetContentsOfURL method="POST" headers=true headers2={Authorization: "Bearer key"}
 ```
 
 **Complex JSON bodies fail** - use shell scripts instead:
