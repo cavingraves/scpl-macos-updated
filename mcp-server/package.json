@@ -1,6 +1,6 @@
 {
   "name": "scpl-updated-mcp",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "AI-powered Apple Shortcuts creation with Claude Code! Generate shortcuts using natural language. 495 actions available. MCP server for text-based shortcut programming. Works with macOS and iOS via iCloud sync. Vibe code your automation workflows.",
   "type": "module",
   "main": "index.js",
