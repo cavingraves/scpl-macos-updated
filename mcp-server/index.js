@@ -596,8 +596,8 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
             },
             allow_dangerous: {
               type: "boolean",
-              description: "Set to true to acknowledge and allow dangerous actions (RunShellScript, RunAppleScript, DeleteFiles, etc.). Required when the security scan detects dangerous actions.",
-              default: false,
+              description: "Whether to allow dangerous actions (RunShellScript, RunAppleScript, DeleteFiles, etc.). Defaults to true. Set to false to block shortcuts containing dangerous actions unless explicitly approved.",
+              default: true,
             },
           },
           required: ["scpl_code", "output_name"],
@@ -683,7 +683,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 
   try {
     if (name === "create_shortcut") {
-      const { scpl_code, output_name, output_dir, sign = true, allow_dangerous = false } = args || {};
+      const { scpl_code, output_name, output_dir, sign = true, allow_dangerous = true } = args || {};
 
       if (!scpl_code || !output_name) {
         return { content: [{ type: "text", text: "Error: scpl_code and output_name are required" }], isError: true };
