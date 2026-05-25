@@ -10,11 +10,108 @@ import {
 } from "@modelcontextprotocol/sdk/types.js";
 import pkg from "scpl-macos-updated";
 const { parse, allActions } = pkg;
-import { writeFileSync, readFileSync, existsSync, mkdirSync, unlinkSync } from "fs";
+import { writeFileSync, readFileSync, existsSync, mkdirSync, unlinkSync, appendFileSync } from "fs";
 import { join, dirname } from "path";
 import { homedir } from "os";
-import { execSync } from "child_process";
+import { execFileSync } from "child_process";
 import { fileURLToPath } from "url";
+
+// ============================================================================
+// SECURITY: Action Risk Classification
+// ============================================================================
+
+const DANGEROUS_ACTIONS = new Set([
+  "runshellscript",
+  "runapplescript",
+  "runjavascriptforautomation",
+  "runscriptoverssh",
+  "runsshscript",
+  "deletefiles",
+  "removefiles",
+  "openxcallbackurl",
+  "openurl",
+  "sendmessage",
+  "sendemail",
+]);
+
+const MODERATE_ACTIONS = new Set([
+  "getcontentsofurl",
+  "savefile",
+  "getfile",
+  "setclipboard",
+  "openapp",
+  "runshortcut",
+  "getlocation",
+  "selectcontact",
+  "selectemailaddress",
+  "selectphone",
+]);
+
+function classifyAction(actionName) {
+  const normalized = actionName.toLowerCase().replace(/[^a-z0-9]/g, "");
+  if (DANGEROUS_ACTIONS.has(normalized)) return "dangerous";
+  if (MODERATE_ACTIONS.has(normalized)) return "moderate";
+  return "safe";
+}
+
+function analyzeScplSecurity(scplCode) {
+  const lines = scplCode.split("\n");
+  const findings = { dangerous: [], moderate: [], safe: 0 };
+
+  for (const line of lines) {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith("#") || trimmed.startsWith("//") || trimmed.startsWith("--")) continue;
+    if (/^(End |Otherwise|Case )/.test(trimmed)) continue;
+
+    const actionMatch = trimmed.match(/^([A-Za-z][A-Za-z0-9]*)/);
+    if (!actionMatch) continue;
+
+    const actionName = actionMatch[1];
+    const level = classifyAction(actionName);
+
+    if (level === "dangerous") {
+      findings.dangerous.push({ action: actionName, line: trimmed.substring(0, 120) });
+    } else if (level === "moderate") {
+      findings.moderate.push({ action: actionName, line: trimmed.substring(0, 120) });
+    } else {
+      findings.safe++;
+    }
+  }
+
+  return findings;
+}
+
+function formatSecurityReport(findings) {
+  let report = "## Security Scan Results\n\n";
+
+  if (findings.dangerous.length > 0) {
+    report += `**⛔ DANGEROUS actions detected (${findings.dangerous.length}):**\n`;
+    for (const f of findings.dangerous) {
+      report += `  - \`${f.action}\`: ${f.line}\n`;
+    }
+    report += "\n";
+  }
+
+  if (findings.moderate.length > 0) {
+    report += `**⚠️ Moderate-risk actions (${findings.moderate.length}):**\n`;
+    for (const f of findings.moderate) {
+      report += `  - \`${f.action}\`: ${f.line}\n`;
+    }
+    report += "\n";
+  }
+
+  report += `**Safe actions:** ${findings.safe}\n`;
+  return report;
+}
+
+const AUDIT_LOG_PATH = join(homedir(), ".scpl-audit.log");
+
+function auditLog(entry) {
+  const line = JSON.stringify({ timestamp: new Date().toISOString(), ...entry }) + "\n";
+  try {
+    appendFileSync(AUDIT_LOG_PATH, line);
+  } catch {}
+}
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -476,7 +573,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
     tools: [
       {
         name: "create_shortcut",
-        description: "Create a macOS Shortcut from ScPL code. Returns the path to the generated .shortcut file. Set sign=true to auto-sign for immediate use (requires macOS 12+).",
+        description: "Create a macOS Shortcut from ScPL code. Performs a security scan first — if dangerous actions (shell scripts, AppleScript, file deletion, SSH) are detected, returns a security report and requires re-calling with allow_dangerous=true. Set sign=true to auto-sign (requires macOS 12+).",
         inputSchema: {
           type: "object",
           properties: {
@@ -496,6 +593,11 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
               type: "boolean",
               description: "Auto-sign the shortcut using macOS shortcuts CLI (default: true). Signed shortcuts can be opened directly.",
               default: true,
+            },
+            allow_dangerous: {
+              type: "boolean",
+              description: "Set to true to acknowledge and allow dangerous actions (RunShellScript, RunAppleScript, DeleteFiles, etc.). Required when the security scan detects dangerous actions.",
+              default: false,
             },
           },
           required: ["scpl_code", "output_name"],
@@ -581,10 +683,30 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 
   try {
     if (name === "create_shortcut") {
-      const { scpl_code, output_name, output_dir, sign = true } = args || {};
+      const { scpl_code, output_name, output_dir, sign = true, allow_dangerous = false } = args || {};
 
       if (!scpl_code || !output_name) {
         return { content: [{ type: "text", text: "Error: scpl_code and output_name are required" }], isError: true };
+      }
+
+      if (/[\/\\<>:"|?*\x00-\x1f]/.test(output_name) || output_name.startsWith(".")) {
+        return { content: [{ type: "text", text: "Error: output_name contains invalid characters. Use alphanumeric, spaces, hyphens, or underscores only." }], isError: true };
+      }
+
+      // Security scan
+      const findings = analyzeScplSecurity(scpl_code);
+      const securityReport = formatSecurityReport(findings);
+
+      // Block dangerous actions unless explicitly approved
+      if (findings.dangerous.length > 0 && !allow_dangerous) {
+        auditLog({ event: "blocked", shortcut: output_name, dangerous: findings.dangerous.map(f => f.action) });
+        return {
+          content: [{
+            type: "text",
+            text: `⛔ SHORTCUT BLOCKED — Dangerous actions detected\n\n${securityReport}\n**To proceed:** Re-call create_shortcut with \`allow_dangerous=true\` to acknowledge these risks.\n\nDangerous actions can execute arbitrary code, delete files, or access remote systems.`,
+          }],
+          isError: true,
+        };
       }
 
       const shortcutBuffer = parse(scpl_code, {
@@ -592,14 +714,23 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
       });
 
       let dir = output_dir || join(homedir(), "Documents");
-      // Expand ~ to home directory
       if (dir.startsWith("~")) {
         dir = dir.replace("~", homedir());
       }
-      // Ensure directory exists
       mkdirSync(dir, { recursive: true });
 
       const outputPath = join(dir, `${output_name}.shortcut`);
+
+      // Audit log
+      auditLog({
+        event: "created",
+        shortcut: output_name,
+        path: outputPath,
+        signed: sign,
+        dangerous: findings.dangerous.map(f => f.action),
+        moderate: findings.moderate.map(f => f.action),
+        allow_dangerous,
+      });
 
       // If signing, write to temp file first, then sign to final location
       if (sign) {
@@ -607,47 +738,38 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         writeFileSync(unsignedPath, shortcutBuffer);
 
         try {
-          // Sign using macOS shortcuts CLI (available since macOS 12 Monterey)
-          execSync(`shortcuts sign --mode anyone --input "${unsignedPath}" --output "${outputPath}"`, {
+          execFileSync("shortcuts", ["sign", "--mode", "anyone", "--input", unsignedPath, "--output", outputPath], {
             stdio: 'pipe',
             timeout: 30000,
           });
-          // Remove unsigned temp file
           unlinkSync(unsignedPath);
 
-          return {
-            content: [
-              {
-                type: "text",
-                text: `✅ Shortcut created and signed!\n\nPath: ${outputPath}\n\nTo install: Double-click the file or run:\n  open "${outputPath}"`,
-              },
-            ],
-          };
+          let resultText = `✅ Shortcut created and signed!\n\nPath: ${outputPath}\n\nTo install: Double-click the file or run:\n  open "${outputPath}"`;
+          if (findings.dangerous.length > 0) {
+            resultText += `\n\n⚠️ Note: This shortcut contains dangerous actions that were explicitly approved:\n${findings.dangerous.map(f => `  - ${f.action}`).join("\n")}`;
+          } else if (findings.moderate.length > 0) {
+            resultText += `\n\nℹ️ Contains moderate-risk actions: ${findings.moderate.map(f => f.action).join(", ")}`;
+          }
+          return { content: [{ type: "text", text: resultText }] };
         } catch (signError) {
-          // If signing fails, keep unsigned version and inform user
           writeFileSync(outputPath, shortcutBuffer);
           try { unlinkSync(unsignedPath); } catch {}
 
           return {
-            content: [
-              {
-                type: "text",
-                text: `✅ Shortcut created (unsigned - signing failed)\n\nPath: ${outputPath}\n\nSigning error: ${signError.message}\n\nTo sign manually:\n  shortcuts sign --mode anyone --input "${outputPath}" --output "${outputPath.replace('.shortcut', '_signed.shortcut')}"`,
-              },
-            ],
+            content: [{
+              type: "text",
+              text: `✅ Shortcut created (unsigned - signing failed)\n\nPath: ${outputPath}\n\nSigning error: ${signError.message}\n\nTo sign manually:\n  shortcuts sign --mode anyone --input "${outputPath}" --output "${outputPath.replace('.shortcut', '_signed.shortcut')}"`,
+            }],
           };
         }
       } else {
-        // No signing requested
         writeFileSync(outputPath, shortcutBuffer);
 
         return {
-          content: [
-            {
-              type: "text",
-              text: `✅ Shortcut created (unsigned)!\n\nPath: ${outputPath}\n\nTo sign and install:\n  shortcuts sign --mode anyone --input "${outputPath}" --output "${outputPath.replace('.shortcut', '_signed.shortcut')}"`,
-            },
-          ],
+          content: [{
+            type: "text",
+            text: `✅ Shortcut created (unsigned)!\n\nPath: ${outputPath}\n\nTo sign and install:\n  shortcuts sign --mode anyone --input "${outputPath}" --output "${outputPath.replace('.shortcut', '_signed.shortcut')}"`,
+          }],
         };
       }
     }
